@@ -1,0 +1,111 @@
+\documentclass{ximera}
+\title{Euler's Method}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{dialogue}
+\item[Julia] I know Wooster has oil, but this is kind of ridiculous don't you think?
+\item[Dylan] What are you talking about Julia?
+\item[Julia] My professor keeps talking about Oiler's Method. Like, what is that? This is calculus, not geology.
+\item[Dylan] Actually, it's \textit{Euler's} Method. He was a Swiss mathematician who came up with a way of approximating solutions to differential equations when we start with a given value!
+\item[James] That's right Dylan! Euler did a lot more than just that though; he's considered to be one the greatest mathematicians of all time!
+\end{dialogue}
+
+\section{Introduction}
+Euler's Method is a simple method of approximating the solution to a differential equation given an initial value, $y_0$, at a point $t_0$, or $y(t_0) = y_0$. Additionally, $F(t, y)$ is given, which is equivalent to $\dfrac{dy}{dt} y$. From here, the user chooses a step size, $h$, and uses $$y_k = y_{k-1} + h \cdot F(t_{k-1}, y_{k-1})$$ to approximate the value at a point $t_1$, which is $h$ units away from $t_0$, or $t_1 = t_0 + h$. At this point, we repeat the process, evaluating $F(t, y)$ at our new point, and moving another $h$ units along the $t$-axis. By continuing this process, it is possible to approximate the solution at a point other than that which we are given.
+
+\begin{question}
+What alteration to $h$ might produce a more accurate estimation?
+\begin{hint}
+Consider a function with a rapidly changing derivative. How might a larger step-size approximate the rapid changes? A smaller one?
+\end{hint}
+\begin{multipleChoice}
+\choice{Increase the size of $h$ to ignore minor jumps that would make the prediction less accurate.}
+\choice[correct]{Decrease the size of $h$ to take into account very minor alterations in the function's derivative.}
+\choice{Use an $h$ equivalent to the functional value at the point.}
+\choice{Use an $h$ equivalent to the value of the derivative at that point.}
+\end{multipleChoice}
+
+When will this approximation be the best? When will it be the worst?
+\begin{hint}
+Think about the derivative of the graph here, and how it affects the shape.
+\end{hint}
+\begin{multipleChoice}
+\choice{The approximation will be the best at rapid changes
+
+and worst where minimal change occurs.}
+\choice{The approximation will be equally good at all points.}
+\choice{The approximation will be best where the graph stays positive or negative,
+
+and worst where the parity changes.}
+\choice[correct]{The approximation will be best where little change occurs,
+
+and worst where the most change occurs.}
+\end{multipleChoice}
+\end{question}
+
+\section{Guided Example}
+Given $$F(t,y) = t + 2y$$ and the initial condition $$y(0) = 0\text{,}$$ we will approximate the value of the solution at $t = 1$ using various step sizes.
+
+Using a step size of $h = 0.5$, we find $t_1 = h + t_0  = 0.5 + 0 = 0.5$. Next, we see that $y_1 = y_0 + h \cdot F(t_0, y_0)$, or $y_1 = 0 + 0.5(t_0+2y_0) = 0+(0+2\cdot 0) = 0$. Thus, $y(t_1) = y(0.5)= 0$.
+
+On step two, we see $t_2 = 0.5 + 0.5 = 1$, and $y_2 = 0 + 0.5(0.5 + 2\cdot 0) = 0.25$. Thus $y(t_2) = y(1) = 0.25$.
+
+Let's check our estimation - the actual solution to our differential equation was $$y = 0.25\cdot e^{2t}-0.5t-0.25\text{.}$$ Don't worry about how we found this; just note that at $t=1$, $y = 1.097$.
+
+Clearly, our estimation is not very good. But look at our step size! We moved an entire unit in only two steps - but that's an easy fix.
+
+Let's look at the result when we use $h = 0.02$, using Sage! While an example has been provided below, \href{http://doc.sagemath.org/html/en/reference/calculus/sage/calculus/desolvers.html#sage.calculus.desolvers.eulers\_method}{click here} for the documentation on how to use eulers\_method!
+\begin{onlineOnly}
+\begin{sageCell}
+from sage.calculus.desolvers import eulers_method#imports the Euler's Method function from Sage
+t,y = PolynomialRing(QQ,2,"ty").gens()#Defines our two variables
+eulers_method(t+2*y,0,0,0.02,1,algorithm="table")#Produces a table of the t and y values.
+\end{sageCell}
+\end{onlineOnly}
+
+Clearly a much better approximation! Note that the $x$ column is simply our $t$, Sage uses an $x$ instead of $t$. By simply decreasing $h$, we can increase the accuracy of Euler's Method greatly, at the cost of much harder work if done by hand.
+
+\section{On Your Own}
+
+\begin{enumerate}
+\item For the following, use step sizes of $0.5$, $0.25$, and $0.1$ in combination to approximate the given point. 
+
+\begin{remark}
+Euler's Method does not require each step to be the same size.
+\end{remark}
+\begin{enumerate}
+\item $F(t,y) = t^2 -y$, $y(2) = 3$ at $y(3.5)$.
+\item $F(t,y) = y+t$, $y(0)=1$ at $y(3.85)$.
+\item $F(t,y) = t\sin(y)$, $y(1) = 2$ at $y(2.4)$.
+\end{enumerate}
+\end{enumerate}
+
+\begin{dialogue}
+\item[Dylan] Euler's Method is cool and all, but the approximation is so bad if I want it done in a reasonable amount of time without a computer.
+\item[James] Well, we typically will use a computer with Euler's Method, but there is a modification of Euler's Method that is much more accurate! It's known as \textit{Euler's Midpoint Method}, which uses the derivative at the midpoint of the step, so the change is better approximated.
+\item[Julia] How much better is it?
+\item[James] Let's take a look!
+\end{dialogue}
+The equation for Euler's Midpoint Method is $$y_k = y_{k-1}+h \cdot m_{k-1}\text{,}$$ $$\text{where } m_{k-1} = F\left(t_{k-1} + \frac{h}{2}, y_{k-1} + \frac{h}{2}F(t_{k-1},y_{k-1})\right)\text{.}$$ 
+\begin{enumerate}
+\item Using both Euler's Method and Euler's Midpoint Method, approximate the solution $y(t)$ at the given point.
+\begin{enumerate}
+\item $F(t, y) = y+t$, $y(0) = 1$, $h = 0.1$ at $y(0.5)$.
+\item $F(t, y) = t^2 - y$, $y(1) = 3$, $h=0.2$ at $y(2)$.
+\end{enumerate}
+\end{enumerate}
+\begin{dialogue}
+\item[Julia] Wow! Euler's Method is pretty cool!
+\item[Dylan] Yeah, it means I don't have to always mess around with integrating if I'm given the derivative of a function and have to find a point!
+\item[James] Let's make sure we remember what we learned today, okay?
+\end{dialogue}
+\section{In Summary}
+\begin{definition}
+\textbf{Euler's Method} is a system which approximates solutions of first order differential equations by using the rate of change over a small distance to approximate the actual change. The basic method uses the equation $$y_k = y_{k-1} + h \cdot F(t_{k-1}, y_{k-1})\text{,}$$ $$\text{where } \dfrac{dy}{dt} y = F(t,y) \text{,}$$ $h$ is step size, and $F(x_{n-1}, y_{n-1})$ is the derivative at the previous point.
+\end{definition}
+\begin{definition}
+\textbf{Euler's Midpoint Method} is a modified version of Euler's Method, which uses the derivative at the midpoint between the end and start of the step to better approximate the rate of change over the step. This method uses a slightly modified equation, $$y_k = y_{k-1}+h \cdot m_{k-1}\text{,}$$ $$\text{where } m_{k-1} = F\left(t_{k-1} + \frac{h}{2}, y_{k-1} + \frac{h}{2}F(t_{k-1},y_{k-1})\right)\text{.}$$
+\end{definition}
+\end{document}

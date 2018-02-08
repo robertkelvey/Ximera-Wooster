@@ -1,0 +1,256 @@
+\documentclass{ximera}
+\title{Motion}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\section{Introduction}
+\begin{dialogue}
+\item[Dylan] I wonder where Julia and James are...
+\item[Julia] \textit{(runs in panting and clutching side)} Ha! I win
+\item[James] \textit{(enters, also catching breath)} I just don't get it, I was going faster than you at some point!!!
+\item[Dylan] Well don't you know that position, velocity, and acceleration are all related? Just because you were at a faster velocity at some point doesn't mean you got there first!
+\item[Julia and James] Oh gosh, please don't tell me this is more applications of derivatives...
+\end{dialogue}
+There are three main aspects of motion that we will examine in this lab; position, velocity, and acceleration.
+
+\begin{image}
+    \includegraphics[width=80mm]{motion.jpg}
+\end{image}
+
+\section{Guided Example}
+\begin{question}
+A banana is sliding across an ice hockey rink after being thrown in by an over-excited child. The position of the banana, in meters, can be given by $$p(t) = -\dfrac{1}{2}t^2+14t+11\text{,}$$ where $t$ is measured in seconds.
+
+What does the slope of the graph mean in this context?
+\begin{multipleChoice}
+\choice{The velocity of the banana in ft/s.}
+\choice[correct]{The velocity of the banana in m/s.}
+\choice{The acceleration of the banana in m/s$^2$.}
+\choice{The acceleration of the banana in ft/s$^2$.}
+\end{multipleChoice}
+
+Graph this function.
+\[
+    \graph{}
+\]
+
+How would you determine the average velocity from $t = 3$ to $t = 6$?
+
+\begin{multipleChoice}
+\choice{$\frac{p(3)-p(6)}{3-6}$}
+\choice{$\frac{p(6)-p(3)}{2}$}
+\choice{$\frac{p(3)-p(6)}{2}$}
+\choice[correct]{$\frac{p(6)-p(3)}{(6-3)}$}
+\end{multipleChoice}
+
+
+What is the average velocity over this interval?
+
+$\answer{9.5}\text{m} / \text{s}$
+
+With help from the formula you used in the previous question, determine the instantaneous velocity at any point.
+
+$v(t) =  \answer{-t+14}$
+
+
+Graph the equation you found.
+\[
+    \graph{}
+\]
+
+Does this graph appear to model the rate of change of the original function?
+
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+
+If not, go back over your work from the previous problem.
+
+
+What does the slope of this graph indicate?
+
+\begin{multipleChoice}
+\choice[correct]{Acceleration of the banana.}
+\choice{Deceleration of the banana.}
+\choice{The position of the banana over time.}
+\choice{The velocity of the banana versus its initial velocity.}
+\end{multipleChoice}
+
+Determine the average acceleration from $t = 3$ to $t = 6$.
+
+$\answer{-1} \text{m}/\text{s}^2$
+
+Now, create a function to determine the average acceleration at any point - the process will be extremely similar to that of problem 1 part d.
+
+$a(t) = \answer{-1}$
+\end{question}
+
+
+\section{On Your Own}
+\begin{question}
+Examine the following graph of a particle's motion:
+
+\begin{image}
+    \includegraphics[width=80mm]{position.png}
+\end{image}
+
+At what time(s) does the particle return to its initial point?
+
+\begin{selectAll}
+\choice{$1.4$ s}
+\choice[correct]{$1.6$ s}
+\choice{$3$ s}
+\choice[correct]{$2.8$ s}
+\choice{$3$ s}
+\end{selectAll}
+
+When, if ever, is the velocity of the particle zero?
+
+\begin{selectAll}
+\choice{$1$ s}
+\choice[correct]{$0.8$ s}
+\choice{$3$ s}
+\choice{$2.7$ s}
+\choice[correct]{$2.4$ s}
+\choice{The particle never has zero velocity.}
+\end{selectAll}
+
+If these points exist, does the object change direction each time?
+
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+
+At approximately what time is the particle moving the most quickly?
+
+$t = \answer[id=particle,format=float,validator= (particle^2-2.8^2)/2.8 < .1]{} \text{s}$
+\end{question}
+\begin{question}
+Model rockets work through burning a propellant to completion, coasting on momentum for some time, and finally releasing a parachute when the rocket begins to fall in order to prevent the rocket and its components from being destroyed upon landing. Examine the following graph of one such rocket's motion:
+\begin{image}
+    \includegraphics[width=80mm]{rocket.png}
+\end{image}
+
+What was the maximum velocity obtained by the rocket?
+
+$v = \answer[id=maxvel,format=float,validator=(maxvel^2-170^2)/170 < .1]{} \text{ft} / \text{s}$
+
+When did the rocket reach its highest point?
+
+$t = \answer[id=highest,format=float,validator=(highest^2-7.8^2)/7.8 < .1]{} \text{s}$
+
+What was the velocity at that time?
+
+$v = \answer{0} \text{ft} / \text{s}$
+
+When did the rocket's parachute deploy?
+
+$t = \answer[id=deploy,format=float,validator=(deploy^2-10.5^2)/10.5 < .1]{} \text{s}$
+
+How fast was the rocket descending by that time?
+
+$v = -\answer[id=descent,format=float,validator=(descent^2-80^2)/80 < .1]{} \text{ft} / \text{s}$
+
+Describe how long each phase of the rocket lasted.
+
+$\text{Take-off} \hspace{5mm} \answer[id=takeoff,format=float,validator=(takeoff^2-2^2)/2 < .05]{} \text{s}$
+
+$\text{Coasting} \hspace{5mm} \answer[id=coast,format=float,validator=(coast^2-5.8^2)/5.8 < .05]{} \text{s}$
+
+$\text{Free-fall} \hspace{5mm} \answer[id=fall,format=float,validator=(fall^2-2.5^2)/2.5 < .1]{} \text{s}$
+
+$\text{Parachute fall} \hspace{5mm} \answer[id=para,format=float,validator=(para^2-1.5^2)/1.5 < .1]{} \text{s}$
+\end{question}
+\begin{question}
+At the surface of the Earth, acceleration due to gravity is approximately $9.8 \text{m} \backslash \text{s}^2$. Consider throwing a ball directly upward from atop a 160 meter building at $35 \text{m} \backslash \text{s}$.
+
+Create an equation to express the acceleration of the ball at any time after it has been thrown.
+
+$a(t) = \answer{-9.8}$
+\begin{feedback}
+Remember, up is the positive direction.
+\end{feedback}
+
+\begin{hint}
+Don't forget to find the constant of integration - might it have something to do with the starting speed?
+\end{hint}
+Integrate the previously constructed equation to produce the equation for velocity at any time for the ball.
+
+$v(t) = \answer{-9.8t+35}$
+
+\begin{hint}
+Don't forget the constant here either - what is the other factor influencing height here?
+\end{hint}
+Now, integrate your new equation yet again to produce the equation for the position of the ball at any time.
+
+$p(t) = \answer{\frac{-9.8}{2}t^2+35t+160}$
+\end{question}
+\begin{question}
+Consider a balloon which has been caught in a jet stream high above the ground. The horizontal position of the balloon at any time can be given by the equation $$p(t) = 3t^5-15t^3+13\text{.}$$
+
+\begin{hint}
+Remember, acceleration is the derivative of velocity, and velocity is the derivative of position.
+\end{hint}
+Produce the velocity and acceleration equations for the balloon.
+
+$v(t) = \answer{15t^4-45t^2}$
+
+$a(t) = \answer{60t^3-90t}$
+
+\begin{hint}
+Remember to check where the velocity is zero. Then you can check between these points for the sign of the velocity!
+\end{hint}
+Over what time period is the balloon moving in the positive direction?
+
+$\answer{\sqrt{3}} \leq t$
+
+When is the velocity increasing?
+
+$\answer{\sqrt{\frac{3}{2}}} \leq t$
+
+\begin{hint}
+Don't over complicate this - we only need to concern ourselves with position here!
+\end{hint}
+What was the displacement of the balloon over the interval [0, 2.25]? \textit{Displacement is distance from the initial position}. Please answer to two decimal places.
+
+$\answer{2.13} \text{m}$
+\end{question}
+\begin{question}
+\begin{hint}
+A great way to find the initial velocity is to find at what time the velocity became zero. This has to do with the 3.8 seconds!
+\end{hint}
+On a spring break trip with friends, you find yourself dared to stand upon George Washington's nose on Mount Rushmore. While on the dangerous climb down, you come up with an experiment, and request one of your friends go to the base of the mountain. When you're on the nose, you take out your phone and wallet, and toss the wallet into the air, starting the timer just as you release the wallet. Simultaneously on the ground, your friend starts a stopwatch on his phone. You stop the timer as the wallet passes you, with your friend stopping their's once the wallet smashes into the ground. Your stopwatch displays 3.8 seconds, and your friend's displays 13.72 seconds.
+
+Determine the acceleration, velocity, and position functions for the wallet. You will need to use equations to determine each constant of integration. Don't worry about units here, and remember that we're only concerned about the vertical position of the wallet.
+
+$p(t) = \answer{666.902+18.62t-4.9t^2}$
+$v(t) = \answer{18.62-9.8t}$
+$a(t) = \answer{-9.8}$
+
+What is the wallet's initial velocity?
+
+$v_0 = \answer{18.62} \text{m} / \text{s}$
+
+What is it's velocity as it hits the ground?
+
+$v_f = -\answer{115.836} \text{m} / \text{s}$
+
+How far off the ground is George Washington's nose?
+
+$h = \answer{666.902} \text{m}$
+\end{question}
+
+\section{In Summary}
+\begin{dialogue}
+\item[James] I guess there's more to position than just speed!
+\item[Julia] A \textit{lot} more! Do you think you could run through the big points real quick Dylan?
+\item[Dylan] Sure Julia! When we derive position, we get velocity, and when we derive velocity, we get acceleration. Anti-differentiation will give us velocity from acceleration and position from velocity.
+\item[James] Okay, but how do we get the constant of integration?
+\item[Julia] I know this! It's whatever was the initial velocity or position in the problem!
+\item[Dylan] That's right Julia! When the initial isn't given, we can use knowledge of when an object returns to a position zero or stops for a moment to determine those constants.
+\end{dialogue}
+
+\end{document}

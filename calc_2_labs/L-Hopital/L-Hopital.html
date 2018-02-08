@@ -1,0 +1,331 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+                                                                  
+
+                                                                  
+<title>L&#x2019;Hopital&#x2019;s Rule Practice</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="L-Hopital.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\dsp }[0]{\displaystyle }
+\newcommand {\df }[0]{\dsp \frac }
+\newcommand {\dlim }[0]{\displaystyle \lim }
+\newcommand {\ddx }[0]{\df {d}{dx}}
+\newcommand {\dydx }[0]{\df {dy}{dx}}
+\newcommand {\dx }[0]{\; dx}
+\newcommand {\dt }[0]{\; dt}
+\newcommand {\dint }[0]{\displaystyle \int }
+\newcommand {\LHop }[0]{L&#x2019;H\^{o}pital}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from L-Hopital.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %c57847f795527ea6f05af5f287568016% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+                                                                  
+
+                                                                  
+ <div class="maketitle"></div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">I have a limit and it‘s just <script type="math/tex"> <![CDATA[ 
+\dfrac {0}{0} 
+]]> 
+</script>... is that one? Infinity? Zero?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Well... I would probably go with zero? Like, at least they were zeroes
+     before, right?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Woah, hold on! We have a method of figuring these things out, you
+     don&#x2019;t need to just guess!</dd></dl>
+<!--l. 22--><p class="noindent" >Recall that L&#x2019;Hôpital&#x2019;s Rule says the following:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a 
+ id="x1-1001r1"></a>Suppose we have that the limit <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} \df {f(x)}{g(x)} 
+]]> 
+</script> has indeterminate form <script type="math/tex"> <![CDATA[ 
+\frac {0}{0} 
+]]> 
+</script> or <script type="math/tex"> <![CDATA[ 
+\frac {\infty }{\infty } 
+]]> 
+</script>. Then <script type="math/tex; mode=display"> <![CDATA[ 
+ \dlim _{x \to a} \df {f(x)}{g(x)} = \dlim _{x \to a} \df {f'(x)}{g'(x)},  
+]]> 
+</script> provided <script type="math/tex"> <![CDATA[ 
+g'(x) \neq 0 
+]]> 
+</script> around <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script>
+and that <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} \df {f'(x)}{g'(x)} 
+]]> 
+</script> exists or is infinite.
+</div>
+<!--l. 33--><p class="noindent" >Note that </p>
+     <ul class="itemize1">
+     <li class="itemize">This rule is valid if you replace <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script> with <script type="math/tex"> <![CDATA[ 
+\pm \infty  
+]]> 
+</script>.
+     </li>
+     <li class="itemize">This rule is valid for one-sided limits as well.
+     </li>
+     <li class="itemize">The <em>indeterminate form</em> <script type="math/tex"> <![CDATA[ 
+\frac {0}{0} 
+]]> 
+</script> means <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} f(x) = 0 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} g(x) = 0 
+]]> 
+</script>.
+     </li>
+     <li class="itemize">The <em>indeterminate form</em> <script type="math/tex"> <![CDATA[ 
+\frac {\infty }{\infty } 
+]]> 
+</script> means <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} f(x) = \infty  
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to a} g(x) = \infty  
+]]> 
+</script>.
+     </li>
+     <li class="itemize">You can apply L&#x2019;Hôpital&#x2019;s Rule more than once!! As long as the hypothesis
+     regarding the indeterminate form is satisfied, you can apply the rule again
+     and again.
+     </li>
+     <li class="itemize"><em>Never  do  the  quotient  rule!!!</em>  It&#x2019;s  the  derivative  of  the  top  over  the
+     derivative of the bottom - NOT the derivative of the quotient!!</li></ul>
+<a 
+ id="Q1-1-2"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Indeterminate Forms</h3>
+<!--l. 46--><p class="noindent" >The following are all <em>indeterminate forms</em> for limits that you might encounter:
+<script type="math/tex; mode=display"> <![CDATA[ 
+ \frac {0}{0}, \frac {\infty }{\infty }, 0 \cdot \infty , \infty - \infty , 0^0, 1^{\infty }  
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</p>
+     <ul class="itemize1">
+     <li class="itemize">For the form <script type="math/tex"> <![CDATA[ 
+0 \cdot \infty  
+]]> 
+</script>, use algebra to make the limit be in <script type="math/tex"> <![CDATA[ 
+\frac {0}{0} 
+]]> 
+</script> or <script type="math/tex"> <![CDATA[ 
+\frac {\infty }{\infty } 
+]]> 
+</script> form.
+     </li>
+     <li class="itemize">For the form <script type="math/tex"> <![CDATA[ 
+\infty - \infty  
+]]> 
+</script>, you&#x2019;ll generally need to combine fractions to get it into <script type="math/tex"> <![CDATA[ 
+\frac {0}{0} 
+]]> 
+</script> or
+     <script type="math/tex"> <![CDATA[ 
+\frac {\infty }{\infty } 
+]]> 
+</script> form.
+     </li>
+     <li class="itemize">For either of <script type="math/tex"> <![CDATA[ 
+0^0 
+]]> 
+</script> or <script type="math/tex"> <![CDATA[ 
+1^{\infty } 
+]]> 
+</script>, you need to use logarithms.
+     </li></ul>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Problems for Practice</h3>
+<!--l. 63--><p class="noindent" >In your group, try to use L&#x2019;Hôpital&#x2019;s Rule to determine the limit. Make sure you
+check first if L&#x2019;Hôpital&#x2019;s Rule applies. If it doesn&#x2019;t, you might have to change the
+limit with some algebra to be able to use L&#x2019;Hôpital&#x2019;s Rule.
+</p>
+<div class="problem-environment problem" id="problem2"><a 
+ id="x1-3001r2"></a> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to \infty } \df {x}{e^x} = \answer {0} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem3"><a 
+ id="x1-3002r3"></a> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0} \df {\tan (x)}{x} = \answer {1} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem4"><a 
+ id="x1-3003r4"></a> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0} \df {2e^x + x - 2}{\sin (x)} = \answer {3} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem5"><a 
+ id="x1-3004r5"></a> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to \pi } \df {\sin ^2(x)}{1+\cos (x)} = \answer {2} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem6"><a 
+ id="x1-3005r6"></a> <div class="problem-environment hint" id="problem7"><a 
+ id="x1-3006r7"></a> <script type="math/tex"> <![CDATA[ 
+x\ln (x) = \frac {\ln (x)}{\frac {1}{x}} 
+]]> 
+</script>
+</div> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0^+} x \ln (x) = \answer {0} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem8"><a 
+ id="x1-3007r8"></a> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to -\infty } x\sin \left (\frac {1}{x}\right ) = \answer {1} 
+]]> 
+</script>
+</div> <div class="problem-environment problem" id="problem9"><a 
+ id="x1-3008r9"></a> <div class="problem-environment hint" id="problem10"><a 
+ id="x1-3009r10"></a> Make quotients with Trig!
+</div> <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to \frac {\pi }{2}} \sec (x) - \tan (x) = \answer {0} 
+]]> 
+</script>
+</div>
+<div class="problem-environment problem" id="problem11"><a 
+ id="x1-3010r11"></a> To compute <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0^+} x^x 
+]]> 
+</script>, we use logs. Let <script type="math/tex"> <![CDATA[ 
+y=x^x 
+]]> 
+</script>. Then <script type="math/tex"> <![CDATA[ 
+\ln (y) = x \ln (x) 
+]]> 
+</script>. Now compute: <script type="math/tex; mode=display"> <![CDATA[ 
+ \dlim _{x \to 0^+} \ln (y)  
+]]> 
+</script>
+<!--l. 100--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\answer {0} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</p><!--l. 103--><p class="noindent" >Using continuity, we have <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0^+} \ln (y) = \ln \left (\dlim _{x \to 0^+} y\right ) 
+]]> 
+</script>. Use your answer above and your knowledge of exponential
+functions to determine now <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 0^+} x^x 
+]]> 
+</script>.
+</p><!--l. 105--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\answer {1} 
+]]> 
+</script>
+</p><!--l. 107--><p class="noindent" ></div>
+</p>
+<div class="problem-environment problem" id="problem12"><a 
+ id="x1-3011r12"></a> Use the same tricks as the last problem to compute: <script type="math/tex; mode=display"> <![CDATA[ 
+ \dlim _{x \to 1} \left (1+\ln (x)\right )^{\frac {1}{x-1}}  
+]]> 
+</script>
+<!--l. 115--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\answer {e} 
+]]> 
+</script>
+</div>
+</p>
+<div class="problem-environment problem" id="problem13"><a 
+ id="x1-3012r13"></a> Apply L&#x2019;Hôpital&#x2019;s Rule to the following limit: <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to 4} \df {x^3 - 64}{x^2+16} 
+]]> 
+</script>. Then, conclude why this is
+wrong.
+</div>
+<div class="problem-environment problem" id="problem14"><a 
+ id="x1-3013r14"></a> <div class="problem-environment hint" id="problem15"><a 
+ id="x1-3014r15"></a> Use L&#x2019;Hôpital&#x2019;s Rule more than once!!
+</div> Evaluate <script type="math/tex"> <![CDATA[ 
+\dlim _{x \to \infty } \df {x^3}{e^x} 
+]]> 
+</script>.
+</div>
+<div class="theorem-like problem-environment example" id="problem16"><a 
+ id="x1-3015r16"></a>Easter Egg
+</div>
+                                                                  
+
+                                                                  
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

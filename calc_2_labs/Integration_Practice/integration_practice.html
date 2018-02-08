@@ -1,0 +1,342 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+                                                                  
+
+                                                                  
+<title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="integration_practice.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\dsp }[0]{\displaystyle }
+\newcommand {\df }[0]{\dsp \frac }
+\newcommand {\dlim }[0]{\displaystyle \lim }
+\newcommand {\ddx }[0]{\df {d}{dx}}
+\newcommand {\dydx }[0]{\df {dy}{dx}}
+\newcommand {\dx }[0]{\; dx}
+\newcommand {\dt }[0]{\; dt}
+\newcommand {\dint }[0]{\displaystyle \int }
+\newcommand {\du }[0]{\; du}
+\newcommand {\dv }[0]{\; dv}
+\newcommand {\hh }[0]{\hs {40pt}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from integration_practice.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %0f0e4f799d9311a0e8809205febd308e% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Integrals are such a drag.
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Way too much to keep track of.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Come on, don&#x2019;t be such downers! I know class starts early than you
+     would like, but calculus is awesome!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Well, we&#x2019;ll just have to agree to disagree on this James.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">I bet I could change both your minds if I showed you just how much
+     you&#x2019;ve learned this semester about integration!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">As if! Bring it on James!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Strategies for Integration</h3>
+     <ul class="itemize1">
+     <li class="itemize">Always  do  some  algebra  first!!  Factoring  can  lead  to  some  very  nice
+     simplifications of problems that, at first glance, don&#x2019;t look like any problem
+     that you have recently done. Or, algebra might enlighten you as to what
+     method to employ!
+     </li>
+     <li class="itemize">Next you should always look for substitution: let <script type="math/tex"> <![CDATA[ 
+u = g(x) 
+]]> 
+</script> for some function <script type="math/tex"> <![CDATA[ 
+g(x) 
+]]> 
+</script> in
+     the integrand. Note that you necessarily need <script type="math/tex"> <![CDATA[ 
+g'(x) 
+]]> 
+</script> in the integrand as well for
+     <script type="math/tex"> <![CDATA[ 
+\du = g'(x) \dx  
+]]> 
+</script>. Also note: some substitutions can be <em>tricky</em> and involve solving for <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> in
+     the expression <script type="math/tex"> <![CDATA[ 
+u=g(x) 
+]]> 
+</script>.
+     </li>
+     <li class="itemize">Next, you might want to try Integration By Parts (IBP). Remember the ILATE
+     acronym, this stands for:
+         <ul class="itemize2">
+         <li class="itemize">Inverse Trig
+         </li>
+         <li class="itemize">Logarithms
+                                                                  
+
+                                                                  
+         </li>
+         <li class="itemize">Algebraic
+         </li>
+         <li class="itemize">Trig
+         </li>
+         <li class="itemize">Exponential</li></ul>
+     <!--l. 39--><p class="noindent" >Choose <script type="math/tex"> <![CDATA[ 
+u 
+]]> 
+</script> starting from the top and working down; choose <script type="math/tex"> <![CDATA[ 
+\dv  
+]]> 
+</script> starting from the
+     bottom and working up.
+     </p></li>
+     <li class="itemize">Are there powers of trig functions and only trig functions involved? Then you
+     can likely apply a trig identity. Here are our most commonly used ones:
+     <script type="math/tex; mode=display"><![CDATA[ 
+\begin{align*} 
+         \sin^2 x + \cos^2 x &= 1 &\sin^2 x &= \frac{1}{2}\left(1-\cos(2x)\right) \\
+           \tan^2 x + 1 &= \sec^2 x &\cos^2 x &= \frac{1}{2}\left(1 + \cos(2x) \right)
+         \end{align*} 
+]]> 
+</script>
+     </li>
+     <li class="itemize">Are there expressions in the integral like <script type="math/tex"> <![CDATA[ 
+\sqrt {x^2 - a^2}, \sqrt {a^2 - x^2}, \sqrt {x^2+a^2} 
+]]> 
+</script>? Then use trig substitution.
+     </li>
+     <li class="itemize">Is the integrand a rational function <script type="math/tex"> <![CDATA[ 
+\df {P(x)}{Q(x)} 
+]]> 
+</script>? Then if the degree of <script type="math/tex"> <![CDATA[ 
+P(x) 
+]]> 
+</script> is <script type="math/tex"> <![CDATA[ 
+\geq  
+]]> 
+</script> degree of <script type="math/tex"> <![CDATA[ 
+Q(x) 
+]]> 
+</script>, then
+     do long division first. Then, when the degree of the top is less than the degree
+     of the bottom, apply partial fraction decomposition.</li></ul>
+<a 
+ id="Q1-1-3"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-3000"></a>Practice Problems</h3>
+<!--l. 54--><p class="noindent" >Identify the correct integration technique for each of the following integrals. A correct
+technique is one that results in you solving the problem correctly - you don&#x2019;t actually
+have to complete all of the integrals to get credit, but you need to be able to
+recognize what techniques are used to solve a problem. This is the first step to
+mastering integrals!
+</p>
+<div class="problem-environment problem" id="problem1"><a 
+ id="x1-3001r1"></a> <script type="math/tex"> <![CDATA[ 
+\dint \cos ^2(x) \sin (x) \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem2"><span class="choice correct "   id="choice1">Trig Sub</span> <span class="choice  "   id="choice2">IBP</span> <span class="choice  "   id="choice3">Partial Fraction</span> <span class="choice  "   id="choice4">U Sub</span> <span class="choice  "   id="choice5">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback3"> This is a trig integral: so do a substitution. In this case, let <script type="math/tex"> <![CDATA[ 
+u = \cos x 
+]]> 
+</script>. </div>
+</div> <div class="problem-environment problem" id="problem4"><a 
+ id="x1-3002r2"></a> <script type="math/tex"> <![CDATA[ 
+\dint x^2 \ln (x) \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem5"><span class="choice  "   id="choice6">Trig Sub</span> <span class="choice correct "   id="choice7">IBP</span> <span class="choice  "   id="choice8">Partial Fraction</span> <span class="choice  "   id="choice9">U Sub</span> <span class="choice  "   id="choice10">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback6"> This is an integration by parts (IBP) problem. Let <script type="math/tex"> <![CDATA[ 
+u=\ln x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+dv = x^2 \dx  
+]]> 
+</script>. </div>
+</div> <div class="problem-environment problem" id="problem7"><a 
+ id="x1-3003r3"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {1+x^2}{1-x^2} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem8"><span class="choice correct "   id="choice11">Trig Sub</span> <span class="choice  "   id="choice12">IBP</span> <span class="choice correct "   id="choice13">Partial Fraction</span> <span class="choice  "   id="choice14">U Sub</span> <span class="choice  "   id="choice15">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback9"> This is a rational function. Since the degrees of the numerator and denominator are
+the same, do long division. The resulting integral might involve another technique,
+such as trig sub or partial fractions. </div>
+                                                                  
+
+                                                                  
+</div> <div class="problem-environment problem" id="problem10"><a 
+ id="x1-3004r4"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {x}{\sqrt {x^2 + 2}} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem11"><span class="choice correct "   id="choice16">Trig Sub</span> <span class="choice  "   id="choice17">IBP</span> <span class="choice  "   id="choice18">Partial Fraction</span> <span class="choice correct "   id="choice19">U Sub</span> <span class="choice  "   id="choice20">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback12"> You can do an easy substitution by letting <script type="math/tex"> <![CDATA[ 
+u = x^2 + 2 
+]]> 
+</script>; or you can do trig substitution with <script type="math/tex"> <![CDATA[ 
+x=\sqrt {2}\tan \theta  
+]]> 
+</script>. </div>
+</div> <div class="problem-environment problem" id="problem13"><a 
+ id="x1-3005r5"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {x}{\sqrt {x + 2}} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem14"><span class="choice  "   id="choice21">Trig Sub</span> <span class="choice  "   id="choice22">IBP</span> <span class="choice  "   id="choice23">Partial Fraction</span> <span class="choice correct "   id="choice24">U Sub</span> <span class="choice  "   id="choice25">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback15"> This is a tricky substitution problem. Let <script type="math/tex"> <![CDATA[ 
+u=x+2 
+]]> 
+</script>. Then <script type="math/tex"> <![CDATA[ 
+\dx = \du  
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+x = u-2 
+]]> 
+</script>. Now you can do algebra with
+the new integral and solve. </div>
+</div> <div class="problem-environment problem" id="problem16"><a 
+ id="x1-3006r6"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {x^2 + 2x + 10}{x^2 + x - 6} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem17"><span class="choice  "   id="choice26">Trig Sub</span> <span class="choice  "   id="choice27">IBP</span> <span class="choice correct "   id="choice28">Partial Fraction</span> <span class="choice  "   id="choice29">U Sub</span> <span class="choice  "   id="choice30">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback18"> Do long division first, then partial fractions. </div>
+</div> <div class="problem-environment problem" id="problem19"><a 
+ id="x1-3007r7"></a> <script type="math/tex"> <![CDATA[ 
+ \dint \sqrt {x^4 + x^7} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem20"><span class="choice  "   id="choice31">Trig Sub</span> <span class="choice  "   id="choice32">IBP</span> <span class="choice  "   id="choice33">Partial Fraction</span> <span class="choice correct "   id="choice34">U Sub</span> <span class="choice  "   id="choice35">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback21"> Do algebra first: factor out an <script type="math/tex"> <![CDATA[ 
+x^4 
+]]> 
+</script>, then you should get <script type="math/tex"> <![CDATA[ 
+\dint x^2\sqrt {1+x^3} \dx  
+]]> 
+</script>. Now do a simple substitution. </div>
+</div> <div class="problem-environment problem" id="problem22"><a 
+ id="x1-3008r8"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {\sqrt {x^4 - 8x^2}}{x} \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem23"><span class="choice correct "   id="choice36">Trig Sub</span> <span class="choice  "   id="choice37">IBP</span> <span class="choice  "   id="choice38">Partial Fraction</span> <span class="choice  "   id="choice39">U Sub</span> <span class="choice  "   id="choice40">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback24"> Again, do some algebra first. After factoring and cancelling, you can do trig sub. </div>
+</div> <div class="problem-environment problem" id="problem25"><a 
+ id="x1-3009r9"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {\dx }{x^2-1} 
+]]> 
+</script> <div class="multiple-choice" id="problem26"><span class="choice correct "   id="choice41">Trig Sub</span> <span class="choice  "   id="choice42">IBP</span> <span class="choice correct "   id="choice43">Partial Fraction</span> <span class="choice  "   id="choice44">U Sub</span> <span class="choice  "   id="choice45">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback27"> You can do trig sub or partial fractions for this one. The answers are equivalent (you
+should be able to see why that is!!) </div>
+</div> <div class="problem-environment problem" id="problem28"><a 
+ id="x1-3010r10"></a> <script type="math/tex"> <![CDATA[ 
+\dint (x^2\sin (x) + x\sin (x)) \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem29"><span class="choice  "   id="choice46">Trig Sub</span> <span class="choice correct "   id="choice47">IBP</span> <span class="choice  "   id="choice48">Partial Fraction</span> <span class="choice  "   id="choice49">U Sub</span> <span class="choice  "   id="choice50">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback30"> You can make the Integration by Parts here a little easier by factoring the integrand
+into <script type="math/tex"> <![CDATA[ 
+(x^2+x)\sin (x) 
+]]> 
+</script>. </div>
+</div> <div class="problem-environment problem" id="problem31"><a 
+ id="x1-3011r11"></a> <div class="problem-environment hint" id="problem32"><a 
+ id="x1-3012r12"></a> Factor - recall that <script type="math/tex"> <![CDATA[ 
+(e^x)^2 = e^{2x} 
+]]> 
+</script>
+</div> <script type="math/tex"> <![CDATA[ 
+\dint (e^{3x} + 2e^{2x} + e^x) \dx  
+]]> 
+</script> <div class="multiple-choice" id="problem33"><span class="choice  "   id="choice51">Trig Sub</span> <span class="choice  "   id="choice52">IBP</span> <span class="choice  "   id="choice53">Partial Fraction</span> <span class="choice  "   id="choice54">U Sub</span> <span class="choice correct "   id="choice55">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback34"> This was another silly problem that I came up with that doesn&#x2019;t require anything
+special. Thus integrate each term and you are done! </div>
+</div> <div class="problem-environment problem" id="problem35"><a 
+ id="x1-3013r13"></a>
+<!--l. 204--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\dint x\cos ^2(x)\sin (x) \dx  
+]]> 
+</script> </p><div class="multiple-choice" id="problem36"><span class="choice  "   id="choice56">Trig Sub</span> <span class="choice correct "   id="choice57">IBP</span> <span class="choice  "   id="choice58">Partial Fraction</span> <span class="choice  "   id="choice59">U Sub</span> <span class="choice  "   id="choice60">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback37"> This was is tricky! You need to do IBP! Let <script type="math/tex"> <![CDATA[ 
+u=x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+\dv = \cos ^2(x)\sin (x) \dx  
+]]> 
+</script> (don&#x2019;t we know how to integrate
+that from above???). </div>
+</div> <div class="problem-environment problem" id="problem38"><a 
+ id="x1-3014r14"></a> <script type="math/tex"> <![CDATA[ 
+\dint \df {\dx }{(x+12)^4} 
+]]> 
+</script> <div class="multiple-choice" id="problem39"><span class="choice  "   id="choice61">Trig Sub</span> <span class="choice  "   id="choice62">IBP</span> <span class="choice  "   id="choice63">Partial Fraction</span> <span class="choice correct "   id="choice64">U Sub</span> <span class="choice  "   id="choice65">Basic Integration</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback40"> This is really just the power rule. But if you can&#x2019;t see it, let <script type="math/tex"> <![CDATA[ 
+u=x+12 
+]]> 
+</script>. Then you should see
+that it is just <script type="math/tex"> <![CDATA[ 
+\dint \df {1}{u^4} \du  
+]]> 
+</script>. </div>
+</div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

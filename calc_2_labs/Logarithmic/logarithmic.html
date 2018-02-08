@@ -1,0 +1,376 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Logarithms</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="logarithmic.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from logarithmic.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %a0d4295b79fc953798b2f7f4400325dd% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech"><script type="math/tex"> <![CDATA[ 
+\log _b(x) 
+]]> 
+</script>? Why are they talking about trees on this paper?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Well,  that  doesn&#x2019;t  seem  quite  right...  it  probably  isn&#x2019;t  talking  about
+     forests or anything. Is it?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Come  on  you  guys,  the  lecture  <script type="math/tex"> <![CDATA[ 
+just 
+]]> 
+</script>  went  over  this!  It&#x2019;s  the  inverse
+     exponential function!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Examining Log Rules</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Alright, so it isn&#x2019;t about trees, and maybe I wasn&#x2019;t paying attention
+     during the lecture. So, what do I need to know before I do the lab?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Well, at least you&#x2019;re admitting it! I think I remember us going over a few
+     rules for logarithms, but I can&#x2019;t quite seem to remember how they went...
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Let&#x2019;s do a refresher then!</dd></dl>
+<!--l. 20--><p class="noindent" >For the following multiple choice questions, you&#x2019;ll be given the left hand side of the
+equation. Match it up with the right hand side! </p><div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> log<script type="math/tex"> <![CDATA[ 
+_b\left (\dfrac {x}{y}\right ) 
+]]> 
+</script>
+<div class="multiple-choice" id="problem2"><span class="choice  "   id="choice1"><script type="math/tex"> <![CDATA[ 
+\log _b(y)- \log _b(x) 
+]]> 
+</script></span> <span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+\dfrac {\log _b(x)}{\log _b(y)} 
+]]> 
+</script></span> <span class="choice correct "   id="choice3"><script type="math/tex"> <![CDATA[ 
+\log _b(x) - \log _b(y) 
+]]> 
+</script></span> <span class="choice  "   id="choice4"><script type="math/tex"> <![CDATA[ 
+\dfrac {\log _b(y)}{\log _b(x)} 
+]]> 
+</script></span> </div>
+<!--l. 31--><p class="noindent" >log<script type="math/tex"> <![CDATA[ 
+_b(x*y) 
+]]> 
+</script> </p><div class="multiple-choice" id="problem3"><span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+\log _b(y) \div \log _b(x) 
+]]> 
+</script></span> <span class="choice  "   id="choice6"><script type="math/tex"> <![CDATA[ 
+\log _b(x) \cdot \log _b(y) 
+]]> 
+</script></span> <span class="choice  "   id="choice7"><script type="math/tex"> <![CDATA[ 
+\log _b(y) \cdot \log _b(x) 
+]]> 
+</script></span> <span class="choice correct "   id="choice8"><script type="math/tex"> <![CDATA[ 
+\log _b(x) + \log _b(y) 
+]]> 
+</script></span> </div>
+<!--l. 39--><p class="noindent" >log<script type="math/tex"> <![CDATA[ 
+_b(x^y) 
+]]> 
+</script> </p><div class="multiple-choice" id="problem4"><span class="choice correct "   id="choice9"><script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> <script type="math/tex"> <![CDATA[ 
+\cdot  
+]]> 
+</script> log<script type="math/tex"> <![CDATA[ 
+_b(x) 
+]]> 
+</script></span> <span class="choice  "   id="choice10"><script type="math/tex"> <![CDATA[ 
+x \cdot \log _b(y) 
+]]> 
+</script></span> <span class="choice  "   id="choice11"><script type="math/tex"> <![CDATA[ 
+\log _b(x^y) 
+]]> 
+</script></span> <span class="choice  "   id="choice12"><script type="math/tex"> <![CDATA[ 
+\log _b(y^x) 
+]]> 
+</script></span> </div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Beyond the Basics</h3>
+     <dl class="dialogue"><dt class="actor">
+James </dt><dd 
+class="speech">Now that we&#x2019;ve gotten past the basic stuff, let&#x2019;s talk about the meaty
+     stuff - calculus with logs!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">I&#x2019;m not going to like this, am I?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Sometimes you&#x2019;re way too into this James...</dd></dl>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment example" id="problem5"><a 
+ id="x1-3001r2"></a>Lets work together to determine the value of <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\ln (x) 
+]]> 
+</script> <div class="theorem-like problem-environment explanation" id="problem6"><a 
+ id="x1-3002r3"></a>First, lets think about a number that
+might make it easier for us to determine the value. <div class="multiple-choice" id="problem7"><span class="choice  "   id="choice13"><script type="math/tex"> <![CDATA[ 
+x^2 
+]]> 
+</script></span> <span class="choice  "   id="choice14"><script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script></span> <span class="choice correct "   id="choice15"><script type="math/tex"> <![CDATA[ 
+e^x 
+]]> 
+</script></span> <span class="choice  "   id="choice16"><script type="math/tex"> <![CDATA[ 
+\pi  
+]]> 
+</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback8">We want <script type="math/tex"> <![CDATA[ 
+e^x 
+]]> 
+</script> because it is its own derivative - that will make our differentiation more
+than a bit easier! </div>
+<!--l. 68--><p class="noindent" >Now, lets consider a general equation <script type="math/tex"> <![CDATA[ 
+y = \ln (e^x) 
+]]> 
+</script>.
+</p><!--l. 70--><p class="noindent" >What is the derivative of the left hand side? <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dy}y = \answer {1} 
+]]> 
+</script>
+</p><!--l. 73--><p class="noindent" >On the right hand side, we apply the chain rule to see
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\dfrac {d}{dx} \ln (e^x) = \dfrac {dx}{dy} \cdot \dfrac {d}{dx}\ln (y) \text {, where } y = e^x 
+]]> 
+</script>
+</p><!--l. 75--><p class="noindent" >Now, because we know that <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}e^x = e^x 
+]]> 
+</script>, we can change our <script type="math/tex"> <![CDATA[ 
+\dfrac {dy}{dx}\cdot \dfrac {d}{dy}\ln (x) = 1 
+]]> 
+</script> to what?
+</p>
+<div class="multiple-choice" id="problem9"><span class="choice  "   id="choice17"><script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script></span> <span class="choice  "   id="choice18"><script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dz} = x 
+]]> 
+</script></span> <span class="choice  "   id="choice19"><script type="math/tex"> <![CDATA[ 
+\dfrac {1}{\dfrac {d}{dx}} 
+]]> 
+</script></span> <span class="choice correct "   id="choice20"><script type="math/tex"> <![CDATA[ 
+x \cdot \dfrac {d}{dx}\ln (x) 
+]]> 
+</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback10">And thus, we see that we have <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\ln (x) = \dfrac {1}{x} 
+]]> 
+</script>. So in general, the derivative of <script type="math/tex"> <![CDATA[ 
+\ln (x) 
+]]> 
+</script> is <script type="math/tex"> <![CDATA[ 
+\dfrac {1}{x} 
+]]> 
+</script>! </div>
+</div>
+</div>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Well, that was quite a bit James!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Its good to know!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Do you think you could give us a little practice James? I wanna be sure
+     I understand how to use it to get an A on this coming exam!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">It would be my pleasure!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Practice with Logarithmic Differentiation</h3>
+<!--l. 97--><p class="noindent" >Take the derivative of the following functions, without using any technology (except
+                                                                  
+
+                                                                  
+to enter your answer!).
+</p>
+<div class="problem-environment problem" id="problem11"><a 
+ id="x1-4001r4"></a> <script type="math/tex"> <![CDATA[ 
+\ln (x^2)=\answer {\frac {2}{x}} 
+]]> 
+</script>
+</div>
+<div class="problem-environment problem" id="problem12"><a 
+ id="x1-4002r5"></a> <script type="math/tex"> <![CDATA[ 
+\ln (x)+\ln (x)=\answer {\frac {2}{x}} 
+]]> 
+</script>
+</div>
+<div class="problem-environment problem" id="problem13"><a 
+ id="x1-4003r6"></a> <script type="math/tex"> <![CDATA[ 
+\ln (\cot (x))=\answer {-\csc (x)\cdot \sec (x)} 
+]]> 
+</script>
+</div>
+<!--l. 111--><p class="noindent" >Now, use your knowledge of Sage (and if necessary, a quick glance back at the Intro
+to Sage lab) to evaluate the following derivatives. If a point is indicated, evaluate at
+that point.
+</p>
+<div class="problem-environment problem" id="problem14"><a 
+ id="x1-4004r7"></a> <script type="math/tex"> <![CDATA[ 
+\ln (\ln (x)^3)=\answer {\dfrac {3}{x\cdot \ln (x)}} 
+]]> 
+</script>
+</div>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<div class="problem-environment problem" id="problem15"><a 
+ id="x1-4005r8"></a>
+<!--l. 127--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\ln (\sin (\cos (\ln (x)))) 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+x=10 
+]]> 
+</script>
+</p><!--l. 129--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\frac {(\frac {-1}{10}\cdot \cos (\cos (\log (10)))\cdot \sin (\log (10)))}{\sin (\cos (\log (10)))}} 
+]]> 
+</script>
+</div>
+</p>
+<div class="problem-environment problem" id="problem16"><a 
+ id="x1-4006r9"></a> <script type="math/tex"> <![CDATA[ 
+16^{\ln (\csc (x)^2)} 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+x = 1 
+]]> 
+</script>
+<!--l. 135--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {-3\cdot \ln (16)\cdot \cot (1)\cdot 16^{3\ln (\csc (1))}} 
+]]> 
+</script>
+</div>
+</p><!--l. 138--><p class="noindent" >Finally, we&#x2019;ll look at the general form of the derivative of a logarithmic function with
+any base <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script>. Here&#x2019;s a hint to get you started:
+</p><!--l. 140--><p class="noindent" >Use your knowledge of <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx} \ln (x) 
+]]> 
+</script> and the change of base formula, <script type="math/tex"> <![CDATA[ 
+\log _b(x) = \dfrac {\ln (x)}{\ln (b)} 
+]]> 
+</script> to find the derivative for <script type="math/tex"> <![CDATA[ 
+\log _b(x) 
+]]> 
+</script>. </p><div class="problem-environment problem" id="problem17"><a 
+ id="x1-4007r10"></a>
+What is <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\log _b(x) 
+]]> 
+</script>? <script type="math/tex"> <![CDATA[ 
+\answer {\frac {1}{x\cdot \ln (b)}} 
+]]> 
+</script>
+</div>
+<!--l. 146--><p class="noindent" >Now, try taking the derivative of just a few more functions!
+</p>
+<div class="problem-environment problem" id="problem18"><a 
+ id="x1-4008r11"></a> <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\log _{7}x^2 = \answer {\frac {2}{x \cdot \ln (7)}} 
+]]> 
+</script>
+</div>
+<div class="problem-environment problem" id="problem19"><a 
+ id="x1-4009r12"></a> <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\log _{5}\sin (x) = \answer {\frac {\cot (x)}{\ln (5)}} 
+]]> 
+</script>
+</div>
+<div class="problem-environment problem" id="problem20"><a 
+ id="x1-4010r13"></a> <script type="math/tex"> <![CDATA[ 
+\dfrac {d}{dx}\log _{20}x^3 = \answer {\frac {3}{x \cdot \ln (20)}} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

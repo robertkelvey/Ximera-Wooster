@@ -1,0 +1,290 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Applications of Extrema</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="max_min_app.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from max_min_app.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %8f180857da1a9e36802cb775096f4b6b% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">I love optimization, but I can&#x2019;t really imagine where we could use it in
+                                                                  
+
+                                                                  
+     real life.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Yeah, it seems great for graphs, but for real world problems? No way.
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">.....
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">.....
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">This is usually where James would chime in...
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Maybe he&#x2019;s running late?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Sorry guys, there was a traffic jam! I think it might be just perfect for
+     our first illustration of the uses of optimization!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>James&#x2019; Traffic Jam</h3>
+<!--l. 17--><p class="noindent" >On the way back from Walmart, James ran into a traffic jam along the highway
+caused by an accident. While he was waiting in traffic, James decided to work on a
+function that roughly modeled the speed of the traffic over the day, using data from a
+surveyor who had been monitoring the accident. The equation he found
+was
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+v(t)=t^3-11t^2+25t+45 
+]]> 
+</script>
+ where <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> is hours, <script type="math/tex"> <![CDATA[ 
+v(t) 
+]]> 
+</script> is miles per hour, and <script type="math/tex"> <![CDATA[ 
+t = 0 
+]]> 
+</script> at 7 AM. The function accurately models
+until 3 PM. </p><div class="problem-environment question" id="problem1"><a 
+ id="x1-1001r1"></a> Use the graph of <script type="math/tex"> <![CDATA[ 
+v(t) 
+]]> 
+</script> to complete the following problems. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [xmin=-20,xmax=20,ymin=-10,ymax=100]{v(t)=t^3-11t^2+25t+45}  
+]]> 
+</script> At approximately
+what time is the traffic moving the slowest? Give your answer to the nearest hour. <script type="math/tex"> <![CDATA[ 
+\answer {1} 
+]]> 
+</script> <div class="multiple-choice" id="problem2"><span class="choice  " 
+id="choice1">AM</span> <span class="choice correct "   id="choice2">PM</span> </div>
+<!--l. 30--><p class="noindent" >At what speed is the traffic moving at that time?
+                                                                  
+
+                                                                  
+</p><!--l. 32--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [validator=1]{15} \text {mi} \backslash \text {hr} 
+]]> 
+</script>
+</p><!--l. 34--><p class="noindent" >When is the traffic moving the most quickly?
+</p><!--l. 36--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {8} 
+]]> 
+</script></p><div class="multiple-choice" id="problem3"><span class="choice correct "   id="choice3">AM</span> <span class="choice  "   id="choice4">PM</span> </div>
+<!--l. 41--><p class="noindent" >At what speed, to the nearest mile per hour?
+</p><!--l. 43--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {61} \text {mi} \backslash \text {hr} 
+]]> 
+</script>
+</p><!--l. 45--><p class="noindent" ></div>
+     </p><dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Wow, I guess there are some uses for optimization!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Could we do something similar for the tree house I&#x2019;m building for my
+     cousin? It needs one side to be a screen to let air in and keep bugs out,
+     but the rest should be wood. We want it to be 200 square feet.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Sure! Let&#x2019;s try and find the cheapest you could build it for.</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Julia&#x2019;s Tree House</h3>
+<!--l. 52--><p class="noindent" >Julia is building a tree house for her younger cousin. She&#x2019;d like two opposite sides to
+be large screens to give a great view and airflow, without letting bugs pour in. The
+rest will be made of wood, with windows (which we will not account for).
+Unfortunately, to have the screen be sturdy enough for Julia to be comfortable, it
+will cost $18 per foot, while the wood will cost only $7 per foot. The treehouse will
+have a wood floor and ceiling, and will be three times as long as it is wide. Given
+that she wants the volume to be 120 cubic feet, how should she design it
+to minimize the cost? </p><div class="problem-environment question" id="problem4"><a 
+ id="x1-2001r2"></a> Determine the dimensions and cost of the cheapest
+tree house. Round cost to the nearest cent, and dimensions to 2 decimal
+places.
+<!--l. 56--><p class="noindent" >You can use the following Sage cell to help with computations. You may find the diff
+and solve commands useful. Type diff? or solve? into the Sage cell for help using the
+commands. </p><div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 63--><p class="noindent" >Length:<script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.01]{10.008} 
+]]> 
+</script> X Width:<script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.01]{3.336} 
+]]> 
+</script>
+</p><!--l. 65--><p class="noindent" >Cost: <script type="math/tex"> <![CDATA[ 
+\answer {1402.66} 
+]]> 
+</script>$
+</div>
+     </p><dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wow, thanks James! That&#x2019;s going to be a real help!
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Not a problem Julia.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Could you help my little sister with her lemonade stand?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Sure, let&#x2019;s look at how she can maximize her profits!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Dylan&#x2019;s Lemonade Stand</h3>
+<!--l. 76--><p class="noindent" >Dylan&#x2019;s little sister is running a lemonade stand, selling a cup for 25 cents. Because
+all her lemonade is freshly squeezed, she never has a wasted cup. However, due to
+her success, she has hired numerous employees and runs smear campaigns
+against other lemonade stands, resulting in very steep running costs, modeled
+by
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+c(x) = x^3+11x^2-18x\text {,} 
+]]> 
+</script>
+ while her revenue can be modeled by
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+r(x) = 25x\text {.} 
+]]> 
+</script>
+ Both <script type="math/tex"> <![CDATA[ 
+r(x) 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+c(x) 
+]]> 
+</script> are in thousands of dollars, and <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> is thousands of cups of lemonade.
+</p><div class="problem-environment question" id="problem5"><a 
+ id="x1-3001r3"></a>
+<!--l. 79--><p class="noindent" >You can use the following Sage cell to help with computations. You may find the diff
+and solve commands useful. Type diff? or solve? into the Sage cell for help using the
+commands. </p><div class="sage"><script type="text/x-sage">
+                                                                  
+
+                                                                  
+ 
+</script></div>
+<!--l. 86--><p class="noindent" >How many thousands of cups of lemonade should Dylan&#x2019;s little sister sell? Please
+round your answer to two decimal places.
+</p><!--l. 88--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.01]{1.603} 
+]]> 
+</script>
+</div>
+     </p><dl class="dialogue"><dt class="actor">
+James </dt><dd 
+class="speech">Excuse me for a second guys, I&#x2019;m getting a call. Hello?... Yes, this is
+     him... Sure, I&#x2019;ll get right on it!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">What was that about?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">I just got a call from a small business that wanted me to help them
+     figure out how to maximize their profits. Why don&#x2019;t you guys help me?
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">Sounds good!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Handmade Paper Cups</h3>
+<!--l. 97--><p class="noindent" >James just got a call from a small company just north of Wooster which specializes in
+hand crafted paper cups. Every day, the company pays its workers $2000, regardless
+of their productivity. Each thousand cups costs $2.15 to produce, as a result of the
+“high quality” paper which is used. Every day, new materials are ordered
+for <script type="math/tex"> <![CDATA[ 
+\frac {\$1500}{x} 
+]]> 
+</script>, where <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> is the number of cups in thousands produced in a single day.
+</p><div class="problem-environment question" id="problem6"><a 
+ id="x1-4001r4"></a>
+<!--l. 100--><p class="noindent" >You can use the following Sage cell to help with computations. You may find the diff
+and solve commands useful. Type diff? or solve? into the Sage cell for help using the
+commands. </p><div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 107--><p class="noindent" >How many thousands of cups should the company produce every day in order to
+minimize costs? Please round your answer to two decimal places.
+</p><!--l. 109--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.01]{26.414} 
+]]> 
+</script>
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

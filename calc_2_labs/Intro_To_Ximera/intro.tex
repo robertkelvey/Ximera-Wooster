@@ -1,0 +1,184 @@
+\documentclass{ximera}
+\title{Intro to Ximera}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{javascript}
+ caseInsensitive = function(a,b) {
+    return a.toLowerCase() == b.toLowerCase();
+  };
+\end{javascript}
+
+\begin{dialogue}
+\item[Julia] Hi, I'm Julia. Is anyone sitting here?
+\item[James] Nope, just me! I'm James by the way. Let's get started on this lab!
+\end{dialogue}
+
+\section{Multiple Choice and Select All}
+First things first - let's answer an easy multiple choice question! Simply click the correct box and then "Check Your Work"!
+
+\begin{question}
+Are you ready to learn how to use Ximera for your Calculus course?
+
+\begin{multipleChoice}
+\choice{Never!}
+\choice{No!}
+\choice[correct]{Heck yeah!}
+\choice{No way!}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Well great news for you! That's just what we'll do!
+\end{feedback}
+
+\end{question}
+\begin{dialogue}
+\item[Dylan] Ah! What was that?
+\item[James] Quit yelling in here! That was a feedback box, they usually give you a little more information on the question you answered.
+\item[Dylan] Oh, alright. Well, I'm Dylan! It's a pleasure.
+\item[Julia] I'm Julia, and this is James.
+\end{dialogue}
+
+Let's look at another type of question here: select all. These allow you to pick multiple boxes before checking your answer, and you need to get all of them to get the right answer! These choices will not always be made clear in these labs, so if you think you see two or more right answers, click away!
+
+\begin{question}
+Who have we met in this lab?
+\begin{selectAll}
+\choice{Jim}
+\choice{Jeff}
+\choice[correct]{Julia}
+\choice{Jennifer}
+\choice[correct]{James}
+\choice{Dillon}
+\choice[correct]{Dylan}
+\choice{Don}
+\end{selectAll}
+\end{question}
+
+\section{Fill in the Blanks!}
+\begin{dialogue}
+\item[Dylan] Woah, what's this blank box?
+\item[Julia] Looks like we put our answer in it? But how do I know how to format it?
+\item[James] Don't worry you two! Ximera is pretty smart, so as long as what you put in is equivalent to the answer Ximera knows, it should work fine! Check it out down here!
+\end{dialogue}
+
+\begin{question}
+Go ahead and put in $2x^2$ into the following blank, using
+\begin{verbatim}
+2x^2
+\end{verbatim}
+to raise $x$ to the power of two:
+
+$\answer{2x^2}$
+
+Now, the answer to this box is $2x^2$ as well, but try $2*(x)*(x)$ or $2x*x$!
+
+$\answer{2x^2}$
+\begin{feedback}[correct]
+Look! It all works the same! Isn't Ximera great?
+\end{feedback}
+\end{question}
+
+\begin{dialogue}
+\item[Dylan] Well that's cool and all, but what if I need a square root?
+\item[James] That's easy!
+\end{dialogue}
+
+There are two ways to enter a square root in Ximera; sqrt() and raising to the one-half power.
+
+\begin{question}
+Using what we learned in the last example, use
+\begin{verbatim}
+2^(1/2)
+\end{verbatim}
+to input $\sqrt{2}$. You'll have to use parentheses on the power, so that Ximera knows you want everything to the power.
+$\answer{\sqrt{2}}$
+\end{question}
+
+\begin{question}
+Now, use sqrt(2) to input it here!
+
+$\answer{\sqrt{2}}$
+\begin{feedback}[correct]
+Notice that Ximera gives you what it thinks you're inputting as you fill in the box! If you keep getting the wrong answer but think you're right, make sure to see if Ximera is interpretting your input correctly!
+\end{feedback}
+\end{question}
+
+\section{Hints}
+\begin{dialogue}
+\item[Julia] Ximera is cool, but I'm a little worried. What if I get stuck and I'm doing it outside of class? I can't exactly ask the professor then!
+\item[James] That is true Julia, but the people who made this thought of just that! When a problem can be tough or confusing, they sometimes drop you a \textbf{hint}. Look down below, and click the show hint button to see what they can do!
+\end{dialogue}
+
+Let's put some tough questions down, and use hints to answer them!
+\begin{question}
+\begin{hint}
+It's one of the characters we've seen so far, and the only one who doesn't have a J in their name!
+\end{hint}
+Who wrote this lab?
+$\answer[format=string,validator=caseInsensitive]{Dylan}$
+\end{question}
+\begin{question}
+\begin{hint}
+This was three years before 2020.
+\end{hint}
+What year was this lab written?
+$\answer{2017}$
+\end{question}
+
+Sometimes, a single question block can have multiple hints - if you're stuck, and there's a hint box, it's always worth clicking it again to see if another hint will appear!
+
+\begin{question}
+\begin{hint}
+I don't think you need a hint here.
+\end{hint}
+This question is easy, just click yes!
+\begin{multipleChoice}
+\choice{No}
+\choice{I refuse}
+\choice[correct]{yes!}
+\choice{Yes}
+\end{multipleChoice}
+
+\begin{hint}
+My favorite number is $\sqrt{4}$.
+\end{hint}
+What is my favorite number?
+$\answer{2}$
+\end{question}
+
+\section{Desmos}
+\begin{dialogue}
+\item[Dylan] Hey, this question wants me to graph something. Do I just put it on to paper?
+\item[Julia] Well, there's a box here that looks like a coordinate plane, but I'm not quite sure how to go about putting anything onto it.
+\item[James] This is a Desmos graph, and graphing with it is so easy! Just click the arrow on the left side, and put your equation in!
+\end{dialogue}
+
+In the following graph, input $x^3+4x$.
+\[
+\graph{}
+\]
+
+It should look like this:
+\[
+\graph{x^3+4x}
+\]
+
+\begin{dialogue}
+\item[Julia] Wow, that was easy!
+\item[Dylan] And sometimes I guess we'll just be given the graph!
+\item[James] I guess it all depends on the question! You can also change your window size on the right side of the graph, either with the ``+'' and ``-'' buttons, or by directly modifying the maximum and minimum $x$ and $y$ values by going into the window which opens with the wrench!
+\end{dialogue}
+
+Play with the following Desmos graph to see everything the wrench menu can allow you to do!
+
+\[
+\graph{2x^3+4x-8}
+\]
+
+\begin{dialogue}
+\item[Julia] Well, this looks like it's going to be a fun year!
+\item[James] Let's make it a great one!
+\item[Dylan] And let's dive in to Calculus!
+\end{dialogue}
+\end{document}

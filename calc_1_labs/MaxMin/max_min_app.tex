@@ -1,0 +1,112 @@
+\documentclass{ximera}
+\title{Applications of Extrema}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{dialogue}
+\item[Julia] I love optimization, but I can't really imagine where we could use it in real life.
+\item[Dylan] Yeah, it seems great for graphs, but for real world problems? No way.
+\item[Julia and Dylan] .....
+\item[Julia and Dylan] .....
+\item[Julia] This is usually where James would chime in...
+\item[Dylan] Maybe he's running late?
+\item[James] Sorry guys, there was a traffic jam! I think it might be just perfect for our first illustration of the uses of optimization!
+\end{dialogue}
+\section{James' Traffic Jam}
+On the way back from Walmart, James ran into a traffic jam along the highway caused by an accident. While he was waiting in traffic, James decided to work on a function that roughly modeled the speed of the traffic over the day, using data from a surveyor who had been monitoring the accident. The equation he found was $$v(t)=t^3-11t^2+25t+45$$ where $t$ is hours, $v(t)$ is miles per hour, and $t = 0$ at 7 AM. The function accurately models until 3 PM.
+\begin{question}
+Use the graph of $v(t)$ to complete the following problems.
+\[
+\graph[xmin=-20,xmax=20,ymin=-10,ymax=100]{v(t)=t^3-11t^2+25t+45}
+\]
+At approximately what time is the traffic moving the slowest? Give your answer to the nearest hour.
+$\answer{1}$
+\begin{multipleChoice}
+\choice{AM}
+\choice[correct]{PM}
+\end{multipleChoice}
+
+At what speed is the traffic moving at that time?
+
+$\answer[validator=1]{15} \text{mi} \backslash \text{hr}$
+
+When is the traffic moving the most quickly?
+
+$\answer{8}$\begin{multipleChoice}
+\choice[correct]{AM}
+\choice{PM}
+\end{multipleChoice}
+
+At what speed, to the nearest mile per hour?
+
+$\answer{61} \text{mi} \backslash \text{hr}$
+
+\end{question}
+\begin{dialogue}
+\item[Dylan] Wow, I guess there are some uses for optimization!
+\item[Julia] Could we do something similar for the tree house I'm building for my cousin? It needs one side to be a screen to let air in and keep bugs out, but the rest should be wood. We want it to be 200 square feet.
+\item[James] Sure! Let's try and find the cheapest you could build it for.
+\end{dialogue}
+\section{Julia's Tree House}
+Julia is building a tree house for her younger cousin. She'd like two opposite sides to be large screens to give a great view and airflow, without letting bugs pour in. The rest will be made of wood, with windows (which we will not account for). Unfortunately, to have the screen be sturdy enough for Julia to be comfortable, it will cost \$18 per foot, while the wood will cost only \$7 per foot. The treehouse will have a wood floor and ceiling, and will be three times as long as it is wide. Given that she wants the volume to be 120 cubic feet, how should she design it to minimize the cost?
+\begin{question}
+Determine the dimensions and cost of the cheapest tree house. Round cost to the nearest cent, and dimensions to 2 decimal places.
+
+You can use the following Sage cell to help with computations. You may find the diff and solve commands useful. Type diff? or solve? into the Sage cell for help using the commands.
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+
+Length:$\answer[tolerance=0.01]{10.008}$ X Width:$\answer[tolerance=0.01]{3.336}$
+
+Cost: $\answer{1402.66}$\$
+\end{question}
+
+\begin{dialogue}
+\item[Julia] Wow, thanks James! That's going to be a real help!
+\item[James] Not a problem Julia.
+\item[Dylan] Could you help my little sister with her lemonade stand?
+\item[James] Sure, let's look at how she can maximize her profits!
+\end{dialogue}
+
+\section{Dylan's Lemonade Stand}
+Dylan's little sister is running a lemonade stand, selling a cup for 25 cents. Because all her lemonade is freshly squeezed, she never has a wasted cup. However, due to her success, she has hired numerous employees and runs smear campaigns against other lemonade stands, resulting in very steep running costs, modeled by $$c(x) = x^3+11x^2-18x\text{,}$$ while her revenue can be modeled by $$r(x) = 25x\text{.}$$ Both $r(x)$ and $c(x)$ are in thousands of dollars, and $x$ is thousands of cups of lemonade.
+\begin{question}
+
+You can use the following Sage cell to help with computations. You may find the diff and solve commands useful. Type diff? or solve? into the Sage cell for help using the commands.
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+
+How many thousands of cups of lemonade should Dylan's little sister sell? Please round your answer to two decimal places.
+
+$\answer[tolerance=0.01]{1.603}$
+\end{question}
+\begin{dialogue}
+\item[James] Excuse me for a second guys, I'm getting a call. Hello?... Yes, this is him... Sure, I'll get right on it!
+\item[Dylan] What was that about?
+\item[James] I just got a call from a small business that wanted me to help them figure out how to maximize their profits. Why don't you guys help me?
+\item[Julia and Dylan] Sounds good!
+\end{dialogue}
+\section{Handmade Paper Cups}
+James just got a call from a small company just north of Wooster which specializes in hand crafted paper cups. Every day, the company pays its workers \$2000, regardless of their productivity. Each thousand cups costs \$2.15 to produce, as a result of the ``high quality'' paper which is used. Every day, new materials are ordered for $\frac{\$1500}{x}$, where $x$ is the number of cups in thousands produced in a single day.
+\begin{question}
+
+You can use the following Sage cell to help with computations. You may find the diff and solve commands useful. Type diff? or solve? into the Sage cell for help using the commands.
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+
+How many thousands of cups should the company produce every day in order to minimize costs? Please round your answer to two decimal places.
+
+$\answer[tolerance=0.01]{26.414}$
+\end{question}
+\pagebreak
+\end{document}

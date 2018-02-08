@@ -1,0 +1,185 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Introduction to Sage</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="sage.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from sage.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %9abb3e83c259e287ef0760555843d736% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+<div 
+class="abstract" 
+>
+<!--l. 5--><p class="noindent" >SageMath is a computer algebra system which uses Python. Throughout these labs
+Sage Cells will be used for certain problems. This lab introduces you to the basics of
+using SageMath via Sage Cells.
+</p></div>   <div class="maketitle"></div>
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 9--><p class="noindent" >If you ever want to use a sage cell when one is not provided, or would like to
+experiment with Sage Cells, you can follow this <a 
+href="https://sagecell.sagemath.org/" >link</a>.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Functions</h3>
+<!--l. 12--><p class="noindent" >To define a function you use the notation in the following sage cell: </p><div class="sage"><script type="text/x-sage">f(x)=x^5+3*x+4
+ 
+</script></div>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> What output did you get from evaluating the sage cell? <div class="multiple-choice" id="problem2"><span class="choice correct "   id="choice1">None</span> <span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+f(x)=x^5+3x+4 
+]]> 
+</script></span> <span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+x^5+3x+4 
+]]> 
+</script></span>
+</div>
+<div class="feedback" data-feedback="attempt" id="feedback3">All we did was define a function. To see the function definition type f(x).
+</div>
+Evaluate the function at <script type="math/tex"> <![CDATA[ 
+x=3 
+]]> 
+</script> by typing f(3) in the sage cell, what did you get?
+<script type="math/tex"> <![CDATA[ 
+\answer {256} 
+]]> 
+</script>
+</div> <div class="problem-environment question" id="problem4"><a 
+ id="x1-2002r2"></a> Define <script type="math/tex"> <![CDATA[ 
+f(x)=\sin (x)^2 
+]]> 
+</script> in the following cell, then (on the next line) evaluate at <script type="math/tex"> <![CDATA[ 
+x=4\pi  
+]]> 
+</script> <div class="problem-environment hint" id="problem5"><a 
+ id="x1-2003r3"></a> In sage, you type
+pi for <script type="math/tex"> <![CDATA[ 
+\pi  
+]]> 
+</script>. Remember to use the carrot <script type="math/tex"> <![CDATA[ 
+\wedge  
+]]> 
+</script> for powers and * for multiplication!
+</div> <div class="sage"><script type="text/x-sage">#To stop something from being evaluated put it in a comment using the hashtag
+ 
+</script></div>
+What did you get? <script type="math/tex"> <![CDATA[ 
+\answer {0} 
+]]> 
+</script>
+</div>
+<!--l. 44--><p class="noindent" >If you don&#x2019;t use function notation, or want to define a function of multiple variables
+you must define your variables before using them, as in the following Sage
+Cell. The following sage cell defines the equation <script type="math/tex"> <![CDATA[ 
+4x+y=1 
+]]> 
+</script>, and then solves it for <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>.
+</p><div class="sage"><script type="text/x-sage">var('x y')
+eqn=4*x+y==1
+solve(eqn,y)
+ 
+</script></div>
+<div class="problem-environment question" id="problem6"><a 
+ id="x1-2004r4"></a> From the sage cell above, what can you say about “=” vs “==”? <div class="multiple-choice" id="problem7"><span class="choice correct "   id="choice4">“=” is used for
+assignment and “==” is used to signify equality</span> <span class="choice  "   id="choice5">“=” is used to signify equality and
+“==” is used for assignment</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback8"><em>Note that you need to include the * operator, go back and take out the * to see how
+Sage Does error messages and debugging.</em> </div>
+</div> The solve command is also shown above, it&#x2019;s fairly intuitive to use, the thing you
+want to solve is the first parameter and what you&#x2019;re solving for is the second
+parameter. <div class="problem-environment question" id="problem9"><a 
+ id="x1-2005r5"></a> Using the solve command, find the roots for <script type="math/tex"> <![CDATA[ 
+f(x)=x^2+3x+2 
+]]> 
+</script> <div class="problem-environment hint" id="problem10"><a 
+ id="x1-2006r6"></a> You should be solving <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> for
+<script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>
+</div> <div class="sage"><script type="text/x-sage">#
+                                                                  
+
+                                                                  
+ 
+</script></div>
+Copy paste what you got in your sage cell here: <script type="math/tex"> <![CDATA[ 
+\answer [format=string]{[x == -2, x == -1]} 
+]]> 
+</script>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Getting Help</h3>
+<!--l. 79--><p class="noindent" >If you ever get stuck trying to use a command, there is built in documentation (as
+well as Google). Type the command followed directly by “?” to get extensive
+documentation on how to use it with examples. Try this for the solve command in
+the following cell. </p><div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

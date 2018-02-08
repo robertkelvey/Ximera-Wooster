@@ -1,0 +1,186 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\title{Derivative}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{dialogue}
+\item[Julia] Ah, this sucks!
+\item[Dylan] What's up?
+\item[Julia] I'm supposed to find the slope of a parabola at a point, and I'm not sure how!
+\item[Dylan] Well if we had two points we could make a secant line to approximate it!
+\item[Julia] Secant line? What's that?
+\item[Dylan] A \textit{secant line} is just a line which connects two points on a function!
+\item[Julia] But isn't the \textit{tangent} line one that skims a curve at one point? So the slope of the tangent line is the slope at that point! See?
+\[
+\graph{f(x)=x^2,g(x)=2(x-1)+1}
+\]
+\item[Dylan] Well do you know how to find the equation for a line with just one point?
+\item[Julia]...
+\item[James] Come on guys we can approximate the tangent line using the secant line!
+\item[Altogether]Let's dive in!
+\end{dialogue}
+
+
+
+\section{Guided Example}
+
+Consider the function $f(x) = x^2$. In green is $g(x)=4x-4$ the tangent line at the point $x=2$. Thus the slope of the tangent line at $x=2$ is 4.
+\[
+\graph{f(x)=x^2,g(x)=4x-4}
+\]
+%\begin{image}
+%\begin{center}
+%\begin{tikzpicture}
+%\begin{axis}[
+%    axis lines = left,
+%    xlabel = $x$,
+%    ylabel = {$f(x)$},
+%]
+%Below the red parabola is defined
+%\addplot [
+%    domain=-10:10, 
+%    samples=100, 
+%    color=red,
+%]
+%{x^2};
+%\addlegendentry{$x^2$}
+%\end{axis}
+%\end{tikzpicture}
+%\end{center}
+%\end{image}
+
+\begin{question}
+Find the slope of the secant line between $x = 2$ and $x = 7$.
+
+
+$\answer{9}$
+
+Does this seem to be a good approximation for the slope of the tangent line at $x = 2$?
+
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\end{multipleChoice}
+
+Dylan thinks we can solve the problem by just picking something closer than 7. Find the slope of the secant line between $x = 2$ and $x = 3$.
+
+$\answer{5}$
+
+Is this a good approximation for the slope of the tangent line at $x=2$?
+
+\begin{multipleChoice}
+\choice{Yes}
+\choice[correct]{No}
+\end{multipleChoice}
+
+Is it better than the last attempt?
+
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+\end{question}
+\begin{dialogue}
+\item[Julia] Dylan, this still isn't a great approximation...
+\item[Dylan] Well, I think we need to get even closer. Like, infinitesimally close! But how would we do that....
+\item[James] You guys need some help?
+\item[Julia and Dylan] James! How do we find the slope of a line at a point?
+\item[James] It isn't too tough! Before, you were considering a certain point as your comparison. What if instead, you used the point you want to evaluate at plus something really small? Let's call it $h$.
+\end{dialogue}
+\begin{question}
+How can you make the $h$ in $$\frac{f(2+h)-f(2)}{(2+h)-2}$$ approach 0?
+\begin{multipleChoice}
+\choice[correct]{Use $\lim_{h \to 0}$.}
+\choice{Use $\lim_{h \to \infty}$.}
+\choice{Divide the fraction by $h$.}
+\choice{Pick a function $f(x)$ so that $f(2)$ is 0.}
+\end{multipleChoice}
+
+Using the method you determined, approximate the slope of the tangent line at the point x=2.
+
+$\answer{4}$
+
+\end{question}
+\begin{dialogue}
+\item[James] Want to know something really cool?
+\item[Julia and Dylan] What James?
+\item[James] The function we just discovered is how you determine a function's derivative! Using that process, you can find the instantaneous rate of change at any point on a function!
+\item[Julia and Dylan] Wow! So cool!
+\end{dialogue}
+
+\section{On Your Own}
+Using what you've learned, find the derivative of the following functions at the given point.
+\setcounter{problem}{0}
+\begin{question}
+\begin{hint}
+Remember you can enter $\sqrt{x}$ as either \begin{verbatim}sqrt(...) or (...)^(1/2)\end{verbatim}
+\end{hint}
+$g(x) = x^2+1$, $x=2$
+
+$\answer{4}$
+
+$h(x) = \frac{1}{x}$, $x=2$
+
+$\answer{-0.25}$
+
+$f(x)=3x^2+4x+2$, $x=-1$
+
+$\answer{-2}$
+
+$f(x)=\sqrt{x^2+1}$, $x=3$
+
+$\answer{\frac{3}{\sqrt{10}}}$
+
+$f(x) = x+x^{-1}$,$x=4$
+
+$\answer{15/16}$
+
+\end{question}
+
+By replacing the point in our formula for the derivative with $x$, we may determine the derivative at any point on the function. Determine the derivative for the following functions.
+\begin{question}
+$m(x) = x^3$
+
+$\answer{3x^2}$
+
+$n(x) = 3x+2$
+
+$\answer{3}$
+
+$f(x)=4-x^2$
+
+$\answer{-2x}$
+
+$f(x) = 12+7x$
+
+$\answer{7}$
+
+$f(x)=\frac{4}{x+1}$
+
+$\answer{\frac{-4}{(x+1)^2}}$
+
+\end{question}
+
+
+\section{In Summary}
+\begin{dialogue}
+\item[Julia] So why is it called a secant line?
+\item[James] It comes from the Latin word secare, which means 'to cut'.
+\item[Dylan] Ohh, I get it now! Because a secant line is a line that 'cuts' a function!
+\end{dialogue}
+In this lab we've (hopefully) learned the function for finding a derivative using the limit as $h$ approaches 0. We also learned what secant and tangent lines are. For your convenience, the important definitions are listed below.
+\begin{definition}
+ A \textbf{secant line} is any line that connects any two points on a curve.
+\end{definition}
+\begin{definition}
+A \textbf{tangent line} is a line which intersects a differentiable curve at a point where the slope of the curve equals the slope of the line.
+\end{definition}
+\begin{definition}
+  The \textbf{derivative} of $f(x)$ at $a$ is defined by the following limit:
+  \[
+  \eval{\frac{d}{dx} f(x)}_{x=a} = \lim_{h\to 0} \frac{f(a+h) - f(a)}{h}.
+  \]
+\end{definition}
+\end{document}

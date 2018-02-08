@@ -1,0 +1,465 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Motion</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="Motion.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from Motion.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %7b70538e766e7a51b479b761dc24d4d6% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+var particle;
+var maxvel;
+var highest;
+var deploy;
+var descent;
+var takeoff;
+var coast;
+var fall;
+var para;    </script> 
+</div>
+ <div class="maketitle"></div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+                                                                  
+
+                                                                  
+Dylan </dt><dd 
+class="speech">I wonder where Julia and James are...
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech"><em>(runs in panting and clutching side)</em> Ha! I win
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech"><em>(enters, also catching breath)</em> I just don&#x2019;t get it, I was going faster than
+     you at some point!!!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Well don&#x2019;t you know that position, velocity, and acceleration are all
+     related? Just because you were at a faster velocity at some point doesn&#x2019;t
+     mean you got there first!
+     </dd><dt class="actor">
+Julia and James </dt><dd 
+class="speech">Oh gosh, please don&#x2019;t tell me this is more applications of
+     derivatives...</dd></dl>
+<!--l. 15--><p class="noindent" >There are three main aspects of motion that we will examine in this lab; position,
+velocity, and acceleration.
+</p>
+<div class="image-environment"><img 
+src="motion.jpg" alt="PIC"  
+ /> </div>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> A banana is sliding across an ice hockey rink after being thrown in by an
+over-excited child. The position of the banana, in meters, can be given by
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+p(t) = -\dfrac {1}{2}t^2+14t+11\text {,} 
+]]> 
+</script>
+ where <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> is measured in seconds.
+<!--l. 25--><p class="noindent" >What does the slope of the graph mean in this context? </p><div class="multiple-choice" id="problem2"><span class="choice  "   id="choice1">The velocity of the banana
+in ft/s.</span> <span class="choice correct "   id="choice2">The velocity of the banana in m/s.</span> <span class="choice  "   id="choice3">The acceleration of the banana in
+m/s<script type="math/tex"> <![CDATA[ 
+^2 
+]]> 
+</script>.</span> <span class="choice  "   id="choice4">The acceleration of the banana in ft/s<script type="math/tex"> <![CDATA[ 
+^2 
+]]> 
+</script>.</span> </div>
+<!--l. 33--><p class="noindent" >Graph this function. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</p><!--l. 38--><p class="noindent" >How would you determine the average velocity from <script type="math/tex"> <![CDATA[ 
+t = 3 
+]]> 
+</script> to <script type="math/tex"> <![CDATA[ 
+t = 6 
+]]> 
+</script>?
+</p>
+<div class="multiple-choice" id="problem3"><span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+\frac {p(3)-p(6)}{3-6} 
+]]> 
+</script></span> <span class="choice  "   id="choice6"><script type="math/tex"> <![CDATA[ 
+\frac {p(6)-p(3)}{2} 
+]]> 
+</script></span> <span class="choice  "   id="choice7"><script type="math/tex"> <![CDATA[ 
+\frac {p(3)-p(6)}{2} 
+]]> 
+</script></span> <span class="choice correct "   id="choice8"><script type="math/tex"> <![CDATA[ 
+\frac {p(6)-p(3)}{(6-3)} 
+]]> 
+</script></span> </div>
+<!--l. 48--><p class="noindent" >What is the average velocity over this interval?
+</p><!--l. 50--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {9.5}\text {m} / \text {s} 
+]]> 
+</script>
+</p><!--l. 52--><p class="noindent" >With help from the formula you used in the previous question, determine the
+instantaneous velocity at any point.
+</p><!--l. 54--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v(t) = \answer {-t+14} 
+]]> 
+</script>
+</p><!--l. 57--><p class="noindent" >Graph the equation you found. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p><!--l. 62--><p class="noindent" >Does this graph appear to model the rate of change of the original function?
+</p>
+<div class="multiple-choice" id="problem4"><span class="choice correct "   id="choice9">Yes</span> <span class="choice  "   id="choice10">No</span> </div>
+<!--l. 69--><p class="noindent" >If not, go back over your work from the previous problem.
+</p><!--l. 72--><p class="noindent" >What does the slope of this graph indicate?
+</p>
+<div class="multiple-choice" id="problem5"><span class="choice correct "   id="choice11">Acceleration of the banana.</span> <span class="choice  "   id="choice12">Deceleration of the banana.</span> <span class="choice  "   id="choice13">The position of the
+banana over time.</span> <span class="choice  "   id="choice14">The velocity of the banana versus its initial velocity.</span> </div>
+<!--l. 81--><p class="noindent" >Determine the average acceleration from <script type="math/tex"> <![CDATA[ 
+t = 3 
+]]> 
+</script> to <script type="math/tex"> <![CDATA[ 
+t = 6 
+]]> 
+</script>.
+</p><!--l. 83--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {-1} \text {m}/\text {s}^2 
+]]> 
+</script>
+</p><!--l. 85--><p class="noindent" >Now, create a function to determine the average acceleration at any point - the
+process will be extremely similar to that of problem 1 part d.
+</p><!--l. 87--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a(t) = \answer {-1} 
+]]> 
+</script>
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<div class="problem-environment question" id="problem6"><a 
+ id="x1-3001r2"></a> Examine the following graph of a particle&#x2019;s motion:
+<div class="image-environment"><img 
+src="position.png" alt="PIC"  
+ /> </div>
+<!--l. 99--><p class="noindent" >At what time(s) does the particle return to its initial point?
+</p>
+<div class="select-all" id="problem7"><a 
+ id="x1-3002r3"></a> <span class="choice  "   id="choice15"><script type="math/tex"> <![CDATA[ 
+1.4 
+]]> 
+</script> s</span> <span class="choice correct "   id="choice16"><script type="math/tex"> <![CDATA[ 
+1.6 
+]]> 
+</script> s</span> <span class="choice  "   id="choice17"><script type="math/tex"> <![CDATA[ 
+3 
+]]> 
+</script> s</span> <span class="choice correct "   id="choice18"><script type="math/tex"> <![CDATA[ 
+2.8 
+]]> 
+</script> s</span> <span class="choice  "   id="choice19"><script type="math/tex"> <![CDATA[ 
+3 
+]]> 
+</script> s</span>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 109--><p class="noindent" >When, if ever, is the velocity of the particle zero?
+</p>
+<div class="select-all" id="problem8"><a 
+ id="x1-3003r4"></a> <span class="choice  "   id="choice20"><script type="math/tex"> <![CDATA[ 
+1 
+]]> 
+</script> s</span> <span class="choice correct "   id="choice21"><script type="math/tex"> <![CDATA[ 
+0.8 
+]]> 
+</script> s</span> <span class="choice  "   id="choice22"><script type="math/tex"> <![CDATA[ 
+3 
+]]> 
+</script> s</span> <span class="choice  "   id="choice23"><script type="math/tex"> <![CDATA[ 
+2.7 
+]]> 
+</script> s</span> <span class="choice correct "   id="choice24"><script type="math/tex"> <![CDATA[ 
+2.4 
+]]> 
+</script> s</span> <span class="choice  "   id="choice25">The particle never has zero velocity.</span>
+</div>
+<!--l. 120--><p class="noindent" >If these points exist, does the object change direction each time?
+</p>
+<div class="multiple-choice" id="problem9"><span class="choice correct "   id="choice26">Yes</span> <span class="choice  "   id="choice27">No</span> </div>
+<!--l. 127--><p class="noindent" >At approximately what time is the particle moving the most quickly?
+</p><!--l. 129--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+t = \answer [id=particle,format=float,validator= (particle^2-2.8^2)/2.8 < .1]{} \text {s} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem10"><a 
+ id="x1-3004r5"></a> Model rockets work through burning a propellant to completion, coasting on
+momentum for some time, and finally releasing a parachute when the rocket begins
+to fall in order to prevent the rocket and its components from being destroyed upon
+landing. Examine the following graph of one such rocket&#x2019;s motion: <div class="image-environment"><img 
+src="rocket.png" alt="PIC"  
+ /> </div>
+<!--l. 137--><p class="noindent" >What was the maximum velocity obtained by the rocket?
+</p><!--l. 139--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v = \answer [id=maxvel,format=float,validator=(maxvel^2-170^2)/170 < .1]{} \text {ft} / \text {s} 
+]]> 
+</script>
+</p><!--l. 141--><p class="noindent" >When did the rocket reach its highest point?
+</p><!--l. 143--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+t = \answer [id=highest,format=float,validator=(highest^2-7.8^2)/7.8 < .1]{} \text {s} 
+]]> 
+</script>
+</p><!--l. 145--><p class="noindent" >What was the velocity at that time?
+</p><!--l. 147--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v = \answer {0} \text {ft} / \text {s} 
+]]> 
+</script>
+</p><!--l. 149--><p class="noindent" >When did the rocket&#x2019;s parachute deploy?
+</p><!--l. 151--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+t = \answer [id=deploy,format=float,validator=(deploy^2-10.5^2)/10.5 < .1]{} \text {s} 
+]]> 
+</script>
+</p><!--l. 153--><p class="noindent" >How fast was the rocket descending by that time?
+</p><!--l. 155--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v = -\answer [id=descent,format=float,validator=(descent^2-80^2)/80 < .1]{} \text {ft} / \text {s} 
+]]> 
+</script>
+</p><!--l. 157--><p class="noindent" >Describe how long each phase of the rocket lasted.
+</p><!--l. 159--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\text {Take-off} \hspace {5mm} \answer [id=takeoff,format=float,validator=(takeoff^2-2^2)/2 < .05]{} \text {s} 
+]]> 
+</script>
+</p><!--l. 161--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\text {Coasting} \hspace {5mm} \answer [id=coast,format=float,validator=(coast^2-5.8^2)/5.8 < .05]{} \text {s} 
+]]> 
+</script>
+</p><!--l. 163--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\text {Free-fall} \hspace {5mm} \answer [id=fall,format=float,validator=(fall^2-2.5^2)/2.5 < .1]{} \text {s} 
+]]> 
+</script>
+</p><!--l. 165--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\text {Parachute fall} \hspace {5mm} \answer [id=para,format=float,validator=(para^2-1.5^2)/1.5 < .1]{} \text {s} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem11"><a 
+ id="x1-3005r6"></a> At the surface of the Earth, acceleration due to gravity is approximately <script type="math/tex"> <![CDATA[ 
+9.8 \text {m} \backslash \text {s}^2 
+]]> 
+</script>.
+Consider throwing a ball directly upward from atop a 160 meter building at
+<script type="math/tex"> <![CDATA[ 
+35 \text {m} \backslash \text {s} 
+]]> 
+</script>.
+<!--l. 170--><p class="noindent" >Create an equation to express the acceleration of the ball at any time after it has
+been thrown.
+                                                                  
+
+                                                                  
+</p><!--l. 172--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a(t) = \answer {-9.8} 
+]]> 
+</script> </p><div class="feedback" data-feedback="attempt" id="feedback12">Remember, up is the positive direction. </div>
+<div class="problem-environment hint" id="problem13"><a 
+ id="x1-3006r7"></a> Don&#x2019;t forget to find the constant of integration - might it have something to do with
+the starting speed?
+</div> Integrate the previously constructed equation to produce the equation for velocity at
+any time for the ball.
+<!--l. 182--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v(t) = \answer {-9.8t+35} 
+]]> 
+</script>
+</p>
+<div class="problem-environment hint" id="problem14"><a 
+ id="x1-3007r8"></a> Don&#x2019;t forget the constant here either - what is the other factor influencing height
+here?
+</div> Now, integrate your new equation yet again to produce the equation for the position
+of the ball at any time.
+<!--l. 189--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p(t) = \answer {\frac {-9.8}{2}t^2+35t+160} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem15"><a 
+ id="x1-3008r9"></a> Consider a balloon which has been caught in a jet stream high above the
+ground. The horizontal position of the balloon at any time can be given by the
+equation
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+p(t) = 3t^5-15t^3+13\text {.} 
+]]> 
+</script>
+<div class="problem-environment hint" id="problem16"><a 
+ id="x1-3009r10"></a> Remember, acceleration is the derivative of velocity, and velocity is the derivative of
+position.
+</div> Produce the velocity and acceleration equations for the balloon.
+<!--l. 199--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v(t) = \answer {15t^4-45t^2} 
+]]> 
+</script>
+</p><!--l. 201--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a(t) = \answer {60t^3-90t} 
+]]> 
+</script>
+</p>
+<div class="problem-environment hint" id="problem17"><a 
+ id="x1-3010r11"></a> Remember to check where the velocity is zero. Then you can check between these
+points for the sign of the velocity!
+</div> Over what time period is the balloon moving in the positive direction?
+<!--l. 208--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\sqrt {3}} \leq t 
+]]> 
+</script>
+</p><!--l. 210--><p class="noindent" >When is the velocity increasing?
+</p><!--l. 212--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\sqrt {\frac {3}{2}}} \leq t 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</p>
+<div class="problem-environment hint" id="problem18"><a 
+ id="x1-3011r12"></a> Don&#x2019;t over complicate this - we only need to concern ourselves with position
+here!
+</div> What was the displacement of the balloon over the interval [0, 2.25]? <em>Displacement
+is distance from the initial position</em>. Please answer to two decimal places.
+<!--l. 219--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {2.13} \text {m} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem19"><a 
+ id="x1-3012r13"></a> <div class="problem-environment hint" id="problem20"><a 
+ id="x1-3013r14"></a> A great way to find the initial velocity is to find at what time the velocity became
+zero. This has to do with the 3.8 seconds!
+</div> On a spring break trip with friends, you find yourself dared to stand upon George
+Washington&#x2019;s nose on Mount Rushmore. While on the dangerous climb down, you
+come up with an experiment, and request one of your friends go to the base of the
+mountain. When you&#x2019;re on the nose, you take out your phone and wallet, and
+toss the wallet into the air, starting the timer just as you release the wallet.
+Simultaneously on the ground, your friend starts a stopwatch on his phone. You stop
+the timer as the wallet passes you, with your friend stopping their&#x2019;s once the wallet
+smashes into the ground. Your stopwatch displays 3.8 seconds, and your friend&#x2019;s
+displays 13.72 seconds.
+<!--l. 227--><p class="noindent" >Determine the acceleration, velocity, and position functions for the wallet. You will
+need to use equations to determine each constant of integration. Don&#x2019;t worry about
+units here, and remember that we&#x2019;re only concerned about the vertical position of the
+wallet.
+</p><!--l. 229--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p(t) = \answer {666.902+18.62t-4.9t^2} 
+]]> 
+</script> <script type="math/tex"> <![CDATA[ 
+v(t) = \answer {18.62-9.8t} 
+]]> 
+</script> <script type="math/tex"> <![CDATA[ 
+a(t) = \answer {-9.8} 
+]]> 
+</script>
+</p><!--l. 233--><p class="noindent" >What is the wallet&#x2019;s initial velocity?
+</p><!--l. 235--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_0 = \answer {18.62} \text {m} / \text {s} 
+]]> 
+</script>
+</p><!--l. 237--><p class="noindent" >What is it&#x2019;s velocity as it hits the ground?
+</p><!--l. 239--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_f = -\answer {115.836} \text {m} / \text {s} 
+]]> 
+</script>
+</p><!--l. 241--><p class="noindent" >How far off the ground is George Washington&#x2019;s nose?
+</p><!--l. 243--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+h = \answer {666.902} \text {m} 
+]]> 
+</script>
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>In Summary</h3>
+     <dl class="dialogue"><dt class="actor">
+James </dt><dd 
+class="speech">I guess there&#x2019;s more to position than just speed!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">A <em>lot</em> more! Do you think you could run through the big points real quick
+     Dylan?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Sure Julia! When we derive position, we get velocity, and when we derive
+     velocity, we get acceleration. Anti-differentiation will give us velocity from
+                                                                  
+
+                                                                  
+     acceleration and position from velocity.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Okay, but how do we get the constant of integration?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">I  know  this!  It&#x2019;s  whatever  was  the  initial  velocity  or  position  in  the
+     problem!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">That&#x2019;s right Julia! When the initial isn&#x2019;t given, we can use knowledge
+     of when an object returns to a position zero or stops for a moment to
+     determine those constants.</dd></dl>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

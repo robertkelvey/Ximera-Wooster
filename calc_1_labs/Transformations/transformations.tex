@@ -1,0 +1,191 @@
+\documentclass{ximera}
+\title{Transformations of Functions}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{javascript}
+ caseInsensitive = function(a,b) {
+    return a.toLowerCase() == b.toLowerCase();
+  };
+\end{javascript}
+\begin{dialogue}
+\item[Julia] Ugh!
+\item[Dylan] What's up Julia?
+\item[Julia] I have these functions I have to graph, and they're \textit{so} close to functions I know really well, but they're a little bit different and it makes it so I have to calculate a bunch of points before I can confidently graph it!
+\item[James] Sounds like you could use some help Julia!
+\item[Julia and Dylan] James!
+\item[James] There are a ton of ways to transform functions, so let's get going and look at how we can modify our favorite functions!
+\end{dialogue}
+\section{Introduction}
+While you work with many different functions, there are a few basic types of functions. These include polynomials, rational functions, trigonometric functions, exponential functions, and logarithmic functions. In this lab we will explore different variations on these basic functions called \textbf{transformations}.
+\section{Guided Example}
+Consider the function $f(x)=x^2$.
+
+\[
+\graph{f(x)=x^2}
+\]
+
+\begin{question}
+
+On the same axis graph $g(x)=f(x)+2$. What change happened from $f(x)$ to $g(x)$?
+
+The graph shifted $\answer{2}$ units $\answer[format=string,validator=caseInsensitive]{up}$.
+
+What can you infer about $f(x)-2$?
+
+The graph would shift $\answer{2}$ units $\answer[format=string,validator=caseInsensitive]{down}$.
+
+Consider the function $f(x+2)=(x+2)^2$. How do you think this graph will be different from the graph of $f(x)$?
+\begin{freeResponse}
+\end{freeResponse}
+Graph the function $f(x+2)$ in the desmos window above, was your prediction correct? What can you infer about the function $f(x-2)$? Graph this function to verify your prediction.
+\begin{freeResponse}
+\end{freeResponse}
+What rule can you write about a general function $f(x+c)$ where $c$ is a positive constant?
+The function will shift $\answer[format=string,validator=caseInsensitive]{c}$ units $\answer[format=string,validator=caseInsensitive]{left}$
+
+Why do you think the graph moves in the direction it does when using the rule you determined in the last question? \textit{Hint: Think about the $x$-intercept and how it changes when you add or subtract a constant from the $x$ value}
+\begin{freeResponse}
+\end{freeResponse}
+How do you think the graph of $f(x)=x^2$ be affected when you multiply the whole function by some constant $c$?
+\begin{freeResponse}
+\end{freeResponse}
+Graph the function $c \cdot f(x)$ for the following values of $c=2,\frac{1}{2},-2,\frac{-1}{2}$
+\[
+\graph{}
+\]
+Describe what is happening to the function based on the value of $c$, what can you generalize from this? It may be helpful to make a table with the x and y values to understand why this change happens.
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+\section{On your own}
+\begin{question}
+Using $f(x) = x^2$ as your base function create a new function that will shift the graph up 4 units, to the right 3 units, reflect it across the x-axis and stretch it vertically by a factor of 2 and graph it below
+\[
+\graph{}
+\]
+Graph the function $f(2x)$
+\[
+\graph{}
+\]
+What constant does this stretch or compress $x^2$ by?
+
+$\answer{1/2}$
+
+Graph $f(2x+6)$ on the same axis above, what transformation occurred?
+\begin{freeResponse}
+\end{freeResponse}
+Note the following expansion of the general function $f(x)=(ax+b)^2$: $$\displaystyle f(x)=\left(ax+b\right)^2=\left(a\left(x+\frac{b}{a}\right)\right)^2=a^2\left(x+\frac{b}{a}\right)^2$$
+
+From this expansion, how is a function in the form $f(x)=(ax+b)^2$ being shifted and stretched/compressed in terms of $a$ and $b$?
+\begin{freeResponse}
+\end{freeResponse}
+
+\end{question}
+\section{In Summary}
+
+For the following questions, pick in which way the general graph $f(x)$ would change under certain transformations.
+
+\begin{question}
+$$c \cdot f(x)$$
+When $c>1$
+
+\begin{multipleChoice}
+\choice{Shrink $f(x)$ vertically by $c$}
+\choice[correct]{Stretch $f(x)$ vertically by $c$}
+\choice{Shrink $f(x)$ horizontally by $c$}
+\choice{Stretch $f(x)$ horizontally by $c$}
+\choice{Flip $f(x)$ over the $x$ axis}
+\end{multipleChoice}
+
+When $c<-1$
+
+\begin{multipleChoice}
+\choice{Flip $f(x)$ over the $x$ axis}
+\choice{Shrink $f(x)$ horizontally by $c$}
+\choice{Flip $f(x)$ over the $y$ axis and stretch horizontally by $c$}
+\choice[correct]{Flip $f(x)$ over the $x$ axis and stretch vertically by $c$}
+\choice{Flip $f(x)$ over the $x$ axis and stretch horizontally by $c$}
+\end{multipleChoice}
+
+When $0<c<1$
+
+\begin{multipleChoice}
+\choice{Stretch $f(x)$ horizontally by $c$}
+\choice[correct]{Shrink $f(x)$ vertically by $c$}
+\choice{Shrink $f(x)$ horizontally by $c$}
+\choice{Stretch $f(x)$ horizontally by $c$}
+\choice{Flip $f(x)$ over the $x$ axis}
+\end{multipleChoice}
+\end{question}
+
+\begin{question}
+$$f(x+c)$$
+When $c>0$
+
+\begin{multipleChoice}
+\choice[correct]{Shift $f(x)$ left by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice{Shift $f(x)$ right by $|c|$}
+\choice{Flip $f(x)$ over the x-axis and shift it up by $|c|$.}
+\choice{No change occurs to $f(x)$.}
+\end{multipleChoice}
+
+When $c<0$
+
+\begin{multipleChoice}
+\choice{Shift $f(x)$ left by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice[correct]{Shift $f(x)$ right by $|c|$}
+\choice{Flip $f(x)$ over the x-axis and shift it up by $|c|$.}
+\choice{No change occurs to $f(x)$.}
+\end{multipleChoice}
+
+When $c=0$
+
+\begin{multipleChoice}
+\choice{Shift $f(x)$ left by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice{Shift $f(x)$ right by $|c|$}
+\choice{Flip $f(x)$ over the x-axis and shift it up by $|c|$.}
+\choice[correct]{No change occurs to $f(x)$.}
+\end{multipleChoice}
+
+\end{question}
+\begin{question}
+
+$$f(x)+c$$
+
+When $c>0$
+
+\begin{multipleChoice}
+\choice{Shift $f(x)$ down by $|c|$.}
+\choice{Stretch $f(x)$ vertically by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice[correct]{Shift $f(x)$ up by $|c|$.}
+\choice{No change will occur.}
+\end{multipleChoice}
+
+When $c=0$
+
+\begin{multipleChoice}
+\choice{Shift $f(x)$ down by $|c|$.}
+\choice{Stretch $f(x)$ vertically by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice{Shift $f(x)$ up by $|c|$.}
+\choice[correct]{No change will occur.}
+\end{multipleChoice}
+
+When $c<0$
+
+\begin{multipleChoice}
+\choice[correct]{Shift $f(x)$ down by $|c|$.}
+\choice{Stretch $f(x)$ vertically by $|c|$.}
+\choice{Flip $f(x)$ over the x-axis.}
+\choice{Shift $f(x)$ up by $|c|$.}
+\choice{No change will occur.}
+\end{multipleChoice}
+\end{question}
+\end{document}

@@ -1,0 +1,219 @@
+\documentclass{ximera}
+\title{Parametric Equations}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\section{Introduction}
+\begin{dialogue}
+\item[Julia] Ugh, I hate when they use stuff other than $x$ and $y$. I'm used to them! Why do they need to change them?
+\item[Dylan] It looks like there's a lot more going on here than usual. There are $x$ and $y$, but they're in different equations, and there's a $t$ that's all over the place!
+\item[James] These are what are known as \textit{parametric equations}. Rather than $x$ and $y$ being defined in terms of each other, they are defined by their relationship to a common variable, which here is $t$.
+\item[Dylan] Why is it called parametric? And why should we bother with it?
+\item[James] Well, they're called parametric equations because they are \textit{parameterized} by $t$, meaning they're represented in terms of $t$. Parameters show underlying factors to better model data. Think about this: as more families make chili, fewer drownings are recorded. Does it make sense that the chili is causing this? We could write something like $$\text{drownings} = 10 - \sqrt{\text{chili}}\text{.}$$
+\item[Julia] But that doesn't make sense! Those two things don't affect each other at all!
+\item[James] That's right! But temperature would affect both; it's cold out, so I make chili, and I don't want to go swimming! By using a parameter of temperature, we could make two equations which don't assume some non-existent relationship.
+\end{dialogue}
+
+\section{Examining Parametric Graphs}
+\begin{dialogue}
+\item[Dylan] So, how exactly do we input parametric equations in Desmos?
+\item[James] It's easy! First, we put a parenthesis, then the equation for our $x$-value. After that, we put a comma, our $y$-value equation, then close our parentheses!
+\item[Julia] But how do we work with our $t$ then?
+\item[James] Desmos will pop up a range for $t$ just under your equations!
+\end{dialogue}
+For the following questions, graph the given equations, and give a short explanation of why each graph looks the way it does.
+\begin{question}
+$x = \sin(2t)$, $y = 2t^2$, $t = [-2,2]$
+
+\[
+\graph{}
+\]
+
+\begin{freeResponse}
+\end{freeResponse}
+$x = t + \sin(3t)$, $y = 7t + \sin(2t)$, $t = [-6,6]$
+
+\[
+\graph{}
+\]
+
+\begin{freeResponse}
+\end{freeResponse}
+$x = 3\sin(2t)$, $y = 2\cos(t)$, $t = [0,2\pi]$
+
+\[
+\graph{}
+\]
+
+\begin{freeResponse}
+\end{freeResponse}
+$x(t) = 11\cos(t) - 6\cos\left(\dfrac{11}{6}t\right), y(t) = 11\sin(t) - 6\sin\left(\dfrac{11}{6} t\right)$, $t = [0,50]$
+
+\[
+\graph{}
+\]
+
+\begin{freeResponse}
+\end{freeResponse}
+\end{question}
+
+\section{On Your Own}
+\begin{question}
+\item Your friend Joe is beyond excited about his new car, and wants to see just what it can do, despite your requests to be careful. He has set up a large wooden ramp designed to cause his car to do three barrel rolls before landing. These barrel rolls will be perfect circles, his car is 1.5 meters wide, and will take off exactly at the same angle it will land at.
+
+How could the position of his right headlight be modeled, if the center of his front bumper is the origin?
+
+\begin{multipleChoice}
+\choice{$x(t)=\sin(t)$
+
+$y(t)=\cos(t)$}
+\choice{$x(t)=\cos(1.5t)$
+
+$y(t)=\sin(1.5t)$}
+\choice[correct]{$x(t)=1.5 \cdot \cos(t)$
+
+$y(t)=1.5 \cdot \sin(t)$}
+\choice{$x(t)=1.5 \cdot \cos(t)$
+
+$y(t)=\sin(t)$}
+\end{multipleChoice}
+
+What interval of $t$ should be used to replicate the spinning of Joe's car, assuming he lands the jump?
+
+\begin{multipleChoice}
+\choice{$t = [0,4\pi]$}
+\choice{$t = [0,\dfrac{10\pi}{3}]$}
+\choice[correct]{$t = [0,6\pi]$}
+\choice{$t = [0, 2\pi]$}
+\end{multipleChoice}
+
+Using the arc length formula, determine the distance traveled by his right headlight. Do not use a full period, or Sage will return zero; instead, use half of a period and remember to multiply your final result by two!
+
+$$L = \int_\alpha^\beta \sqrt{\left(\dfrac{dx}{dt}\right)^2 + \left(\dfrac{dy}{dt}\right)^2} \;dt$$
+
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+\begin{center}
+$\answer{9\pi}\text{m}$
+\end{center}
+\end{question}
+\begin{question}
+After his successful jump, Joe has become even more daring, deciding to jump across the Grand Canyon. Choosing the narrowest point along the canyon, in Marble Canyon, he needs to jump ``only'' 185 meters to safely land on the other side. Consider the base of the canyon directly under the jump to be the origin. This point lies 140 meters below the ramp.
+
+First, design position equations for Joe's car, starting with acceleration and working your way to position. You will not have the values to solve it, but you will end up with a skeleton for the final equation.
+
+\begin{multipleChoice}
+\choice[correct]{$p_y(t) = a_gt^2 + v_0t + 140$
+
+$p_x(t) = v_0t$}
+\choice{$p_y(t) = v_0t + 140$
+
+$p_x(t) = a_gt + v_0$}
+\choice{$p_y(t) = v_0t$
+
+$p_x(t) = a_gt^2 + v_0t$}
+\choice{$p_y(t) = a_gt^2 + 140$
+
+$p_x(t) = v_0t + 140$}
+\end{multipleChoice}
+
+For acceleration due to gravity, use $9.8 \text{m} \backslash \text{s}^2$. Joe's car leaves the ramp at $60 \text{m}\backslash \text{s}$, at an angle of $30^\circ$. What are the initial velocities in the $x$ and $y$ directions?
+
+\begin{multipleChoice}
+\choice{$v_{x0} = 30 \text{m} / \text{s}$
+
+$v_{y0} = 51.96 \text{m} / \text{s}$}
+\choice{$v_{x0} = 60 \text{m} / \text{s}$
+
+$v_{y0} = 60 \text{m} / \text{s}$}
+\choice[correct]{$v_{x0} = 51.96 \text{m} / \text{s}$
+
+$v_{y0} = 30 \text{m} / \text{s}$}
+\choice{$v_{x0} = 42.42 \text{m} / \text{s}$
+
+$v_{y0} = 42.42 \text{m} / \text{s}$}
+\end{multipleChoice}
+\begin{feedback}[correct]
+What is the equation for $v_{y}$?
+\begin{multipleChoice}
+\choice{$v_y = 30$}
+\choice[correct]{$v_y = 30 + a_gt$}
+\choice{$v_y = 30 + a_gt^2$}
+\choice{$v_y = 30t + a_gt^2$}
+\end{multipleChoice}
+What is the equation for $v_x$?
+\begin{multipleChoice}
+\choice{$v_x = 51.96t$}
+\choice{$v_y = 51.96 + a_gt$}
+\choice[correct]{$v_x = 51.96$}
+\choice{$v_x = 51.96t + a_gt^2$}
+\end{multipleChoice}
+\end{feedback}
+How long will it take Joe to reach the same altitude he started at?
+\begin{multipleChoice}
+\choice[correct]{$6.1224 \text{ s}$}
+\choice{$3.0612 \text{ s}$}
+\choice{$5.3020 \text{ s}$}
+\choice{$10.6040 \text{ s}$}
+\end{multipleChoice}
+
+
+How far will Joe travel before he returns to 160 meters off the base of the canyon?
+\begin{multipleChoice}
+\choice{$183.672 \text{ m}$}
+\choice{$145.09 \text{ m}$}
+\choice{$159.06 \text{ m}$}
+\choice[correct]{$318.12 \text{ m}$}
+\end{multipleChoice}
+
+Does Joe make it across?
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\end{multipleChoice}
+
+What is the necessary initial velocity for him to perfectly make the jump?
+\begin{multipleChoice}
+\choice{$v_{0} = 45.092 \text{m} / \text{s}$}
+\choice[correct]{$v_{0} = 40.3672 \text{m} / \text{s}$}
+\choice{$v_{0} = 35.673 \text{m} / \text{s}$}
+\choice{$v_{0} = 3.5673 \text{m} / \text{s}$}
+\end{multipleChoice}
+
+\end{question}
+\begin{question}
+Just before Joe started to accelerate towards the ramp, a young spider crawled onto one of his tires! Your friend noticed just before Joe started to move, and was able to give the position of the spider in both the $x$ and $y$ directions with respect to time:
+
+$$x = \dfrac{3}{\pi} \cdot (t - \sin(t))$$ $$y = \dfrac{3}{\pi} \cdot (1 - \cos(t))\text{.}$$
+
+Unfortunately, your friend didn't see what happened after Joe reached the ramp, and was unable to model everything which followed.
+
+If Joe's tires have a radius of $0.4$ meters and he must travel 131.85 meters to reach the base of the jump, how much distance will the spider have covered in this time?
+
+\textit{Note: We are not looking for the area under the curve here. Think of the distance around the tire, and the number of rotations the tires will experience.}
+
+$\answer{131.85} \text{m}$
+
+How does this distance relate to the distance the car itself moved?
+\begin{multipleChoice}
+\choice{The spider traveled a greater distance than the car.}
+\choice[correct]{The spider traveled the same distance as the car.}
+\choice{The spider traveled a lesser distance than the car.}
+\end{multipleChoice}
+
+For a parametric curve, the area under the curve may be represented by the integral $$A = \int_{t_0}^{t_1} y(t)x'(t) dt \text{.}$$
+
+What is the area under the curve for one full period?
+$\answer{.48\pi}$
+
+
+How does this relate to the area of the circle which created the cycloid?
+\begin{center}
+The area of the cycloid is $\answer{3}$ times as much as the area of the circle which traces it.
+\end{center}
+\end{question}
+\end{document}

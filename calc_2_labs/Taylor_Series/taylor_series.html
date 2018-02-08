@@ -1,0 +1,544 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+                                                                  
+
+                                                                  
+<title>Taylor Series</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="taylor_series.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\dsp }[0]{\displaystyle }
+\newcommand {\df }[0]{\dsp \frac }
+\newcommand {\dlim }[0]{\displaystyle \lim }
+\newcommand {\ddx }[0]{\df {d}{dx}}
+\newcommand {\dydx }[0]{\df {dy}{dx}}
+\newcommand {\dx }[0]{\; dx}
+\newcommand {\dt }[0]{\; dt}
+\newcommand {\dint }[0]{\displaystyle \int }
+\newcommand {\dsum }[0]{\displaystyle \sum }
+\newcommand {\dsumone }[0]{\dsum _{n=1}^{\infty }}
+\newcommand {\dseries }[0]{\dsum _{n=0}^{\infty }}
+\newcommand {\du }[0]{\; du}
+\newcommand {\dv }[0]{\; dv}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from taylor_series.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %380f38ea0f445eee9e20a74e2a4127d3% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+ <div class="maketitle"></div>
+<a 
+ id="Q1-1-1"></a>
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Whatever
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">But wait!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">There&#x2019;s more!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Overview of Taylor Series</h3>
+<!--l. 35--><p class="noindent" >A <em>Taylor Series</em> is just a power series, so it isn&#x2019;t anything different from what we&#x2019;ve
+already been looking at. Let us develop what it is by considering a specific
+example.
+</p><!--l. 37--><p class="noindent" >Consider <script type="math/tex"> <![CDATA[ 
+f(x) = \sin (x) 
+]]> 
+</script>. Suppose we could write <script type="math/tex"> <![CDATA[ 
+\sin (x) 
+]]> 
+</script> as a power series centered at <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script>: <script type="math/tex; mode=display"> <![CDATA[ 
+ \sin (x) = \sum _{n=0}^{\infty } a_n x^n.  
+]]> 
+</script> Then what can we
+say about this power series? Must it look a certain way? </p><div class="multiple-choice" id="problem1"><span class="choice correct "   id="choice1">Yes</span> <span class="choice  "   id="choice2">No</span> <div class="feedback" data-feedback="correct" id="feedback2"> We can see this
+by using <em>term-by-term differentiation</em>. </div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Taylor Series for <script type="math/tex"> <![CDATA[ 
+\sin (x) 
+]]> 
+</script></h3>
+<!--l. 52--><p class="noindent" >Assuming <script type="math/tex"> <![CDATA[ 
+\sin (x) 
+]]> 
+</script> can be written as the power series above, determine the value of <script type="math/tex"> <![CDATA[ 
+a_0 
+]]> 
+</script> by
+evaluating <script type="math/tex"> <![CDATA[ 
+\sin (0) 
+]]> 
+</script>.
+</p><!--l. 54--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_0 = \answer {0} 
+]]> 
+</script>
+</p><!--l. 56--><p class="noindent" >Solve for <script type="math/tex"> <![CDATA[ 
+a_1 
+]]> 
+</script> by evaluating <script type="math/tex"> <![CDATA[ 
+\frac {d}{dx}(\sin (x)) 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script>.
+</p><!--l. 58--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_1 = \answer {1} 
+]]> 
+</script>
+</p><!--l. 60--><p class="noindent" >Continue the same process to solve for <script type="math/tex"> <![CDATA[ 
+a_2, a_3, a_4 
+]]> 
+</script>, and <script type="math/tex"> <![CDATA[ 
+a_5 
+]]> 
+</script> (that is, keep taking derivatives and
+evaluate at <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script> to solve for the coefficients).
+</p><!--l. 62--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_2 = \answer {0} 
+]]> 
+</script>
+</p><!--l. 64--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_3 = \answer {-1/6} 
+]]> 
+</script>
+</p><!--l. 66--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_4 = \answer {0} 
+]]> 
+</script>
+</p><!--l. 68--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+a_5 = \answer {1/120} 
+]]> 
+</script>
+</p><!--l. 70--><p class="noindent" >Describe (as best you can) a general formula for <script type="math/tex"> <![CDATA[ 
+a_n 
+]]> 
+</script>.
+</p>
+<div class="free-response" id="problem3"><a 
+ id="x1-3001r1"></a>
+                                                                  
+
+                                                                  
+<!--l. 76--><p class="noindent" ></div>
+</p><!--l. 80--><p class="noindent" >Which of the following is the power series you just derived? </p><div class="multiple-choice" id="problem4"><span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+x + \frac {x^3}{6} + \frac {x^5}{120} + \frac {x^7}{5040} 
+]]> 
+</script></span> <span class="choice correct "   id="choice4"><script type="math/tex"> <![CDATA[ 
+\dseries x - \frac {x^3}{3!} + \frac {x^5}{5!} - \frac {x^7}{7!} + \dots  
+]]> 
+</script></span> </div>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Taylor Series for <script type="math/tex"> <![CDATA[ 
+\cos (x) 
+]]> 
+</script></h3>
+<!--l. 90--><p class="noindent" >Assume that <script type="math/tex"> <![CDATA[ 
+\cos (x) = b_n x^n 
+]]> 
+</script>, a power series centered at <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script>. Perform the same steps as in the previous
+problem to solve for the coefficients <script type="math/tex"> <![CDATA[ 
+b_n 
+]]> 
+</script>.
+</p><!--l. 92--><p class="noindent" >Write out the series that you just derived. What is the radius of convergence?
+</p><!--l. 94--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\infty } 
+]]> 
+</script>
+</p><!--l. 96--><p class="noindent" >Based off your work above, you should hopefully agree with the following
+definition:
+</p>
+<div class="theorem-like problem-environment definition" id="problem5"><a 
+ id="x1-4001r2"></a>The <strong>Taylor Series</strong> for a function <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> centered at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is the power series <script type="math/tex; mode=display"> <![CDATA[ 
+ T(x) = \dseries \df {f^{(n)}(c)}{n!}(x-c)^n.  
+]]> 
+</script>
+<!--l. 104--><p class="noindent" >When the center is <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script>, we call the series a <strong>Maclaurin Series</strong>: <script type="math/tex; mode=display"> <![CDATA[ 
+ T(x) = \dseries \df {f^{(n)}(0)}{n!}x^n.  
+]]> 
+</script>
+</p><!--l. 109--><p class="noindent" ></div> </p><div class="theorem-like problem-environment definition" id="problem6"><a 
+ id="x1-4002r3"></a>The <em>partial sums</em> of a Taylor series are called <strong>Taylor polynomials</strong> (or <em>Maclaurin
+polynomials</em>): <script type="math/tex; mode=display"> <![CDATA[ 
+ T_N(x) = \sum _{n=0}^N df{f^{(n)}(c)}{n!}(x-c)^n.  
+]]> 
+</script>
+<!--l. 116--><p class="noindent" ></div> </p><div class="theorem-like problem-environment definition" id="problem7"><a 
+ id="x1-4003r4"></a>The <strong>remainder term</strong> <script type="math/tex"> <![CDATA[ 
+R_N(x) 
+]]> 
+</script> corresponding to a Taylor series is <script type="math/tex; mode=display"> <![CDATA[ 
+ R_N(x) = T(x) - T_N(x).  
+]]> 
+</script> The remainder tells us
+how accurate the Taylor polynomial <script type="math/tex"> <![CDATA[ 
+T_N(x) 
+]]> 
+</script> is in approximating the series.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>Example with <script type="math/tex"> <![CDATA[ 
+e^x 
+]]> 
+</script></h3>
+<!--l. 125--><p class="noindent" >Let <script type="math/tex"> <![CDATA[ 
+f(x) = e^x 
+]]> 
+</script>. Determine the Taylor series for <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> centered at <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script> by following these steps. Compute
+the first 4 - 5 derivatives of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>: <script type="math/tex"> <![CDATA[ 
+f'(x) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script>, etc. Then evaluate them at <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script>. Now take your answers
+from the last step to write out the Taylor series <script type="math/tex"> <![CDATA[ 
+T(x) 
+]]> 
+</script>. Have we seen this series
+before?
+</p><!--l. 130--><p class="noindent" >In the previous example, you should get a Taylor series equal to <script type="math/tex"> <![CDATA[ 
+T(x) = series \df {x^n}{n!} 
+]]> 
+</script>. This is the power
+series we derived for <script type="math/tex"> <![CDATA[ 
+e^x 
+]]> 
+</script> in the last section - unless we didn&#x2019;t get that far in class!
+:(.
+<a 
+ id="Q1-1-7"></a>
+</p>
+<h3 class="likesectionHead"><a 
+ id="x1-6000"></a>Some Theorems for Taylor Series</h3>
+<!--l. 135--><p class="noindent" >As you should have seen above, the Taylor series for the functions <script type="math/tex"> <![CDATA[ 
+e^x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+df{1}{1-x} 
+]]> 
+</script> match up
+with the power series expansions that we saw in the previous section. This is no
+coincidence! If a function <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> has a power series expansion on an interval <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script> - meaning,
+there is a power series <em>converging</em> to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> on the interval <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script> - then that power series IS the
+Taylor series.
+</p>
+<div class="newtheorem">
+                                                                  
+
+                                                                  
+<!--l. 137--><p class="noindent" ><span class="head">
+Theorem: Taylor Series Expansion.  </span>If <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> is represented by a power series
+centered at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> in an interval <script type="math/tex"> <![CDATA[ 
+|x-c| < R 
+]]> 
+</script>, with <script type="math/tex"> <![CDATA[ 
+R>0 
+]]> 
+</script>, then that power series is the Taylor series <script type="math/tex; mode=display"> <![CDATA[ 
+ T(x) = series \df {f^{(n)}(c)}{n!}(x-c)^n.  
+]]> 
+</script>
+</p>
+</div>
+<!--l. 144--><p class="noindent" >How do we know when the converse of this is true? That is, when does the Taylor
+series for a function <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> actually converge to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>? Note that the <em>remainder term</em> <script type="math/tex"> <![CDATA[ 
+R_N(x) 
+]]> 
+</script> tries to
+tell us how well the partial sums <script type="math/tex"> <![CDATA[ 
+T_N(x) 
+]]> 
+</script> approximate the function <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>. Since a series converges
+if and only if the partial sums converge, we have:
+</p>
+<div class="newtheorem">
+<!--l. 146--><p class="noindent" ><span class="head">
+Taylor&#x2019;s Theorem.  </span>Suppose <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> has derivatives of all orders on an interval <script type="math/tex"> <![CDATA[ 
+I = (c-R, c+R) 
+]]> 
+</script>, for
+<script type="math/tex"> <![CDATA[ 
+R>0 
+]]> 
+</script>. Then the Taylor series <script type="math/tex; mode=display"> <![CDATA[ 
+ T(x) = \dseries \df {f^{(n)}(c)}{n!}(x-c)^n  
+]]> 
+</script> converges to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> in <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script> if and only if <script type="math/tex"> <![CDATA[ 
+\dlim _{N \to \infty } R_N(x) = 0 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> in <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script>.
+</p>
+</div>
+<!--l. 154--><p class="noindent" >Hence, showing that the remainder <script type="math/tex"> <![CDATA[ 
+R_N(x) 
+]]> 
+</script> tends to zero is enough to show that the Taylor
+Series converges to the function in question. Now this last theorem gives us an
+explicit way of writing out the remainder term so as to practically do all of
+this:
+</p>
+<div class="newtheorem">
+<!--l. 156--><p class="noindent" ><span class="head">
+Taylor&#x2019;s Theorem with Remainder.  </span>Suppose  <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>  is  differentiable  at  least  <script type="math/tex"> <![CDATA[ 
+n+1 
+]]> 
+</script>
+times on an interval <script type="math/tex"> <![CDATA[ 
+I=(c-R, c+R), R>0 
+]]> 
+</script>. Then for each <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> in <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script>, there exists a number <script type="math/tex"> <![CDATA[ 
+d 
+]]> 
+</script> between <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>
+such that <script type="math/tex; mode=display"> <![CDATA[ 
+ R_N(x) = \df {f^{(N+1)}(d)}{(N+1)!}(x-c)^{N+1}.  
+]]> 
+</script> If there exists a real number <script type="math/tex"> <![CDATA[ 
+M>0 
+]]> 
+</script> such that <script type="math/tex"> <![CDATA[ 
+|f^{(N+1)}(x)| \leq M 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> in <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script>, then <script type="math/tex; mode=display"> <![CDATA[ 
+ |R_N(x)| \leq \df {M}{(N+1)!}|x-c|^{N+1}.  
+]]> 
+</script>
+</p>
+</div>
+<!--l. 166--><p class="noindent" >Please note: we mostly just use the second part of this Theorem to help us show that
+<script type="math/tex"> <![CDATA[ 
+R_N(x) \to 0 
+]]> 
+</script>. We investigate this below.
+<a 
+ id="Q1-1-9"></a>
+</p>
+                                                                  
+
+                                                                  
+<h4 class="likesubsectionHead"><a 
+ id="x1-7000"></a>Showing convergence of a Taylor Series</h4>
+<!--l. 170--><p class="noindent" >Let us show that the Taylor series for <script type="math/tex"> <![CDATA[ 
+f(x) = \sin (x) 
+]]> 
+</script> centered at <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script> that you found at the beginning
+of this lab actually converges to <script type="math/tex"> <![CDATA[ 
+\sin (x) 
+]]> 
+</script>. Verify that <script type="math/tex"> <![CDATA[ 
+f(x) = \sin (x) 
+]]> 
+</script> has derivatives of all orders defined on
+the interval <script type="math/tex"> <![CDATA[ 
+I=(-\infty , \infty ) 
+]]> 
+</script>.
+</p>
+<div class="problem-environment question" id="problem8"><a 
+ id="x1-7001r5"></a> Write out <script type="math/tex"> <![CDATA[ 
+R_N(x) 
+]]> 
+</script> for the Taylor series of <script type="math/tex"> <![CDATA[ 
+f(x) = \sin (x) 
+]]> 
+</script> centered at <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script>.
+<!--l. 176--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\sum _{n=0}^\infty -1^{n-1}\frac {x^{2n-1}}{(2n-1)!}} 
+]]> 
+</script>
+</p><!--l. 178--><p class="noindent" >Find an upper bound <script type="math/tex"> <![CDATA[ 
+M 
+]]> 
+</script> for <script type="math/tex"> <![CDATA[ 
+|f^{(N+1)}(0)| 
+]]> 
+</script>. </p><div class="problem-environment hint" id="problem9"><a 
+ id="x1-7002r6"></a> Aren&#x2019;t all the derivatives of <script type="math/tex"> <![CDATA[ 
+f(x) = \sin (x) 
+]]> 
+</script> just one or two things? And
+are these functions bounded above by some constant?
+</div>
+<!--l. 180--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {1} 
+]]> 
+</script>
+</p><!--l. 183--><p class="noindent" >Use your previous answer to compute the limit <script type="math/tex"> <![CDATA[ 
+\dlim _{N \to \infty } \df {M}{(N+1)!}|x-c|^{N+1} 
+]]> 
+</script>. <script type="math/tex"> <![CDATA[ 
+\answer {0} 
+]]> 
+</script>
+</div> Thus, we can see that <script type="math/tex"> <![CDATA[ 
+\dlim _{N \to \infty } R_N(x) = 0 
+]]> 
+</script>!
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

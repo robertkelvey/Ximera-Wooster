@@ -1,0 +1,9 @@
+var particle;
+var maxvel;
+var highest;
+var deploy;
+var descent;
+var takeoff;
+var coast;
+var fall;
+var para;

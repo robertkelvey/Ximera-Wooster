@@ -1,0 +1,606 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Riemann Sums</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="Riemann.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from Riemann.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %513a519c05cb26ade66a3a3171dfb384% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div><div class="javascript" id="javascript1"><script type="text/javascript"> 
+//<![CDATA[ 
+ caseInsensitive = function(a,b) {
+    return a.toLowerCase() == b.toLowerCase();
+  };
+                                                                  
+
+                                                                  
+ 
+//]]> 
+</script></div>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Hey Julia, can you help me with this problem?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Yeah, of course! What do you need?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">I&#x2019;m supposed to approximate area under a curve, and I don&#x2019;t really see
+     what to do.
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Actually, that&#x2019;s pretty easy! We&#x2019;ll just use Riemann sums.</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 20--><p class="noindent" >Riemann sums are a method of approximating area under a curve. In this lab, we will
+look at three varieties; left, right, and midpoint.
+</p><!--l. 22--><p class="noindent" >Please answer to at least three decimal places throughout this lab!
+</p>
+<div class="image-environment"><img 
+src="Table.jpg" alt="PIC"  
+ /> </div>
+<div class="center" 
+>
+<!--l. 27--><p class="noindent" >
+</p><!--l. 28--><p class="noindent" ><em>Obtained from <a 
+href="http://mathforum.org/mathimages/index.php/Riemann_Sums" >mathforum.org</a></em></p></div>
+<!--l. 32--><p class="noindent" >To create Riemann sums, you simply pick a number of desired subintervals, and then
+evenly divide the interval to produce the desired number. From here, we
+choose the height of what will be our rectangles differently for each version:
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><strong>Left Riemann Sum:</strong> The height is calculated using the left endpoint of
+     the subinterval.
+     </li>
+     <li class="itemize"><strong>Right Riemann Sum:</strong> The height is calculated using the right endpoint
+     of the subinterval.
+     </li>
+     <li class="itemize"><strong>Midpoint Riemann Sum:</strong> The height is calculated using the midpoint
+     of the subinterval.</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 39--><p class="noindent" >From here, we simply add the area of each rectangle to produce the area under the
+curve.
+</p><!--l. 41--><p class="noindent" >If we are approximating area with <script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script> rectangles, then
+</p><script type="math/tex; mode=display"><![CDATA[ 
+\begin{align*} 
+  \text{Area} &\approx \sum_{k=1}^n (\text{height of $k$th rectangle})\times(\text{width of $k$th rectangle}) \\
+  &=\sum_{k=1}^n  f(x_k^*)\Delta x \\
+  &=  f(x_1^*)\Delta x +  f(x_2^*)\Delta x +   f(x_3^*)\Delta x + \dots +   f(x_n^*)\Delta x.
+\end{align*} 
+]]> 
+</script>
+<div class="theorem-like problem-environment definition" id="problem2"><a 
+ id="x1-1001r1"></a>A sum of the form: <script type="math/tex; mode=display"> <![CDATA[ 
+ \sum _{k=1}^n f(x_k^*)\Delta x = f(x_1^*)\Delta x + f(x_2^*)\Delta x + \dots + f(x_n^*)\Delta x  
+]]> 
+</script> is called a <strong>Riemann sum</strong>.
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Increasing, Concave Up</h3>
+<!--l. 56--><p class="noindent" >Consider the function <script type="math/tex"> <![CDATA[ 
+x^2 
+]]> 
+</script> on the interval [1, 6]. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [xmin=-1,xmax=7,ymin=-1,ymax=40,height=400]{x^2}  
+]]> 
+</script>
+</p>
+<div class="problem-environment question" id="problem3"><a 
+ id="x1-2001r2"></a> The following qustion shows how to compute the Riemann sums using Sage cells,
+you will need to mimic this process in further questions so be sure to read
+the Sage code and understand how it represents the equation for Riemann
+sums.
+<!--l. 66--><p class="noindent" >The left Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">f(x) = x^2
+a=1.0
+b=6.0
+n=6
+Dx=(b-a)/n
+rsum=sum([f(a+i*Dx)*Dx for i in range(n)])
+print rsum
+ 
+</script></div>
+What did you get for the left Reimann sum from evaluating the above Sage cell?
+<script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{57.6620370370370} 
+]]> 
+</script>
+<!--l. 83--><p class="noindent" >The right Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">f(x) = x^2
+a=1.0
+b=6.0
+n=6
+Dx=(b-a)/n
+                                                                  
+
+                                                                  
+rsum=sum([f(a+(i+1)*Dx)*Dx for i in range(n)])
+print rsum
+ 
+</script></div>
+What did you get for the right Reimann sum from evaluating the above Sage cell? <script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{86.8287037037037} 
+]]> 
+</script>
+<div class="feedback" data-feedback="attempt" id="feedback4">Notice the change in the second to last line between the code for left and right
+Riemann sums. </div>
+<!--l. 102--><p class="noindent" >The midpoint Riemann sum. </p><div class="sage"><script type="text/x-sage">f(x) = x^2
+a=1.0
+b=6.0
+n=6
+Dx=(b-a)/n
+rsum=sum([f(a+(i+0.5)*Dx)*Dx for i in range(n)])
+print rsum
+ 
+</script></div>
+What did you get for the midpoint Reimann sum from evaluating the above Sage
+cell? <script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{71.3773148148148} 
+]]> 
+</script>
+<!--l. 117--><p class="noindent" >Compute the integral numerically by evaluating the following Sage cell. Which of
+these estimates was most accurate? Show the percent error for each type of Riemann
+sum, rounding to two decimal places.
+</p>
+<div class="theorem-like problem-environment remark" id="problem5"><a 
+ id="x1-2002r3"></a>Recall that percent error is calculated with the following formula:
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\left |\dfrac {\text {Calculated}-\text {Actual}}{Actual}\right | \cdot 100 
+]]> 
+</script>
+</div>
+<div class="sage"><script type="text/x-sage">integral(x^2,x,0,6)
+                                                                  
+
+                                                                  
+ 
+</script></div>
+<!--l. 129--><p class="noindent" >Most Accurate: </p><div class="multiple-choice" id="problem6"><span class="choice  "   id="choice1">Left Riemann Sum</span> <span class="choice  "   id="choice2">Right Riemann Sum</span> <span class="choice correct "   id="choice3">Midpoint Riemann
+Sum</span> </div>
+Left Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {19.91} 
+]]> 
+</script>%
+<!--l. 137--><p class="noindent" >Middle Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {0.86} 
+]]> 
+</script>%
+</p><!--l. 139--><p class="noindent" >Right Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {20.60} 
+]]> 
+</script>%
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Decreasing, Concave Up</h3>
+<div class="problem-environment question" id="problem7"><a 
+ id="x1-3001r4"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+x^2 
+]]> 
+</script> on the interval [-7, 0].
+<!--l. 148--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [height=400,xmin=-8,xmax=1,ymin=-1,ymax=55]{x^2}  
+]]> 
+</script>
+</p><!--l. 150--><p class="noindent" >Calculate the following Riemann sums by modifying the code provided in the first
+question to have seven subintervals and reflect the new endpoints.
+</p><!--l. 152--><p class="noindent" >The left Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 160--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {140} 
+]]> 
+</script>
+</p><!--l. 162--><p class="noindent" >The right Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 170--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {91} 
+]]> 
+</script>
+</p><!--l. 172--><p class="noindent" >The midpoint Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 180--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {113.75} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</p><!--l. 182--><p class="noindent" >Compute the integral numerically. Which of these estimates was most accurate? Show
+the percent error for each type of Riemann sum, rounding to two decimal
+places.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 190--><p class="noindent" >Most Accurate: </p><div class="multiple-choice" id="problem8"><span class="choice  "   id="choice4">Left Riemann Sum</span> <span class="choice  "   id="choice5">Right Riemann Sum</span> <span class="choice correct "   id="choice6">Midpoint Riemann
+Sum</span> </div>
+Left Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {22.45} 
+]]> 
+</script>%
+<!--l. 198--><p class="noindent" >Middle Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {0.51} 
+]]> 
+</script>%
+</p><!--l. 200--><p class="noindent" >Right Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {20.41} 
+]]> 
+</script>%
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Increasing, Concave Down</h3>
+<div class="problem-environment question" id="problem9"><a 
+ id="x1-4001r5"></a> <div class="problem-environment hint" id="problem10"><a 
+ id="x1-4002r6"></a> Add .n() right after rsum to get a clean numerical approximation.
+</div> Consider the function <script type="math/tex"> <![CDATA[ 
+\sin (x) 
+]]> 
+</script> on the interval [0,<script type="math/tex"> <![CDATA[ 
+\frac {\pi }{2} 
+]]> 
+</script>].
+<!--l. 212--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [xmin=-.5,xmax=2,ymin=-1.5,ymax=1.5,height=400]{sin(x)}  
+]]> 
+</script>
+</p><!--l. 214--><p class="noindent" >Calculate the following Riemann sums by modifying the code provided in the first
+question to have four subintervals and reflect the new endpoints and new
+function.
+</p><!--l. 216--><p class="noindent" >The left Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 224--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{0.790766260123413} 
+]]> 
+</script>
+</p><!--l. 226--><p class="noindent" >The right Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 234--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{1.18346534182214} 
+]]> 
+</script>
+</p><!--l. 236--><p class="noindent" >The midpoint Riemann sum.
+                                                                  
+
+                                                                  
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 244--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{1.00645454279956} 
+]]> 
+</script>
+</p><!--l. 246--><p class="noindent" >Compute the integral numerically. Which of these estimates was most accurate? Show
+the percent error for each type of Riemann sum, rounding to two decimal
+places.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 254--><p class="noindent" >Most Accurate: </p><div class="multiple-choice" id="problem11"><span class="choice  "   id="choice7">Left Riemann Sum</span> <span class="choice  "   id="choice8">Right Riemann Sum</span> <span class="choice correct "   id="choice9">Midpoint Riemann
+Sum</span> </div>
+<!--l. 261--><p class="noindent" >Left Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {20.92} 
+]]> 
+</script>%
+</p><!--l. 263--><p class="noindent" >Middle Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {0.65} 
+]]> 
+</script>%
+</p><!--l. 265--><p class="noindent" >Right Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {18.35} 
+]]> 
+</script>%
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>Decreasing, Concave Down</h3>
+<div class="problem-environment question" id="problem12"><a 
+ id="x1-5001r7"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+\cos (x) 
+]]> 
+</script> on the interval [0, <script type="math/tex"> <![CDATA[ 
+\frac {\pi }{2} 
+]]> 
+</script>].
+<!--l. 275--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [xmin=-.5,xmax=2,ymin=-1.5,ymax=1.5,height=400]{cos(x)}  
+]]> 
+</script>
+</p><!--l. 277--><p class="noindent" >Calculate the following Riemann sums by modifying the code provided in the first
+question to have four subintervals and reflect the new endpoints and new
+function.
+</p><!--l. 279--><p class="noindent" >The left Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 287--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{1.18346534182214} 
+]]> 
+</script>
+</p><!--l. 289--><p class="noindent" >The right Riemann sum.
+</p>
+                                                                  
+
+                                                                  
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 297--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{0.790766260123413} 
+]]> 
+</script>
+</p><!--l. 299--><p class="noindent" >The midpoint Riemann sum.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 307--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{1.00645454279956} 
+]]> 
+</script>
+</p><!--l. 309--><p class="noindent" >Compute the integral numerically. Which of these estimates was most accurate? Show
+the percent error for each type of Riemann sum, rounding to two decimal
+places.
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 317--><p class="noindent" >Most Accurate: </p><div class="multiple-choice" id="problem13"><span class="choice  "   id="choice10">Left Riemann Sum</span> <span class="choice  "   id="choice11">Right Riemann Sum</span> <span class="choice correct "   id="choice12">Midpoint Riemann
+Sum</span> </div>
+Left Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {18.35} 
+]]> 
+</script>%
+<!--l. 325--><p class="noindent" >Middle Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {0.65} 
+]]> 
+</script>%
+</p><!--l. 327--><p class="noindent" >Right Percent Error: <script type="math/tex"> <![CDATA[ 
+\answer {20.92} 
+]]> 
+</script>%
+</div>
+     </p><dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">That&#x2019;s cool! Thanks Julia!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">No problem!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">I wish I could make the sums more accurate though... some of them are
+     pretty far off.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">I think if you put your mind to it you could Dylan!
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">James! You&#x2019;re late to class!
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Haha no problem, I love helpi... that&#x2019;s not the point! Listen, just use
+     sum notation, and try to make infinitely many subintervals. If you can do
+     that, you&#x2019;ll have an accurate area.</dd></dl>
+<div class="problem-environment question" id="problem14"><a 
+ id="x1-5002r8"></a>
+<div class="problem-environment hint" id="problem15"><a 
+ id="x1-5003r9"></a> Think of the start of the interval as <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script> and the end as <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script>.
+</div>
+<!--l. 344--><p class="noindent" >How would you represent the width of each rectangle when divided into <script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script>
+subintervals?
+</p>
+<div class="multiple-choice" id="problem16"><span class="choice  "   id="choice13"><script type="math/tex"> <![CDATA[ 
+\frac {b+a}{2} 
+]]> 
+</script></span> <span class="choice  "   id="choice14"><script type="math/tex"> <![CDATA[ 
+\frac {b-a}{2} 
+]]> 
+</script></span> <span class="choice correct "   id="choice15"><script type="math/tex"> <![CDATA[ 
+\frac {b-a}{n} 
+]]> 
+</script></span> <span class="choice  "   id="choice16"><script type="math/tex"> <![CDATA[ 
+\frac {n}{b-a} 
+]]> 
+</script></span> </div>
+<div class="problem-environment hint" id="problem17"><a 
+ id="x1-5004r10"></a> As <script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script> grows larger, will the rectangle be wider than a single point? What does that tell
+you about the height?
+</div>
+<!--l. 357--><p class="noindent" >How would you represent the height of each rectangle when divided into <script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script>
+subintervals?
+</p>
+<div class="multiple-choice" id="problem18"><span class="choice correct "   id="choice17"><script type="math/tex"> <![CDATA[ 
+f(x_i) 
+]]> 
+</script></span> <span class="choice  "   id="choice18"><script type="math/tex"> <![CDATA[ 
+f(x_b)-f(x_a) 
+]]> 
+</script></span> <span class="choice  "   id="choice19"><script type="math/tex"> <![CDATA[ 
+\frac {f(x_b)-f(x_a)}{2} 
+]]> 
+</script></span> <span class="choice  "   id="choice20"><script type="math/tex"> <![CDATA[ 
+\sum _{i=a}^b f(x_i) 
+]]> 
+</script></span> </div>
+<!--l. 366--><p class="noindent" >How could you use sigma notation to represent the area under the curve from <script type="math/tex"> <![CDATA[ 
+i = 1 
+]]> 
+</script> to <script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script>, as
+<script type="math/tex"> <![CDATA[ 
+n 
+]]> 
+</script> approaches infinity?
+</p>
+<div class="multiple-choice" id="problem19"><span class="choice correct "   id="choice21"><script type="math/tex"> <![CDATA[ 
+\lim _{n\to \infty } \sum _{i=1}^n 
+]]> 
+</script></span> <span class="choice  "   id="choice22"><script type="math/tex"> <![CDATA[ 
+\lim _{n\to 0} \sum _{i=1}^n 
+]]> 
+</script></span> <span class="choice  "   id="choice23"><script type="math/tex"> <![CDATA[ 
+\lim _{n\to \infty } \sum _{i=1}^\infty  
+]]> 
+</script></span> <span class="choice  "   id="choice24"><script type="math/tex"> <![CDATA[ 
+\sum _{i=1}^n \lim _{n \to \infty } 
+]]> 
+</script></span> </div>
+<!--l. 375--><p class="noindent" ></div>
+     </p><dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wow, that&#x2019;s just as accurate as asking our computers!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">That&#x2019;s right Julia! You just found the integral of a function, with just
+     a little guidance!
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">Wow! Thanks James!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-6000"></a>In Summary</h3>
+<!--l. 383--><p class="noindent" >We&#x2019;ve learned a lot about Riemann sums today, and even the formula for a definite
+integral! So let&#x2019;s recap: </p><div class="theorem-like problem-environment definition" id="problem20"><a 
+ id="x1-6001r11"></a>A <strong>Riemann sum</strong> comes in three types, all of which first
+divide an interval into a number of subintervals:
+                                                                  
+
+                                                                  
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem"><strong>Left endpoint Riemann sums</strong> use the left endpoint of the subinterval
+     to approximate the area.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem"><strong>Right  endpoint  Riemann  sums</strong>  use  the  right  endpoint  of  the
+     subinterval to approximate the area.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem"><strong>Midpoint  Riemann  sums</strong>  use  the  midpoint  of  the  subinterval  to
+     approximate the area.</dd></dl>
+<!--l. 391--><p class="noindent" >Following this, the area of each rectangle is added to approximate the area under the
+curve.
+</div>
+</p>
+     <ul class="itemize1">
+     <li class="itemize">The formula for the definite integral is
+                                   <script type="math/tex; mode=display"> <![CDATA[ 
+\displaystyle \int _a^b f(x) = \lim _{n\to \infty } \sum _{i=1}^n f(x) \cdot \frac {b-a}{n} 
+]]> 
+</script>
+     where <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script> are the endpoints of the interval.</li></ul>
+                                                                  
+
+                                                                  
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

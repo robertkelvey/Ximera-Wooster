@@ -1,0 +1,446 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Euler&#x2019;s Method</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="eulers_method.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from eulers_method.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %d02b5ec555c084da3c9cf228d3e31f75% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">I know Wooster has oil, but this is kind of ridiculous don&#x2019;t you think?
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">What are you talking about Julia?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">My professor keeps talking about Oiler&#x2019;s Method. Like, what is that?
+     This is calculus, not geology.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Actually, it&#x2019;s <em>Euler&#x2019;s</em> Method. He was a Swiss mathematician who came
+     up with a way of approximating solutions to differential equations when
+     we start with a given value!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">That&#x2019;s right Dylan! Euler did a lot more than just that though; he&#x2019;s
+     considered to be one the greatest mathematicians of all time!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 16--><p class="noindent" >Euler&#x2019;s Method is a simple method of approximating the solution to a differential
+equation given an initial value, <script type="math/tex"> <![CDATA[ 
+y_0 
+]]> 
+</script>, at a point <script type="math/tex"> <![CDATA[ 
+t_0 
+]]> 
+</script>, or <script type="math/tex"> <![CDATA[ 
+y(t_0) = y_0 
+]]> 
+</script>. Additionally, <script type="math/tex"> <![CDATA[ 
+F(t, y) 
+]]> 
+</script> is given, which is
+equivalent to <script type="math/tex"> <![CDATA[ 
+\dfrac {dy}{dt} y 
+]]> 
+</script>. From here, the user chooses a step size, <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script>, and uses
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y_k = y_{k-1} + h \cdot F(t_{k-1}, y_{k-1}) 
+]]> 
+</script>
+ to approximate the value at a point <script type="math/tex"> <![CDATA[ 
+t_1 
+]]> 
+</script>, which is <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> units away from <script type="math/tex"> <![CDATA[ 
+t_0 
+]]> 
+</script>, or <script type="math/tex"> <![CDATA[ 
+t_1 = t_0 + h 
+]]> 
+</script>. At this point,
+we repeat the process, evaluating <script type="math/tex"> <![CDATA[ 
+F(t, y) 
+]]> 
+</script> at our new point, and moving another <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> units along
+the <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>-axis. By continuing this process, it is possible to approximate the solution at a
+point other than that which we are given.
+</p>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-1001r1"></a> What alteration to <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> might produce a more accurate estimation? <div class="problem-environment hint" id="problem2"><a 
+ id="x1-1002r2"></a> Consider a function
+with a rapidly changing derivative. How might a larger step-size approximate the
+rapid changes? A smaller one?
+</div> <div class="multiple-choice" id="problem3"><span class="choice  "   id="choice1">Increase the size of <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> to ignore minor jumps that would make the prediction less
+accurate.</span> <span class="choice correct "   id="choice2">Decrease the size of <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> to take into account very minor alterations in the
+function&#x2019;s derivative.</span> <span class="choice  "   id="choice3">Use an <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> equivalent to the functional value at the
+point.</span> <span class="choice  "   id="choice4">Use an <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> equivalent to the value of the derivative at that point.</span> </div>
+                                                                  
+
+                                                                  
+<!--l. 30--><p class="noindent" >When will this approximation be the best? When will it be the worst? </p><div class="problem-environment hint" id="problem4"><a 
+ id="x1-1003r3"></a> Think about
+the derivative of the graph here, and how it affects the shape.
+</div> <div class="multiple-choice" id="problem5"><span class="choice  "   id="choice5">The approximation will be the best at rapid changes
+<!--l. 37--><p class="noindent" >and worst where minimal change occurs.</span> </p><span class="choice  "   id="choice6">The approximation will be equally good
+at all points.</span> <span class="choice  "   id="choice7">The approximation will be best where the graph stays positive or
+negative,
+<!--l. 41--><p class="noindent" >and worst where the parity changes.</span> </p><span class="choice correct "   id="choice8">The approximation will be best where little
+change occurs,
+<!--l. 44--><p class="noindent" >and worst where the most change occurs.</span> </div>
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<!--l. 49--><p class="noindent" >Given
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+F(t,y) = t + 2y 
+]]> 
+</script>
+ and the initial condition
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y(0) = 0\text {,} 
+]]> 
+</script>
+ we will approximate the value of the solution at <script type="math/tex"> <![CDATA[ 
+t = 1 
+]]> 
+</script> using various step sizes.
+                                                                  
+
+                                                                  
+</p><!--l. 51--><p class="noindent" >Using a step size of <script type="math/tex"> <![CDATA[ 
+h = 0.5 
+]]> 
+</script>, we find <script type="math/tex"> <![CDATA[ 
+t_1 = h + t_0 = 0.5 + 0 = 0.5 
+]]> 
+</script>. Next, we see that <script type="math/tex"> <![CDATA[ 
+y_1 = y_0 + h \cdot F(t_0, y_0) 
+]]> 
+</script>, or <script type="math/tex"> <![CDATA[ 
+y_1 = 0 + 0.5(t_0+2y_0) = 0+(0+2\cdot 0) = 0 
+]]> 
+</script>. Thus, <script type="math/tex"> <![CDATA[ 
+y(t_1) = y(0.5)= 0 
+]]> 
+</script>.
+</p><!--l. 53--><p class="noindent" >On step two, we see <script type="math/tex"> <![CDATA[ 
+t_2 = 0.5 + 0.5 = 1 
+]]> 
+</script>, and <script type="math/tex"> <![CDATA[ 
+y_2 = 0 + 0.5(0.5 + 2\cdot 0) = 0.25 
+]]> 
+</script>. Thus <script type="math/tex"> <![CDATA[ 
+y(t_2) = y(1) = 0.25 
+]]> 
+</script>.
+</p><!--l. 55--><p class="noindent" >Let&#x2019;s check our estimation - the actual solution to our differential equation
+was
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y = 0.25\cdot e^{2t}-0.5t-0.25\text {.} 
+]]> 
+</script>
+ Don&#x2019;t worry about how we found this; just note that at <script type="math/tex"> <![CDATA[ 
+t=1 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y = 1.097 
+]]> 
+</script>.
+</p><!--l. 57--><p class="noindent" >Clearly, our estimation is not very good. But look at our step size! We moved an
+entire unit in only two steps - but that&#x2019;s an easy fix.
+</p><!--l. 59--><p class="noindent" >Let&#x2019;s look at the result when we use <script type="math/tex"> <![CDATA[ 
+h = 0.02 
+]]> 
+</script>, using Sage! While an example has been
+provided below, <a 
+href="http://doc.sagemath.org/html/en/reference/calculus/sage/calculus/desolvers.html#sage.calculus.desolvers.eulers_method" >click here</a> for the documentation on how to use eulers_method!
+</p><div class="sage"><script type="text/x-sage">from sage.calculus.desolvers import eulers_method#imports the Euler's Method function from Sage
+t,y = PolynomialRing(QQ,2,"ty").gens()#Defines our two variables
+eulers_method(t+2*y,0,0,0.02,1,algorithm="table")#Produces a table of the t and y values.
+ 
+</script></div>
+<!--l. 68--><p class="noindent" >Clearly a much better approximation! Note that the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> column is simply our <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>, Sage
+uses an <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> instead of <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>. By simply decreasing <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script>, we can increase the accuracy of Euler&#x2019;s
+Method greatly, at the cost of much harder work if done by hand.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">For the following, use step sizes of <script type="math/tex"> <![CDATA[ 
+0.5 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+0.25 
+]]> 
+</script>, and <script type="math/tex"> <![CDATA[ 
+0.1 
+]]> 
+</script> in combination to approximate
+     the given point.
+     <div class="theorem-like problem-environment remark" id="problem6"><a 
+ id="x1-3002r4"></a>Euler&#x2019;s Method does not require each step to be the same size.
+     </div>
+         <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+      (i) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex"> <![CDATA[ 
+F(t,y) = t^2 -y 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y(2) = 3 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+y(3.5) 
+]]> 
+</script>.
+                                                                  
+
+                                                                  
+         </dd><dt class="enumerate-enumitem">
+     (ii) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex"> <![CDATA[ 
+F(t,y) = y+t 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y(0)=1 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+y(3.85) 
+]]> 
+</script>.
+         </dd><dt class="enumerate-enumitem">
+     (iii) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex"> <![CDATA[ 
+F(t,y) = t\sin (y) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y(1) = 2 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+y(2.4) 
+]]> 
+</script>.</dd></dl>
+     </dd></dl>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Euler&#x2019;s Method is cool and all, but the approximation is so bad if I want
+     it done in a reasonable amount of time without a computer.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Well, we typically will use a computer with Euler&#x2019;s Method, but there is
+     a modification of Euler&#x2019;s Method that is much more accurate! It&#x2019;s known
+     as <em>Euler&#x2019;s Midpoint Method</em>, which uses the derivative at the midpoint of
+     the step, so the change is better approximated.
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">How much better is it?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Let&#x2019;s take a look!</dd></dl>
+<!--l. 91--><p class="noindent" >The equation for Euler&#x2019;s Midpoint Method is
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y_k = y_{k-1}+h \cdot m_{k-1}\text {,} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\text {where } m_{k-1} = F\left (t_{k-1} + \frac {h}{2}, y_{k-1} + \frac {h}{2}F(t_{k-1},y_{k-1})\right )\text {.} 
+]]> 
+</script>
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">Using both Euler&#x2019;s Method and Euler&#x2019;s Midpoint Method, approximate the
+     solution <script type="math/tex"> <![CDATA[ 
+y(t) 
+]]> 
+</script> at the given point.
+         <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+      (i) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex"> <![CDATA[ 
+F(t, y) = y+t 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y(0) = 1 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+h = 0.1 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+y(0.5) 
+]]> 
+</script>.
+         </dd><dt class="enumerate-enumitem">
+     (ii) </dt><dd 
+class="enumerate-enumitem"><script type="math/tex"> <![CDATA[ 
+F(t, y) = t^2 - y 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y(1) = 3 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+h=0.2 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+y(2) 
+]]> 
+</script>.</dd></dl>
+     </dd></dl>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wow! Euler&#x2019;s Method is pretty cool!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Yeah, it means I don&#x2019;t have to always mess around with integrating if
+     I&#x2019;m given the derivative of a function and have to find a point!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Let&#x2019;s make sure we remember what we learned today, okay?</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>In Summary</h3>
+<div class="theorem-like problem-environment definition" id="problem7"><a 
+ id="x1-4001r5"></a><strong>Euler&#x2019;s Method</strong> is a system which approximates solutions of first order differential
+equations by using the rate of change over a small distance to approximate the actual
+change. The basic method uses the equation
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y_k = y_{k-1} + h \cdot F(t_{k-1}, y_{k-1})\text {,} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\text {where } \dfrac {dy}{dt} y = F(t,y) \text {,} 
+]]> 
+</script>
+ <script type="math/tex"> <![CDATA[ 
+h 
+]]> 
+</script> is step size, and <script type="math/tex"> <![CDATA[ 
+F(x_{n-1}, y_{n-1}) 
+]]> 
+</script> is the derivative at the previous point.
+</div> <div class="theorem-like problem-environment definition" id="problem8"><a 
+ id="x1-4002r6"></a><strong>Euler&#x2019;s Midpoint Method</strong> is a modified version of Euler&#x2019;s Method, which uses
+the derivative at the midpoint between the end and start of the step to better
+approximate the rate of change over the step. This method uses a slightly modified
+equation,
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y_k = y_{k-1}+h \cdot m_{k-1}\text {,} 
+]]> 
+</script>
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\text {where } m_{k-1} = F\left (t_{k-1} + \frac {h}{2}, y_{k-1} + \frac {h}{2}F(t_{k-1},y_{k-1})\right )\text {.} 
+]]> 
+</script>
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,190 @@
+\documentclass{ximera}
+\title{Taylor Series}
+\begin{abstract}
+\end{abstract}
+
+\usepackage{../Calc2_preamble}
+
+\newcommand{\dsum}{\displaystyle \sum}
+\newcommand{\dsumone}{\dsum_{n=1}^{\infty}}
+\newcommand{\dseries}{\dsum_{n=0}^{\infty}}
+
+
+\newcommand{\du}{\; du}
+\newcommand{\dv}{\; dv}
+
+\newtheorem*{TaylorExpansion}{Theorem: Taylor Series Expansion}
+\newtheorem*{TaylorsThm}{Taylor's Theorem}
+\newtheorem*{RemainderThm}{Taylor's Theorem with Remainder}
+
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+\begin{dialogue}
+\item[Dylan] Whatever
+\item[James] But wait!
+\item[Julia] There's more!
+\end{dialogue}
+
+
+\section{Overview of Taylor Series}
+
+A \emph{Taylor Series} is just a power series, so it isn't anything different from what we've already been looking at. Let us develop what it is by considering a specific example.
+
+Consider $f(x) = \sin(x)$. Suppose we could write $\sin(x)$ as a power series centered at $c=0$:
+\[
+    \sin(x) = \sum_{n=0}^{\infty} a_n x^n.
+\]
+Then what can we say about this power series? Must it look a certain way? 
+\begin{multipleChoice}
+\choice[correct]{Yes}
+\choice{No}
+\begin{feedback}[correct]
+We can see this by using \emph{term-by-term differentiation}.
+\end{feedback}
+\end{multipleChoice}
+
+\section{Taylor Series for $\sin(x)$}
+
+Assuming $\sin(x)$ can be written as the power series above, determine the value of $a_0$ by evaluating $\sin(0)$.
+
+$a_0 = \answer{0}$
+
+Solve for $a_1$ by evaluating $\frac{d}{dx}(\sin(x))$ at $x=0$.
+
+$a_1 = \answer{1}$
+
+Continue the same process to solve for $a_2, a_3, a_4$, and $a_5$ (that is, keep taking derivatives and evaluate at $x=0$ to solve for the coefficients).
+
+$a_2 = \answer{0}$
+
+$a_3 = \answer{-1/6}$
+
+$a_4 = \answer{0}$
+
+$a_5 = \answer{1/120}$
+
+Describe (as best you can) a general formula for $a_n$.
+
+\begin{freeResponse}
+%$a_n = \answer{0}$ for even $n$.
+
+%$a_n = \answer{-1^{n}}$ for odd $n$.
+\end{freeResponse}
+
+
+%Write out the power series you just derived for $\sin(x)$. What is the radius of convergence?
+Which of the following is the power series you just derived?
+%$\answer{}$
+\begin{multipleChoice}
+	\choice{$x + \frac{x^3}{6} + \frac{x^5}{120} + \frac{x^7}{5040}$}
+	\choice[correct]{$\dseries x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots $}
+	%\choice
+\end{multipleChoice}
+
+\section{Taylor Series for $\cos(x)$}
+
+Assume that $\cos(x) = b_n x^n$, a power series centered at $x=0$. Perform the same steps as in the previous problem to solve for the coefficients $b_n$.
+
+Write out the series that you just derived. What is the radius of convergence?
+
+$\answer{\infty}$
+
+Based off your work above, you should hopefully agree with the following definition:
+
+\begin{definition}
+The \textbf{Taylor Series} for a function $f(x)$ centered at $c$ is the power series
+		\[
+			T(x) = \dseries \df{f^{(n)}(c)}{n!}(x-c)^n.
+		\]
+	
+	When the center is $c=0$, we call the series a \textbf{Maclaurin Series}:
+		\[
+			T(x) = \dseries \df{f^{(n)}(0)}{n!}x^n.
+		\]	
+		
+\end{definition}
+\begin{definition}
+The \emph{partial sums} of a Taylor series are called \textbf{Taylor polynomials} (or \emph{Maclaurin polynomials}):
+		\[
+			T_N(x) = \sum_{n=0}^N df{f^{(n)}(c)}{n!}(x-c)^n.
+		\]
+	
+    \end{definition}
+    \begin{definition}
+The \textbf{remainder term} $R_N(x)$ corresponding to a Taylor series is
+		\[
+			R_N(x) = T(x) - T_N(x).
+		\]
+	The remainder tells us how accurate the Taylor polynomial $T_N(x)$ is in approximating the series.
+\end{definition}
+\section{Example with $e^x$}
+	Let $f(x) = e^x$. Determine the Taylor series for $f(x)$ centered at $c=0$ by following these steps. 
+ Compute the first 4 - 5 derivatives of $f(x)$: $f'(x)$, $f''(x)$, etc. Then evaluate them at $x=0$.
+Now take your answers from the last step to write out the Taylor series $T(x)$. 
+Have we seen this series before?
+	
+In the previous example, you should get a Taylor series equal to $T(x) = series \df{x^n}{n!}$. This is the power series we derived for $e^x$ in the last section - unless we didn't get that far in class! :(.
+
+
+\section*{Some Theorems for Taylor Series}
+
+As you should have seen above, the Taylor series for the functions $e^x$ and $df{1}{1-x}$ match up with the power series expansions that we saw in the previous section. This is no coincidence! If a function $f(x)$ has a power series expansion on an interval $I$ - meaning, there is a power series \emph{converging} to $f(x)$ on the interval $I$ - then that power series IS the Taylor series.
+
+	\begin{TaylorExpansion}
+		If $f(x)$ is represented by a power series centered at $c$ in an interval $|x-c| < R$, with $R>0$, then that power series is the Taylor series
+		\[
+			T(x) = series \df{f^{(n)}(c)}{n!}(x-c)^n.
+		\]
+	\end{TaylorExpansion}
+
+How do we know when the converse of this is true? That is, when does the Taylor series for a function $f(x)$ actually converge to $f(x)$? Note that the \emph{remainder term} $R_N(x)$ tries to tell us how well the partial sums $T_N(x)$ approximate the function $f(x)$. Since a series converges if and only if the partial sums converge, we have:
+
+	\begin{TaylorsThm}
+		Suppose $f(x)$ has derivatives of all orders on an interval $I = (c-R, c+R)$, for $R>0$. Then the Taylor series
+		\[
+			T(x) = \dseries \df{f^{(n)}(c)}{n!}(x-c)^n
+		\] 
+		converges to $f(x)$ for all $x$ in $I$ if and only if $\dlim_{N \to \infty} R_N(x) = 0$ for all $x$ in $I$.
+	\end{TaylorsThm}
+
+Hence, showing that the remainder $R_N(x)$ tends to zero is enough to show that the Taylor Series converges to the function in question. Now this last theorem gives us an explicit way of writing out the remainder term so as to practically do all of this:
+
+	\begin{RemainderThm}
+		Suppose $f(x)$ is differentiable at least $n+1$ times on an interval $I=(c-R, c+R), R>0$. Then for each $x$ in $I$, there exists a number $d$ between $c$ and $x$ such that
+		\[
+			R_N(x) =  \df{f^{(N+1)}(d)}{(N+1)!}(x-c)^{N+1}.
+		\]
+	If there exists a real number $M>0$ such that $|f^{(N+1)}(x)| \leq M$ for all $x$ in $I$, then
+		\[
+			|R_N(x)| \leq \df{M}{(N+1)!}|x-c|^{N+1}.
+		\]
+	\end{RemainderThm}
+Please note: we mostly just use the second part of this Theorem to help us show that $R_N(x) \to 0$. We investigate this below.	
+	
+
+\subsection*{Showing convergence of a Taylor Series}
+Let us show that the Taylor series for $f(x) = \sin(x)$ centered at $c=0$ that you found at the beginning of this lab actually converges to $\sin(x)$.
+Verify that $f(x) = \sin(x)$ has derivatives of all orders defined on the interval $I=(-\infty, \infty)$.
+
+\begin{question}
+Write out $R_N(x)$ for the Taylor series of $f(x) = \sin(x)$ centered at $x=0$.
+
+$\answer{\sum_{n=0}^\infty -1^{n-1}\frac{x^{2n-1}}{(2n-1)!}}$
+
+Find an upper bound $M$ for $|f^{(N+1)}(0)|$. \begin{hint} Aren't all the derivatives of $f(x) = \sin(x)$ just one or two things? And are these functions bounded above by some constant?\end{hint}
+
+$\answer{1}$
+
+
+Use your previous answer to compute the limit $\dlim_{N \to \infty} \df{M}{(N+1)!}|x-c|^{N+1}$.
+$\answer{0}$
+\end{question}
+Thus, we can see that $\dlim_{N \to \infty} R_N(x) = 0$!
+
+
+
+\end{document}

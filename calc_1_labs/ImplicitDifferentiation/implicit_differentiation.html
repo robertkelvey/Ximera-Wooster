@@ -1,0 +1,453 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Implicit Differentiation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="implicit_differentiation.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div><div class="javascript" id="javascript1"><script type="text/javascript"> 
+//<![CDATA[ 
+ caseInsensitive = function(a,b) {
+    return a.toLowerCase() == b.toLowerCase();
+  };
+ 
+//]]> 
+</script></div>
+                                                                  
+
+                                                                  
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Woah! What&#x2019;s up with this?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">I didn&#x2019;t know functions were explicit!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">The <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> are on the same side of the equation! I can&#x2019;t deal with this.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Functions can be explicit or implicit! And it not the way you&#x2019;re thinking
+     Julia...</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 19--><p class="noindent" >So far we have dealt only with explicitly defined functions, where <script type="math/tex"> <![CDATA[ 
+y=f(x) 
+]]> 
+</script>. Here <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> is dependent
+variable and it is given in terms of the independent variable <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>. Functions given
+in terms of both independent and dependent variables are called <em>implicit</em>
+functions.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<div class="problem-environment question" id="problem2"><a 
+ id="x1-2001r1"></a> Which of the following equations defined <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> as a function of <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> implicitly? <div class="select-all" id="problem3"><a 
+ id="x1-2002r2"></a> <span class="choice  " 
+id="choice1">
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y=x^2+5x-7 
+]]> 
+</script>
+</span> <span class="choice  "   id="choice2">
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y=\sin (x) 
+]]> 
+</script>
+</span> <span class="choice correct "   id="choice3">
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+x^2+y^2=1 
+]]> 
+</script>
+</span> <span class="choice  "   id="choice4">
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y=\sqrt {(x-3)} 
+]]> 
+</script>
+</span> <span class="choice correct "   id="choice5"><script type="math/tex"> <![CDATA[ 
+x^2y^3+y = 5x+8y 
+]]> 
+</script></span>
+</div>
+</div> Graph the curve defined by this equation:
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+x^2+y^2=1 
+]]> 
+</script>
+ <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script> Now, in the following Sage cell, solve for <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>. For help using the solve command refer
+to the <a 
+href="http://doc.sagemath.org/html/en/tutorial/tour_algebra.html#solving-equations" >documentation</a> here. <div class="sage"><script type="text/x-sage">x,y = var("x, y")
+#eqn = x^2+y^2==1, this sets eqn to the unit circle
+#use the solve command to solve eqn for y
+ 
+</script></div>
+Graph the two explicit equations on the same axis below. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script> <div class="problem-environment question" id="problem4"><a 
+ id="x1-2003r3"></a> Which of the
+following are true? <div class="select-all" id="problem5"><a 
+ id="x1-2004r4"></a> <span class="choice  "   id="choice6"><script type="math/tex"> <![CDATA[ 
+x^2+y^2=1 
+]]> 
+</script> is a function of <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>.</span> <span class="choice correct "   id="choice7"><script type="math/tex"> <![CDATA[ 
+y=-\sqrt {1-x^2} 
+]]> 
+</script> is a function of <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>.</span> <span class="choice correct "   id="choice8"><script type="math/tex"> <![CDATA[ 
+y=\sqrt {1-x^2} 
+]]> 
+</script> is a function of
+<script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>.</span>
+</div>
+</div>
+<div class="problem-environment question" id="problem6"><a 
+ id="x1-2005r5"></a> <div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+Using the functions you found, differentiate to find the slope of the tangent lines at
+the point <script type="math/tex"> <![CDATA[ 
+\big ( \left (\frac {\sqrt {2}}{2}\right ),\left (\frac {\sqrt {2}}{2}\right ) \big ) 
+]]> 
+</script>. You may do this in the above Sage cell or by hand.
+<!--l. 64--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {-1} 
+]]> 
+</script>
+</p><!--l. 66--><p class="noindent" ></div> Unfortunately not all implicit equations can be easily solved for <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>, which is why we
+use implicit differentiation! </p><div class="theorem-like problem-environment explanation" id="problem7"><a 
+ id="x1-2006r6"></a>Starting with
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+x^2 + y^2 = 1 
+]]> 
+</script>
+ we first differentiate each term using <script type="math/tex"> <![CDATA[ 
+\frac {d}{dx} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\frac {d}{dx}x^2+\frac {d}{dx}y^2 = \frac {d}{dx} 1 
+]]> 
+</script>
+ You can already fill in 2 of the terms
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+ \answer {2x}+ \frac {d}{dx}y^2 = \answer {0} 
+]]> 
+</script>
+ For the term <script type="math/tex"> <![CDATA[ 
+\frac {d}{dx} y^2 
+]]> 
+</script> you can imagine <script type="math/tex"> <![CDATA[ 
+y = f(x) 
+]]> 
+</script>, and hence by the chain rule
+<script type="math/tex; mode=display"><![CDATA[ 
+\begin{align*} 
+ \frac{d}{dx} y^2 &= \frac{d}{dx}(f(x))^2 \\
+ &= 2\cdot f(x) \cdot f'(x)  \\
+ &= 2y\frac{dy}{dx} \\
+\end{align*} 
+]]> 
+</script>
+Thus we have the following:
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+2x + 2y\frac {dy}{dx} =0 
+]]> 
+</script>
+ Solving for <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script> we get
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\answer {\frac {-x}{y}} 
+]]> 
+</script>
+</div> <div class="problem-environment question" id="problem8"><a 
+ id="x1-2007r7"></a> Use the equation obtained from the above explanation to find <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+\left (\left (\frac {\sqrt {2}}{2}\right ),\left (\frac {\sqrt {2}}{2}\right )\right ) 
+]]> 
+</script> <script type="math/tex"> <![CDATA[ 
+\answer {-1} 
+]]> 
+</script> <div class="feedback" data-feedback="attempt" id="feedback9">Using both
+methods you can obtain the same answer, but for many equations the first method is
+much more work! </div>
+</div> <div class="problem-environment question" id="problem10"><a 
+ id="x1-2008r8"></a> We can fairly easily use Sage to do this process for us, to illustrate the process
+evaluate the following Sage cell. <div class="sage"><script type="text/x-sage">var('x,y')
+y(x)=function('y')(x)
+eq=x^2+y^2==1
+eq.substitute(y =y(x))
+diff(eq,x)
+solve(diff(eq,x),diff(y(x)))
+ 
+</script></div>
+What did you get as output from your Sage cell? (copy just the answer portion after
+the “==” and before the “]”) <script type="math/tex"> <![CDATA[ 
+\answer {-x/y(x)} 
+]]> 
+</script> <div class="feedback" data-feedback="attempt" id="feedback11">Notice that Sage uses y(x) for y in the output. </div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<!--l. 112--><p class="noindent" >In each of the following problems, evaluate the derivative by hand, and use the Sage
+cells as a check.
+</p><!--l. 114--><p class="noindent" >Consider the equation <script type="math/tex"> <![CDATA[ 
+y^4+xy=x^3-x+2 
+]]> 
+</script>. Using the following Sage cell implicitly differentiate to find <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script>
+using the same commands as shown in the previous question. </p><div class="sage"><script type="text/x-sage">var('x,y')
+ 
+</script></div>
+<div class="problem-environment question" id="problem12"><a 
+ id="x1-3001r9"></a> What did you get as output from your Sage cell? (copy just the answer portion after
+the “==” and before the “]”)
+<!--l. 123--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [format=string]{(3*x^2 - y(x) - 1)/(4*y(x)^3 + x)} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem13"><a 
+ id="x1-3002r10"></a> Using your result in the previous section, evaluate <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script> at the point <script type="math/tex"> <![CDATA[ 
+(1,1) 
+]]> 
+</script>. <script type="math/tex"> <![CDATA[ 
+\answer {1/5} 
+]]> 
+</script>
+</div> <div class="problem-environment question" id="problem14"><a 
+ id="x1-3003r11"></a> Now use Sage Math again to find <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script> for <script type="math/tex"> <![CDATA[ 
+\sin (x^2)=\cos (xy^2) 
+]]> 
+</script>, copy your answer in the same way as
+indicated in the previous section. <div class="sage"><script type="text/x-sage">var('x,y')
+ 
+</script></div>
+<script type="math/tex"> <![CDATA[ 
+\answer [format=string]{-1/2*(sin(x*y(x)^2)*y(x)^2 + 2*x*cos(x^2))/(x*sin(x*y(x)^2)*y(x))} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Perpendicular at a Point</h3>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wow, implicit differentiation is rough.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">You&#x2019;re telling me... I&#x2019;ve been doing this for hours! I wish we could at
+     least do a little more with it if I have to learn it.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Did  I  hear  that  you  guys  want  to  know  more  about  using  implicit
+     differentiation?
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">James! Tell us more!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Alright guys, you can use implicit differentiation with implicit functions
+     to tell if two functions are perpendicular at a point!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">But how?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Yeah, I don&#x2019;t see how that helps.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">It&#x2019;s easy - all we have to do is see if the tangent lines are perpendicular
+     at that point, and if they are, then so are the curves!</dd></dl>
+<div class="problem-environment question" id="problem15"><a 
+ id="x1-4001r12"></a> Graph <script type="math/tex"> <![CDATA[ 
+3x - 2y + x^3-x^2y = 0 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+x^2 - 2x + y^2 - 3y = 0 
+]]> 
+</script> on the same set of axes. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+<!--l. 155--><p class="noindent" >Do they look perpendicular anywhere? </p><div class="multiple-choice" id="problem16"><span class="choice correct "   id="choice9">Yes</span> <span class="choice  "   id="choice10">No</span> </div>
+<div class="problem-environment hint" id="problem17"><a 
+ id="x1-4002r13"></a> To show two lines are perpendicular you must show that the slope of one is the
+opposite inverse of the other
+</div> Show the two curves are (or are not) perpendicular at the origin. You can do this in
+the Sage cell provided or by hand. <div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+Slope of <script type="math/tex"> <![CDATA[ 
+3x - 2y + x^3-x^2y = 0 
+]]> 
+</script> at the origin:
+<!--l. 172--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {3/2} 
+]]> 
+</script>
+</p><!--l. 174--><p class="noindent" >Slope of <script type="math/tex"> <![CDATA[ 
+x^2 - 2x + y^2 - 3y = 0 
+]]> 
+</script> at the origin:
+</p><!--l. 176--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {-2/3} 
+]]> 
+</script>
+</p><!--l. 178--><p class="noindent" >Are the lines perpendicular at the origin?
+                                                                  
+
+                                                                  
+</p><!--l. 182--><p class="noindent" ></div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>In Summary</h3>
+<!--l. 184--><p class="noindent" >There are two main methods to differentiate implicit equations
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">Solve for <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> and then differentiate.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">Treat <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> as <script type="math/tex"> <![CDATA[ 
+y(x) 
+]]> 
+</script> and differentiate with respect to the variable <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>, eventually solving
+     for <script type="math/tex"> <![CDATA[ 
+\frac {dy}{dx} 
+]]> 
+</script> to give the value of the derivative at any point <script type="math/tex"> <![CDATA[ 
+(x,y) 
+]]> 
+</script>.</dd></dl>
+                                                                  
+
+                                                                  
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

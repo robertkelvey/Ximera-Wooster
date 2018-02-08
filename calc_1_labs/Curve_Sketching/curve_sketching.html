@@ -1,0 +1,764 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Curve Sketching</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="curve_sketching.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from curve_sketching.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %0b8cb5def865b8564bf266446e2bfb02% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Using CAS systems to graph is great and all, but on a test where I don&#x2019;t
+     have a calculator it&#x2019;s so hard to sketch a curve!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Well maybe we can use derivatives to figure out properties of the graph
+     so it&#x2019;s easier to sketch!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Oh! We&#x2019;d be able to see where the graph was heading up or down, plus
+     we&#x2019;d be able to see extrema when the derivative at a point is zero!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Problems</h3>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+f(x)=x^3+12x^2+4 
+]]> 
+</script>. Take the derivative and find the values where <script type="math/tex"> <![CDATA[ 
+f'(x)=0 
+]]> 
+</script>. Create a
+number line, and mark these points. Between them, mark the sign of the
+derivative of any point on that interval (Do this by hand). An example is shown
+below.
+<div class="image-environment"><img 
+src="ExampleNumberline.png" alt="PIC"  
+ /> </div>
+<!--l. 24--><p class="noindent" >On what interval(s) is the derivative positive?
+</p>
+<div class="select-all" id="problem2"><a 
+ id="x1-2002r2"></a> <span class="choice  "   id="choice1"><script type="math/tex"> <![CDATA[ 
+[-8, 0) 
+]]> 
+</script></span> <span class="choice correct "   id="choice2"><script type="math/tex"> <![CDATA[ 
+(-\infty ,-8) 
+]]> 
+</script></span> <span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+(-\infty , 0] 
+]]> 
+</script></span> <span class="choice correct "   id="choice4"><script type="math/tex"> <![CDATA[ 
+(0,\infty ) 
+]]> 
+</script></span>
+</div>
+<!--l. 33--><p class="noindent" >On what interval(s) is the derivative negative?
+</p>
+<div class="select-all" id="problem3"><a 
+ id="x1-2003r3"></a> <span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+[-4, \infty ) 
+]]> 
+</script></span> <span class="choice correct "   id="choice6"><script type="math/tex"> <![CDATA[ 
+(-8,0) 
+]]> 
+</script></span> <span class="choice  "   id="choice7"><script type="math/tex"> <![CDATA[ 
+(-\infty , 0] 
+]]> 
+</script></span> <span class="choice  "   id="choice8"><script type="math/tex"> <![CDATA[ 
+(0,\infty ) 
+]]> 
+</script></span>
+</div>
+<!--l. 42--><p class="noindent" >Select everything you can always say about the graph of a function at a point where
+the derivative is 0:
+</p>
+<div class="select-all" id="problem4"><a 
+ id="x1-2004r4"></a> <span class="choice correct "   id="choice9">The graph will be flat at that point.</span> <span class="choice  "   id="choice10">The derivative will change from positive to
+negative at the point.</span> <span class="choice  "   id="choice11">The derivative will change from negative to positive at the
+point.</span> <span class="choice  "   id="choice12">The derivative will change sign going from one side of the point to the
+other.</span>
+</div> <div class="feedback" data-feedback="correct" id="feedback5"> If the derivative at a point is zero, we can only tell that the graph flattens
+out. It is possible that the sign does not change after crossing the point! </div>
+</div>
+     <dl class="dialogue"><dt class="actor">
+                                                                  
+
+                                                                  
+Julia </dt><dd 
+class="speech">So we have local maxima or minima when the derivative is 0, but what
+     about the graph of <script type="math/tex"> <![CDATA[ 
+x^3 
+]]> 
+</script>?</dd></dl>
+<div class="image-environment"><img 
+src="00001.jpg" alt="PIC"  
+ /> </div>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">Hmmm...I guess that means there are three different kinds of critical
+     points! Two when the sign changes and one when it stays the same!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Wait... what&#x2019;s a critical point?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">A <strong>critical point</strong> is any point where the derivative is zero or does not
+     exist! Because we know it&#x2019;s important, but we have to check to see what
+     it means with our number line!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">You guys are still figuring that out? I&#x2019;m already determining concavity!
+     </dd><dt class="actor">
+Dylan and Julia </dt><dd 
+class="speech">Holy cat fur! What&#x2019;s concavity?!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">A graph is <strong>concave up</strong> when its derivative is increasing, and <strong>concave
+     down</strong> when its derivative is decreasing. The easiest way to tell is to look
+     at the curve and think ‘Would this hold water?&#x2019; If it would, it&#x2019;s concave
+     up, and if not, it&#x2019;s concave down!
+     </dd><dt class="actor">
+Dylan and Julia </dt><dd 
+class="speech">Wow! Thanks James!</dd></dl>
+<div class="problem-environment question" id="problem6"><a 
+ id="x1-2005r5"></a>
+<!--l. 75--><p class="noindent" >Now determine the second derivative, <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script>, of our original function <script type="math/tex"> <![CDATA[ 
+f(x) = x^3 + 12x^2+4 
+]]> 
+</script>. What happens at
+the points where the second derivative is zero?
+</p>
+<div class="multiple-choice" id="problem7"><span class="choice  "   id="choice13">They show the function is at extrema as well.</span> <span class="choice  "   id="choice14">They indicate that concavity will
+remain the same.</span> <span class="choice correct "   id="choice15">They indicate that concavity is changing.</span> <span class="choice  "   id="choice16">They show that the
+function is at minimum change.</span> </div>
+<!--l. 85--><p class="noindent" >Points where concavity changes are known as <strong>inflection points</strong>.
+</p><!--l. 87--><p class="noindent" >Draw another number line, this time for the second derivative, marking where the
+derivative equals zero. Evaluate <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script> on a point of each of the intervals created through
+                                                                  
+
+                                                                  
+this marking, and mark the sign. What might this mean in general for changing signs
+on each side of an inflection point?
+</p>
+<div class="select-all" id="problem8"><a 
+ id="x1-2006r6"></a> <span class="choice  "   id="choice17">The graph will be flat at that point.</span> <span class="choice  "   id="choice18">The concavity will change from up to down
+at the point.</span> <span class="choice  "   id="choice19">The concavity will change from down to up at the point.</span> <span class="choice correct "   id="choice20">The
+concavity will change in that point, but it is impossible to tell how without knowing
+the value of the
+<!--l. 95--><p class="noindent" >second derivative around that point.</span>
+</div> Where is the graph concave up? </p><div class="multiple-choice" id="problem9"><span class="choice  "   id="choice21"><script type="math/tex"> <![CDATA[ 
+[0,1] 
+]]> 
+</script></span> <span class="choice correct "   id="choice22"><script type="math/tex"> <![CDATA[ 
+(-4, \infty ) 
+]]> 
+</script></span> <span class="choice  "   id="choice23"><script type="math/tex"> <![CDATA[ 
+(-\infty , 0) 
+]]> 
+</script></span> <span class="choice  "   id="choice24"><script type="math/tex"> <![CDATA[ 
+[0,260] 
+]]> 
+</script></span> <span class="choice  "   id="choice25"><script type="math/tex"> <![CDATA[ 
+[4,260] 
+]]> 
+</script></span> </div>
+What about concave down?
+<div class="multiple-choice" id="problem10"><span class="choice  "   id="choice26"><script type="math/tex"> <![CDATA[ 
+[0,1] 
+]]> 
+</script></span> <span class="choice  "   id="choice27"><script type="math/tex"> <![CDATA[ 
+[-4, \infty ) 
+]]> 
+</script></span> <span class="choice correct "   id="choice28"><script type="math/tex"> <![CDATA[ 
+(-\infty , -4) 
+]]> 
+</script></span> <span class="choice  "   id="choice29"><script type="math/tex"> <![CDATA[ 
+[0,260] 
+]]> 
+</script></span> <span class="choice  "   id="choice30"><script type="math/tex"> <![CDATA[ 
+[4,260] 
+]]> 
+</script></span> </div>
+<!--l. 118--><p class="noindent" >Inflection points are given as ordered pairs. Evaluate each inflection point you found
+using <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> to determine the ordered pairs, then select them below. </p><div class="select-all" id="problem11"><a 
+ id="x1-2007r7"></a> <span class="choice correct "   id="choice31"><script type="math/tex"> <![CDATA[ 
+(-4,132) 
+]]> 
+</script></span> <span class="choice  "   id="choice32"><script type="math/tex"> <![CDATA[ 
+(0, 4) 
+]]> 
+</script></span> <span class="choice  "   id="choice33"><script type="math/tex"> <![CDATA[ 
+(-12.028, 0) 
+]]> 
+</script></span> <span class="choice  " 
+id="choice34"><script type="math/tex"> <![CDATA[ 
+(-8,260) 
+]]> 
+</script></span>
+</div> Based on what you&#x2019;ve done until now, sketch the graph yourself. When you&#x2019;re done,
+click below to see the graph.
+<div class="multiple-choice" id="problem12"><span class="choice correct "   id="choice35">I&#x2019;m Done! Show me the graph!</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback13"><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [height=400,xmin=-50,xmax=50,ymin=-300,ymax=500]{x^3+12x^2+4}  
+]]> 
+</script> </div>
+</div>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wait but what about the graph of <script type="math/tex"> <![CDATA[ 
+f(x)=x^4 
+]]> 
+</script>? <script type="math/tex"> <![CDATA[ 
+f''(x)=0 
+]]> 
+</script> at the origin but the graph doesn&#x2019;t
+     change concavity see? <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [height=200,xmin=-2,xmax=2,ymin=-0.5,ymax=2]{x^4,12x^2}  
+]]> 
+</script>
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Oh jeez, does that mean that not every instance of <script type="math/tex"> <![CDATA[ 
+f''(x)=0 
+]]> 
+</script> is an inflection
+     point?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Not always! That&#x2019;s why you have to make another number line for the
+     second derivative to see if the sign of <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script> changes on either side of the point
+     where <script type="math/tex"> <![CDATA[ 
+f''(x)=0 
+]]> 
+</script>.</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<div class="problem-environment question" id="problem14"><a 
+ id="x1-3001r8"></a> Now, consider the function
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f(x)=x^{2/3}(6-x)^{1/3}\text {.} 
+]]> 
+</script>
+ Without graphing the function, complete the following:
+<!--l. 149--><p class="noindent" >Select each type of extrema present on the graph. </p><div class="select-all" id="problem15"><a 
+ id="x1-3002r9"></a> <span class="choice correct "   id="choice36">Local Maximum</span> <span class="choice correct "   id="choice37">Local
+Minimum</span> <span class="choice  "   id="choice38">Global Maximum</span> <span class="choice  "   id="choice39">Global Minimum</span>
+</div>
+<!--l. 157--><p class="noindent" >Indicate the coordinates of any critical points. </p><div class="select-all" id="problem16"><a 
+ id="x1-3003r10"></a> <span class="choice  "   id="choice40">(-6,0)</span> <span class="choice correct "   id="choice41">(6,0)</span> <span class="choice  "   id="choice42">(3.175, 4)</span> <span class="choice correct " 
+id="choice43">(4,3.175)</span> <span class="choice  "   id="choice44">(1,3)</span> <span class="choice correct "   id="choice45">(0,0)</span> <span class="choice  "   id="choice46">(5,0)</span>
+</div>
+<!--l. 168--><p class="noindent" >Indicate the coordinates of any inflection points. </p><div class="select-all" id="problem17"><a 
+ id="x1-3004r11"></a> <span class="choice  "   id="choice47">(-6,0)</span> <span class="choice correct "   id="choice48">(6,0)</span> <span class="choice  "   id="choice49">(3.175, 4)</span> <span class="choice  " 
+id="choice50">(4,3.175)</span> <span class="choice  "   id="choice51">(1,3)</span> <span class="choice  "   id="choice52">(0,0)</span> <span class="choice  "   id="choice53">(5,0)</span>
+</div>
+<!--l. 179--><p class="noindent" >Select the intervals on which the function is concave up. </p><div class="select-all" id="problem18"><a 
+ id="x1-3005r12"></a> <span class="choice  "   id="choice54"><script type="math/tex"> <![CDATA[ 
+(-\infty ), 0) 
+]]> 
+</script></span> <span class="choice  "   id="choice55"><script type="math/tex"> <![CDATA[ 
+(0,6) 
+]]> 
+</script></span> <span class="choice  "   id="choice56"><script type="math/tex"> <![CDATA[ 
+(0,\infty ) 
+]]> 
+</script></span> <span class="choice correct "   id="choice57"><script type="math/tex"> <![CDATA[ 
+(6, \infty ) 
+]]> 
+</script></span>
+</div>
+<!--l. 187--><p class="noindent" >Select the intervals on which the function is concave down.
+</p>
+<div class="select-all" id="problem19"><a 
+ id="x1-3006r13"></a> <span class="choice correct "   id="choice58"><script type="math/tex"> <![CDATA[ 
+(-\infty ), 0) 
+]]> 
+</script></span> <span class="choice correct "   id="choice59"><script type="math/tex"> <![CDATA[ 
+(0,6) 
+]]> 
+</script></span> <span class="choice  "   id="choice60"><script type="math/tex"> <![CDATA[ 
+(0,\infty ) 
+]]> 
+</script></span> <span class="choice  "   id="choice61"><script type="math/tex"> <![CDATA[ 
+(6, \infty ) 
+]]> 
+</script></span>
+</div>
+<!--l. 197--><p class="noindent" >Now, create a sketch of your function on paper. When you&#x2019;re done, click below to see
+how your graph should look!
+</p>
+<div class="multiple-choice" id="problem20"><span class="choice correct "   id="choice62">I&#x2019;m done waiting! Show me the graph!</span> <span class="choice  "   id="choice63">I&#x2019;m not ready yet, but I&#x2019;m going to click
+regardless!</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback21"> <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [height=400,ymin=-5,ymax=5,xmin=-5,xmax=10]{x^{2/3}(6-x)^1/3}  
+]]> 
+</script> </div>
+</div>
+<div class="problem-environment question" id="problem22"><a 
+ id="x1-3007r14"></a> Now, consider the function
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f(x)=x^3-3x+5\text {.} 
+]]> 
+</script>
+ Without graphing the function, complete the following:
+<!--l. 213--><p class="noindent" >Select each type of extrema present on the graph. </p><div class="select-all" id="problem23"><a 
+ id="x1-3008r15"></a> <span class="choice correct "   id="choice64">Local Maximum</span> <span class="choice correct "   id="choice65">Local
+Minimum</span> <span class="choice  "   id="choice66">Global Maximum</span> <span class="choice  "   id="choice67">Global Minimum</span>
+</div>
+<!--l. 221--><p class="noindent" >Indicate the coordinates of any critical points. </p><div class="select-all" id="problem24"><a 
+ id="x1-3009r16"></a> <span class="choice  "   id="choice68">(-2,0)</span> <span class="choice correct "   id="choice69">(-1,7)</span> <span class="choice  "   id="choice70">(-3,7)</span> <span class="choice  "   id="choice71">(7,-2)</span> <span class="choice correct " 
+id="choice72">(1,3)</span> <span class="choice  "   id="choice73">(0,5)</span> <span class="choice  "   id="choice74">(5,0)</span>
+</div>
+<!--l. 232--><p class="noindent" >Indicate the coordinates of any inflection points. </p><div class="select-all" id="problem25"><a 
+ id="x1-3010r17"></a> <span class="choice  "   id="choice75"><script type="math/tex"> <![CDATA[ 
+(-2,0) 
+]]> 
+</script></span> <span class="choice  "   id="choice76"><script type="math/tex"> <![CDATA[ 
+(-1,7) 
+]]> 
+</script></span> <span class="choice  "   id="choice77"><script type="math/tex"> <![CDATA[ 
+(-3,7) 
+]]> 
+</script></span> <span class="choice  "   id="choice78"><script type="math/tex"> <![CDATA[ 
+(7,-2) 
+]]> 
+</script></span> <span class="choice  "   id="choice79"><script type="math/tex"> <![CDATA[ 
+(1,3) 
+]]> 
+</script></span> <span class="choice correct "   id="choice80"><script type="math/tex"> <![CDATA[ 
+(0,5) 
+]]> 
+</script></span> <span class="choice  "   id="choice81"><script type="math/tex"> <![CDATA[ 
+(5,0) 
+]]> 
+</script></span>
+</div>
+<!--l. 243--><p class="noindent" >Select the intervals on which the function is concave up. </p><div class="select-all" id="problem26"><a 
+ id="x1-3011r18"></a> <span class="choice  "   id="choice82"><script type="math/tex"> <![CDATA[ 
+[-5,10] 
+]]> 
+</script></span> <span class="choice  "   id="choice83"><script type="math/tex"> <![CDATA[ 
+[1,2] 
+]]> 
+</script></span> <span class="choice correct "   id="choice84"><script type="math/tex"> <![CDATA[ 
+(0,\infty ) 
+]]> 
+</script></span> <span class="choice  "   id="choice85"><script type="math/tex"> <![CDATA[ 
+(-\infty , 0) 
+]]> 
+</script></span>
+</div>
+<!--l. 251--><p class="noindent" >Select the intervals on which the function is concave down.
+</p>
+<div class="select-all" id="problem27"><a 
+ id="x1-3012r19"></a> <span class="choice  "   id="choice86"><script type="math/tex"> <![CDATA[ 
+[0,10] 
+]]> 
+</script></span> <span class="choice  "   id="choice87"><script type="math/tex"> <![CDATA[ 
+[1,2] 
+]]> 
+</script></span> <span class="choice  "   id="choice88"><script type="math/tex"> <![CDATA[ 
+[0,\infty ) 
+]]> 
+</script></span> <span class="choice correct "   id="choice89"><script type="math/tex"> <![CDATA[ 
+(-\infty ,0] 
+]]> 
+</script></span>
+</div>
+<!--l. 260--><p class="noindent" >Now, create a sketch of your function on paper. When you&#x2019;re done, click below to see
+how your graph should look!
+</p>
+<div class="multiple-choice" id="problem28"><span class="choice correct "   id="choice90">I&#x2019;m done waiting! Show me the graph!</span> <span class="choice  "   id="choice91">I&#x2019;m not ready yet, but I&#x2019;m going to click
+regardless!</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback29"> <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [height=400,ymin=-5,ymax=15,xmin=-10,xmax=10]{x^3-3x+5}  
+]]> 
+</script> </div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Matching Graphs</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">So if I wanted to match a graph with the graphs of its first and second
+     derivative I can do that now!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Wait, really?? How?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Well the <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> value of <script type="math/tex"> <![CDATA[ 
+f'(x) 
+]]> 
+</script> corresponds to the slope of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>, and the <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> value of <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script>
+     corresponds to the slope of <script type="math/tex"> <![CDATA[ 
+f'(x) 
+]]> 
+</script> and is related to the concavity of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>.
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">So we can match the graphs based on how all that information relates!
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Exactly, let&#x2019;s try it!</dd></dl>
+<div class="problem-environment question" id="problem30"><a 
+ id="x1-4001r20"></a> For the following problems, select the correct match of <script type="math/tex"> <![CDATA[ 
+f(x),f'(x), and f''(x) 
+]]> 
+</script>
+<div class="multiple-choice" id="problem31"><span class="choice  "   id="choice92"><div class="image-environment"><img 
+src="nope3.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice correct "   id="choice93"><div class="image-environment"><img 
+src="match1.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice94"><div class="image-environment"><img 
+src="nope1.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice95"><div class="image-environment"><img 
+src="nope2.jpg" alt="PIC"  
+ /> </div>
+</span> </div>
+<div class="multiple-choice" id="problem32"><span class="choice  "   id="choice96"><div class="image-environment"><img 
+src="2a.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice97"><div class="image-environment"><img 
+src="2c.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice98"><div class="image-environment"><img 
+src="2b.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice correct "   id="choice99"><div class="image-environment"><img 
+src="match2.jpg" alt="PIC"  
+ /> </div>
+</span> </div>
+<div class="multiple-choice" id="problem33"><span class="choice  "   id="choice100"><div class="image-environment"><img 
+src="3c.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice101"><div class="image-environment"><img 
+src="3a.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice correct "   id="choice102"><div class="image-environment"><img 
+src="match3.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice103"><div class="image-environment"><img 
+src="3b.jpg" alt="PIC"  
+ /> </div>
+</span> </div>
+<div class="multiple-choice" id="problem34"><span class="choice correct "   id="choice104"><div class="image-environment"><img 
+src="match4.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice105"><div class="image-environment"><img 
+src="4c.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice106"><div class="image-environment"><img 
+src="4a.jpg" alt="PIC"  
+ /> </div>
+</span> <span class="choice  "   id="choice107"><div class="image-environment"><img 
+src="4b.jpg" alt="PIC"  
+ /> </div>
+</span> </div>
+<!--l. 345--><p class="noindent" ></div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>In Summary</h3>
+<!--l. 349--><p class="noindent" >In this lab, you&#x2019;ve covered quite a bit. To help organize everything, we&#x2019;ve put the
+important theorems below.
+</p><!--l. 351--><p class="noindent" >We&#x2019;ve also included the second derivative test, which is another method to determine
+if a critical point is a maximum, minimum, or saddle point. To do this, you simply
+evaluate the second derivative at the critical point, and determine what that point is
+based on the value, as shown in the table.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem35"><a 
+ id="x1-5001r21"></a><span class="theorem-like-title">First Derivative Test</span> Suppose that <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is a critical number(<script type="math/tex"> <![CDATA[ 
+f'(c)=0 
+]]> 
+</script>) on a continuous function
+<script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script>.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+                                                                  
+
+                                                                  
+ (a) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f' 
+]]> 
+</script> changes from positive to negative at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> has a local maximum at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f' 
+]]> 
+</script> changes from negative to positive at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> has a local minimum at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f' 
+]]> 
+</script> does not change sign at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> has a saddle point at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>.</dd></dl>
+<div class="theorem-like problem-environment remark" id="problem36"><a 
+ id="x1-5005r22"></a>When <script type="math/tex"> <![CDATA[ 
+f'(c) 
+]]> 
+</script> does not exist:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is in the domain of <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script>, follow the same steps as when <script type="math/tex"> <![CDATA[ 
+f'(c)=0\text {.} 
+]]> 
+</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is not in the domain, then <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is not a critical number.</dd></dl>
+<!--l. 366--><p class="noindent" ></div>
+</div>
+</p>
+<div class="theorem-like problem-environment theorem" id="problem37"><a 
+ id="x1-5008r23"></a><span class="theorem-like-title">Concavity Test</span> If <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script> exists for all <script type="math/tex"> <![CDATA[ 
+x\in (a,b) 
+]]> 
+</script>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f''(x)>0 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x\in (a,b) 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is concave up on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f''(x)<0 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x\in (a,b) 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is concave down on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script></dd></dl>
+<!--l. 375--><p class="noindent" ></div>
+</p>
+<div class="theorem-like problem-environment theorem" id="problem38"><a 
+ id="x1-5011r24"></a><span class="theorem-like-title">Test for Inflection Points</span> If <script type="math/tex"> <![CDATA[ 
+f''(c)=0 
+]]> 
+</script> or <script type="math/tex"> <![CDATA[ 
+f''(c) 
+]]> 
+</script> does not exist and <script type="math/tex"> <![CDATA[ 
+f''(x) 
+]]> 
+</script> changes sign at <script type="math/tex"> <![CDATA[ 
+x=c 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> has a point
+of inflection at <script type="math/tex"> <![CDATA[ 
+x=c 
+]]> 
+</script>
+</div>
+<div class="theorem-like problem-environment theorem" id="problem39"><a 
+ id="x1-5012r25"></a><span class="theorem-like-title">Second Derivative Test</span> Let <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> be a critical point of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>. If <script type="math/tex"> <![CDATA[ 
+f''(c) 
+]]> 
+</script> exists, then
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f''(c)>0 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f(c) 
+]]> 
+</script> is a local minimum.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f''(c)<0 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f(c) 
+]]> 
+</script> is a local maximum.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd 
+class="enumerate-enumitem">If <script type="math/tex"> <![CDATA[ 
+f''(c)=0 
+]]> 
+</script>, then the test is inconclusive: <script type="math/tex"> <![CDATA[ 
+f(c) 
+]]> 
+</script> could be a local max, min, or neither.</dd></dl>
+<!--l. 388--><p class="noindent" ></div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

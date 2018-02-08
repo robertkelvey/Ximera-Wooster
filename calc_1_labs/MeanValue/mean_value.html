@@ -1,0 +1,436 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Mean Value Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="mean_value.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">I don&#x2019;t know about this theorem...it seems pretty <em>mean</em>...
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">No no, they mean <em>mean</em> as in average!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Oh, so were looking at the average value of a function?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Not quite, actually the <strong>mean value theorem</strong> states the following: If
+     <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is continuous on <script type="math/tex"> <![CDATA[ 
+[a,b] 
+]]> 
+</script> and differentiable on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>, then there exists at least one
+     value <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> in <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script> such that
+                                   <script type="math/tex; mode=display"> <![CDATA[ 
+f'(c)=\frac {f(b)-f(a)}{b-a} 
+]]> 
+</script>
+     </dd><dt class="actor">
+Dylan and Julia </dt><dd 
+class="speech">Maybe  we  should  do  an  example...that  looks  pretty
+     confusing...
+     </dd><dt class="actor">
+ALTOGETHER </dt><dd 
+class="speech">Let&#x2019;s dive in!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<!--l. 21--><p class="noindent" >Take a look at the following graph illustrating the Mean Value Theorem:
+</p>
+<div class="image-environment"><img 
+src="meanvalue.jpg" alt="PIC"  
+ /> </div>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> What do you notice about the tangent line at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> with respect to the secant line from <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script>
+to <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script>?
+<div class="multiple-choice" id="problem2"><span class="choice correct "   id="choice1">They are parallel.</span> <span class="choice  "   id="choice2">The slope of the tangent line is half that of the secant line.</span> <span class="choice  " 
+id="choice3">The tangent line is perpendicular to the secant line.</span> <span class="choice  "   id="choice4">The tangent line intersects the
+secant line.</span> </div>
+<!--l. 37--><p class="noindent" >What does this mean the derivative of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> is at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>?
+</p>
+                                                                  
+
+                                                                  
+<div class="multiple-choice" id="problem3"><span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+\frac {1}{2} 
+]]> 
+</script></span> <span class="choice  "   id="choice6"><script type="math/tex"> <![CDATA[ 
+\frac {a-b}{f(a)-f(b)} 
+]]> 
+</script></span> <span class="choice correct "   id="choice7"><script type="math/tex"> <![CDATA[ 
+\frac {f(b)-f(a)}{b-a} 
+]]> 
+</script></span> <span class="choice  "   id="choice8"><script type="math/tex"> <![CDATA[ 
+\frac {2a}{b} 
+]]> 
+</script></span> </div>
+<!--l. 46--><p class="noindent" >If <script type="math/tex"> <![CDATA[ 
+f'(x) 
+]]> 
+</script> was zero for all points in the interval, what could always be said about <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> on that
+interval? </p><div class="multiple-choice" id="problem4"><span class="choice  "   id="choice9"><script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> is positive at all points on the interval.</span> <span class="choice  "   id="choice10"><script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> is negative at all points on the
+interval.</span> <span class="choice correct "   id="choice11"><script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> is a constant on the interval.</span> <span class="choice  "   id="choice12"><script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> does not exist on the interval.</span>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem5"><a 
+ id="x1-2002r2"></a>Let <script type="math/tex"> <![CDATA[ 
+a< b 
+]]> 
+</script> be two points in <script type="math/tex"> <![CDATA[ 
+I 
+]]> 
+</script>. Since <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is continuous on <script type="math/tex"> <![CDATA[ 
+[a,b] 
+]]> 
+</script> and differentiable on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>, by
+the Mean Value Theorem we know <script type="math/tex; mode=display"> <![CDATA[ 
+ \frac {f(b)-f(a)}{b-a} = f'(c)  
+]]> 
+</script> for some <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> in the interval <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>. Since <script type="math/tex"> <![CDATA[ 
+f'(c)=0 
+]]> 
+</script> we
+see that <script type="math/tex"> <![CDATA[ 
+f(b)=f(a) 
+]]> 
+</script>. Since <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script> were arbitrarily chosen, <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> must be constant on the
+interval.
+</div>
+</div> <div class="problem-environment question" id="problem6"><a 
+ id="x1-2003r3"></a> Use <script type="math/tex"> <![CDATA[ 
+f(x)=\sin (2x) 
+]]> 
+</script> on the interval <script type="math/tex"> <![CDATA[ 
+[0,2\pi ] 
+]]> 
+</script> for the following questions. <div class="problem-environment hint" id="problem7"><a 
+ id="x1-2004r4"></a> To graph <script type="math/tex"> <![CDATA[ 
+f(x)=\sin (2x) 
+]]> 
+</script> on the domain <script type="math/tex"> <![CDATA[ 
+[0,2\pi ] 
+]]> 
+</script> in
+desmos type: sin(2x)0¡=x¡=2pi.
+</div> Graph <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+<!--l. 74--><p class="noindent" >What values for <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> satisfy the mean value theorem?(figure out where the derivative
+equals the slope of the secant line!)
+</p>
+<div class="select-all" id="problem8"><a 
+ id="x1-2005r5"></a> <span class="choice correct "   id="choice13"><script type="math/tex"> <![CDATA[ 
+\frac {\pi }{4} 
+]]> 
+</script></span> <span class="choice  "   id="choice14"><script type="math/tex"> <![CDATA[ 
+1 
+]]> 
+</script></span> <span class="choice  "   id="choice15"><script type="math/tex"> <![CDATA[ 
+\frac {3\pi }{5} 
+]]> 
+</script></span> <span class="choice correct "   id="choice16"><script type="math/tex"> <![CDATA[ 
+\frac {3\pi }{4} 
+]]> 
+</script></span> <span class="choice correct "   id="choice17"><script type="math/tex"> <![CDATA[ 
+\frac {5\pi }{4} 
+]]> 
+</script></span> <span class="choice  "   id="choice18"><script type="math/tex"> <![CDATA[ 
+0 
+]]> 
+</script></span> <span class="choice  "   id="choice19"><script type="math/tex"> <![CDATA[ 
+\pi  
+]]> 
+</script></span> <span class="choice correct "   id="choice20"><script type="math/tex"> <![CDATA[ 
+\frac {7\pi }{4} 
+]]> 
+</script></span>
+</div>
+<!--l. 87--><p class="noindent" ></div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<!--l. 90--><p class="noindent" >Let <script type="math/tex"> <![CDATA[ 
+f(x)=\left |x^2-x-2\right | 
+]]> 
+</script>. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {f(x)=abs(x^2-x-2)}  
+]]> 
+</script>
+</p>
+<div class="problem-environment question" id="problem9"><a 
+ id="x1-3001r6"></a> Examine the graph. Does the function satisfy the hypothesis of the Mean Value
+Theorem on the interval <script type="math/tex"> <![CDATA[ 
+[a,b]=[0,3] 
+]]> 
+</script>?
+<div class="multiple-choice" id="problem10"><span class="choice  "   id="choice21">Yes</span> <span class="choice correct "   id="choice22">No</span> </div>
+<!--l. 104--><p class="noindent" ></div>
+</p>
+<div class="problem-environment question" id="problem11"><a 
+ id="x1-3002r7"></a> Consider <script type="math/tex"> <![CDATA[ 
+f(x) = \frac {1}{x} 
+]]> 
+</script>. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {1/x}  
+]]> 
+</script>
+<!--l. 112--><p class="noindent" >Over which of the following regions does the function satisfy the hypothesis of the
+Mean Value Theorem?
+</p>
+<div class="select-all" id="problem12"><a 
+ id="x1-3003r8"></a> <span class="choice  "   id="choice23"><script type="math/tex"> <![CDATA[ 
+[-10,10] 
+]]> 
+</script></span> <span class="choice  "   id="choice24"><script type="math/tex"> <![CDATA[ 
+[0,10] 
+]]> 
+</script></span> <span class="choice correct "   id="choice25"><script type="math/tex"> <![CDATA[ 
+[1,10] 
+]]> 
+</script></span> <span class="choice correct "   id="choice26"><script type="math/tex"> <![CDATA[ 
+[-10,-1] 
+]]> 
+</script></span> <span class="choice  "   id="choice27"><script type="math/tex"> <![CDATA[ 
+[-10,0] 
+]]> 
+</script></span>
+</div>
+<!--l. 122--><p class="noindent" >Apply the Mean Value Theorem from [1, 4], determining what points experience the
+same instantaneous change as the entire interval. <script type="math/tex"> <![CDATA[ 
+\answer {\frac {2}{\sqrt {3}}} 
+]]> 
+</script>
+</div>
+                                                                  
+
+                                                                  
+</p>
+<div class="problem-environment question" id="problem13"><a 
+ id="x1-3004r9"></a> Seeing a police officer on the side of the road, your friend Tom slows down to 35
+mph. However, once the officer pulls over someone else for speeding, Tom speeds up
+to 70 mph. Half an hour and 35 miles later, Tom checks his navigation app and sees
+another police officer is up ahead, slowing himself down to the legal 35 mph.
+However, the police officer still pulls Tom over, saying he had been radioed by the
+first officer right when Tom passed, so he could prove that Tom was going 70 mph at
+some point in the last half hour. Tom is furious about the clearly faulty
+reasoning of the police officer. Let <script type="math/tex"> <![CDATA[ 
+g(x) 
+]]> 
+</script> be the position of Tom&#x2019;s car at time
+<script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>.
+<!--l. 129--><p class="noindent" >Thanks to the Mean Value Theorem, you know that the police officer is in the
+right. Using <script type="math/tex"> <![CDATA[ 
+g(x) 
+]]> 
+</script>, explain to Tom why the officer had a valid reason to ticket
+him. </p><div class="problem-environment hint" id="problem14"><a 
+ id="x1-3005r10"></a> What would Tom&#x2019;s average speed have to be to get 35 miles in a half
+hour?
+</div>
+<div class="free-response" id="problem15"><a 
+ id="x1-3006r11"></a>
+</div>
+<!--l. 137--><p class="noindent" >Talking to Tom, you find out that he accelerated to 70 mph in only 5 seconds after
+passing the officer. Prove that at some point, Tom had an acceleration of over
+25,000 <script type="math/tex"> <![CDATA[ 
+\text {mi} \backslash \text {h}^2 
+]]> 
+</script>. </p><div class="problem-environment hint" id="problem16"><a 
+ id="x1-3007r12"></a> What would Tom&#x2019;s average change of velocity have to be to go
+from 35 mph to 70 mph in 5 seconds(make sure to convert the seconds to
+hours)?
+</div> <div class="free-response" id="problem17"><a 
+ id="x1-3008r13"></a>
+</div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>In Summary</h3>
+<div class="theorem-like problem-environment theorem" id="problem18"><a 
+ id="x1-4001r14"></a>The <strong>Mean Value Theorem</strong> states that for any function <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script>, if <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is continuous on <script type="math/tex"> <![CDATA[ 
+[a,b] 
+]]> 
+</script> and
+differentiable on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>, then there exists at least one value <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> such that
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f'(c)=\frac {f(b)-f(a)}{b-a} 
+]]> 
+</script>
+                                                                  
+
+                                                                  
+<!--l. 150--><p class="noindent" >This means that there is a point <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> such that the secant line from <script type="math/tex"> <![CDATA[ 
+a, b 
+]]> 
+</script> has the same slope
+as the tangent line at <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>. It&#x2019;s important to note that this means if <script type="math/tex"> <![CDATA[ 
+f'(x)=0 
+]]> 
+</script> for all <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>, then <script type="math/tex"> <![CDATA[ 
+f 
+]]> 
+</script> is
+constant on <script type="math/tex"> <![CDATA[ 
+(a,b) 
+]]> 
+</script>.
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

@@ -1,0 +1,131 @@
+\documentclass{ximera}
+\title{Introduction to Sage}
+\begin{document}
+\begin{abstract}
+SageMath is a computer algebra system which uses python, throughout these labs sage cells will be used for certain problems. This lab introduces you to the basics of using SageMath via Sage Cells.
+\end{abstract}
+\maketitle
+\section{Introduction}
+If you ever want to use a sage cell when one is not provided, or would like to experiment with Sage Cells, you can follow this \link[link]{https://sagecell.sagemath.org/}.
+
+\section{Functions}
+To define a function you use the notation in the following sage cell:
+\begin{onlineOnly}
+\begin{sageCell}
+f(x)=x^5+3*x+4
+\end{sageCell}
+\end{onlineOnly}
+\begin{question}
+What output did you get from evaluating the sage cell?
+\begin{multipleChoice}
+\choice[correct]{None}
+\choice{$f(x)=x^5+3x+4$}
+\choice{$x^5+3x+4$}
+\end{multipleChoice}
+\begin{feedback}
+All we did was define a function, to see the function definition type f(x).
+\end{feedback}
+Evaluate the function at $x=3$ by typing f(3) in the sage cell, what did you get? $\answer{256}$
+\end{question}
+\begin{question}
+Define $f(x)=\sin(x)^2$ in the following cell evaluate at $x=4\pi$
+\begin{hint}
+In sage, you type pi for $pi$ and remember to use the carrot for powers and * for multiplication!
+\end{hint}
+\begin{onlineOnly}
+\begin{sageCell}
+#To stop something from being evaluated put it in a comment using the hashtag
+\end{sageCell}
+\end{onlineOnly}
+What did you get?
+$\answer{0}$
+\end{question}
+If you don't use function notation, or want to define a function of multiple variables you must define your variables before using them, as in the following Sage Cell. The following sage cell defines the equation $4x+y=1$, and then solves it for $y$.
+\begin{onlineOnly}
+\begin{sageCell}
+var('x y')
+eqn=4*x+y==1
+solve(eqn,y)
+\end{sageCell}
+\end{onlineOnly}
+\begin{question}
+From the sage cell above, what can you say about ``='' vs ``==''?
+\begin{multipleChoice}
+\choice[correct]{``='' is used for assignment and ``=='' is used to signify equality}
+\choice{``='' is used to signify equality and ``=='' is used for assignment}
+\end{multipleChoice}
+\begin{feedback}
+\textit{Note that you need to include the * operator, go back and take out the * to see how Sage Does error messages and debugging.}
+\end{feedback}
+\end{question}
+The solve command is also shown above, it's fairly intuitive to use, the thing you want to solve is the first parameter and what you're solving for is the second parameter.
+\begin{question}
+Using the solve command, find the roots for $f(x)=x^2+3x+2$
+\begin{hint}
+You should be solving $f(x)$ for $x$
+\end{hint}
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+Copy paste what you got in your sage cell here: $\answer[format=string]{[x == -2, x == -1]}$
+\end{question}
+
+\section{Limits}
+Limits are also fairly intuitive to use in Sage. This is shown in the following Sage Cell to find $\displaystyle\lim_{x \to \infty}2x+3$
+\begin{onlineOnly}
+\begin{sageCell}
+f(x)=2*x+3
+limit(f(x),x=infinity)
+\end{sageCell}
+\end{onlineOnly}
+\begin{question}
+Using the commands shown above, find the limit of $\displaystyle\lim_{x \to 4}\dfrac{x^2-2x-8}{x-4}$
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+What did you get?
+$\answer{6}$
+\end{question}
+
+\section{Differentiation}
+To differentiate in sage, use the diff command. This is shown below. It takes in the function you are differentiating and the variable you're differentiating with respect to.
+\begin{onlineOnly}
+\begin{sageCell}
+f(x)=2*x+3
+diff(f(x),x)
+\end{sageCell}
+\end{onlineOnly}
+\begin{question}
+Using the diff command find $\dfrac{d}{dx}\dfrac{x^2-2x-8}{x-4}$
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+Copy paste your answer from Sage here:
+$\answer[format=string]{2*(x - 1)/(x - 4) - (x^2 - 2*x - 8)/(x - 4)^2}$
+\end{question}
+
+\section{Integration}
+The integral command uses the same parameters as the diff command, try it below for $f(x)=2*x+3$
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+\begin{question}
+Copy paste your answer from Sage here:
+$\answer[format=string]{x^2 + 3*x}$
+\end{question}
+\section{Getting Help}
+If you ever get stuck trying to use a command, there is built in documentation (as well as Google). Type the command followed directly by ``?'' to get extensive documentation on how to use it with examples. Try this for the solve command in the following cell.
+\begin{onlineOnly}
+\begin{sageCell}
+
+\end{sageCell}
+\end{onlineOnly}
+\end{document}

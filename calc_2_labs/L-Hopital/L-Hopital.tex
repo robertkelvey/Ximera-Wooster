@@ -1,0 +1,135 @@
+\documentclass{ximera}
+\title{L'H\^{o}pital's Rule Practice}
+\begin{abstract}
+For this lab, we present a few practices exercises for the method known as L'H\^{o}pital's Rule.
+\end{abstract}
+
+\usepackage{../Calc2_preamble}
+
+\newtheorem*{LRule}{L'H\^{o}pital's Rule}
+\newcommand{\LHop}{L'H\^{o}pital}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\begin{dialogue}
+    \item[Julia] I have a limit and it`s just $\dfrac{0}{0}$... is that one? Infinity? Zero?
+    \item[Dylan] Well... I would probably go with zero? Like, at least they were zeroes before, right?
+    \item[James] Woah, hold on! We have a method of figuring these things out, you don't need to just guess!
+\end{dialogue}
+
+Recall that \LHop's Rule says the following:
+
+\begin{theorem}
+    Suppose we have that the limit $\dlim_{x \to a} \df{f(x)}{g(x)}$ has indeterminate form $\frac{0}{0}$ or $\frac{\infty}{\infty}$. Then
+    \[
+        \dlim_{x \to a} \df{f(x)}{g(x)} = \dlim_{x \to a} \df{f'(x)}{g'(x)},
+    \]
+provided $g'(x) \neq 0$ around $a$ and that $\dlim_{x \to a} \df{f'(x)}{g'(x)}$ exists or is infinite.
+\end{theorem}
+
+
+Note that
+    \begin{itemize}
+        \item This rule is valid if you replace $a$ with $\pm \infty$.
+        \item This rule is valid for one-sided limits as well.
+        \item The \emph{indeterminate form} $\frac{0}{0}$ means $\dlim_{x \to a} f(x) = 0$ and $\dlim_{x \to a} g(x) = 0$.
+        \item The \emph{indeterminate form} $\frac{\infty}{\infty}$ means $\dlim_{x \to a} f(x) = \infty$ and $\dlim_{x \to a} g(x) = \infty$.
+        \item You can apply L'H\^{o}pital's Rule more than once!! As long as the hypothesis regarding the indeterminate form is satisfied, you can apply the rule again and again.
+        \item \emph{Never do the quotient rule!!!} It's the derivative of the top over the derivative of the bottom - NOT the derivative of the quotient!!
+    \end{itemize} 
+
+
+\section*{Indeterminate Forms}
+
+The following are all \emph{indeterminate forms} for limits that you might encounter:
+\[
+    \frac{0}{0}, \frac{\infty}{\infty}, 0 \cdot \infty, \infty - \infty, 0^0, 1^{\infty}
+\]
+
+\begin{itemize}
+\item For the form $0 \cdot \infty$, use algebra to make the limit be in $\frac{0}{0}$ or $\frac{\infty}{\infty}$ form.
+
+\item For the form $\infty - \infty$, you'll generally need to combine fractions to get it into $\frac{0}{0}$ or $\frac{\infty}{\infty}$ form.
+
+\item For either of $0^0$ or $1^{\infty}$, you need to use logarithms.
+%Set the expression in the limit equal to $y$ and examine instead $\ln(y)$. Compute the limit of $\ln(y)$ to get an answer, then
+
+\end{itemize}
+
+\section{Problems for Practice}
+
+In your group, try to use L'H\^{o}pital's Rule to determine the limit. Make sure you check first if L'H\^{o}pital's Rule applies. If it doesn't, you might have to change the limit with some algebra to be able to use L'H\^{o}pital's Rule.
+
+    \begin{problem}
+     $\dlim_{x \to \infty} \df{x}{e^x} = \answer{0}$
+    \end{problem}
+    \begin{problem}
+     $\dlim_{x \to 0} \df{\tan(x)}{x} = \answer{1}$
+    \end{problem}
+    \begin{problem}
+     $\dlim_{x \to 0} \df{2e^x + x - 2}{\sin(x)} = \answer{3}$
+    \end{problem}
+    \begin{problem}
+     $\dlim_{x \to \pi} \df{\sin^2(x)}{1+\cos(x)} = \answer{2}$
+    \end{problem}
+    \begin{problem}
+    \begin{hint}
+    $x\ln(x) = \frac{\ln(x)}{\frac{1}{x}}$
+    \end{hint}
+    $\dlim_{x \to 0^+} x \ln(x) = \answer{0}$
+    \end{problem}
+    \begin{problem}
+    $\dlim_{x \to -\infty} x\sin\left(\frac{1}{x}\right) = \answer{1}$
+    \end{problem}
+    \begin{problem}
+    \begin{hint}
+    Make quotients with Trig!
+    \end{hint}
+    $\dlim_{x \to \frac{\pi}{2}} \sec(x) - \tan(x) = \answer{0}$
+    \end{problem}
+
+    \begin{problem}
+    To compute $\dlim_{x \to 0^+} x^x$, we use logs. Let $y=x^x$. Then $\ln(y) = x \ln(x)$. Now compute:
+    \[
+        \dlim_{x \to 0^+} \ln(y)
+    \]
+
+
+    $$\answer{0}$$
+
+
+    Using continuity, we have $\dlim_{x \to 0^+} \ln(y) = \ln\left(\dlim_{x \to 0^+} y\right)$. Use your answer above and your knowledge of exponential functions to determine now $\dlim_{x \to 0^+} x^x$.
+
+    $$\answer{1}$$
+
+    \end{problem}
+
+    \begin{problem}
+Use the same tricks as the last problem to compute:
+        \[
+            \dlim_{x \to 1} \left(1+\ln(x)\right)^{\frac{1}{x-1}}
+        \]
+
+    $$\answer{e}$$
+     \end{problem}
+
+     \begin{problem}
+     Apply L'H\^{o}pital's Rule to the following limit: $\dlim_{x \to 4} \df{x^3 - 64}{x^2+16}$. Then, conclude why this is wrong.
+\end{problem}
+
+\begin{problem}
+\begin{hint}
+Use L'H\^{o}pital's Rule more than once!!
+\end{hint}
+Evaluate $\dlim_{x \to \infty} \df{x^3}{e^x}$.
+\end{problem}
+
+
+\begin{example}
+	Easter Egg
+\end{example}
+
+
+\end{document}

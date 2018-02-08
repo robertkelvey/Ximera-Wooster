@@ -1,0 +1,205 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+\usepackage{tikz}
+\title{Differentiation Rules!}
+\begin{abstract}
+\end{abstract}
+\begin{document}
+\maketitle
+\begin{dialogue}
+\item[Julia] Hmm...I don't think differentiation rules, it takes so long and I hate using that long limit definition!
+\item[Dylan] No no Julia, it's differentiation \textit{rules}!
+\item[Julia] Ohhhh, that makes more sense!
+
+\end{dialogue}
+\section{The Power Rule}
+\begin{dialogue}
+\item[Julia] I hate how long it takes to differentiate powers!
+\item[Dylan] Yeah, it takes forever! I feel like there was some sort of pattern to it, but I couldn't figure anything out.
+\item[James] Sounds like you guys need my help again?
+\item[Julia and Dylan] Help us James!
+\item[James] There \textit{is} a pattern! Check out this table I made!
+\end{dialogue}
+\[
+\begin{array}{l|l}
+f(x) & \ddx f(x) \\
+\hline
+x^2 &  2x^1 \\
+x^3 &  3x^2 \\
+x^3 &  4x^3 
+\end{array}
+\]
+\begin{question}
+What pattern do you notice in James' table? Generalize this pattern in terms of $x^n$.
+\begin{multipleChoice}
+\choice[correct]{$n \cdot x^{n-1}$}
+\choice{$n-1 \cdot x^{n-1}$}
+\choice{$n \cdot x^n$}
+\choice{$n-1 \cdot x^n$}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Congrats! You've found what's known as the \dfn{Power Rule}!
+\end{feedback}
+\end{question}
+
+\begin{definition}
+  The \textbf{derivative} of $f(x)$ at $a$ is defined by the following limit:
+  \[
+  \eval{\frac{d}{dx} f(x)}_{x=a} = \lim_{h\to 0} \frac{f(a+h) - f(a)}{h}.
+  \]
+\end{definition}
+
+\begin{question}
+Using the limit definition of a derivative, compute the derivative for $x^3$.
+
+$\frac{d}{dx} x^3 =  \answer{3x^2}$
+\begin{feedback}[correct]
+Notice that your answer fits the same pattern as before!
+\end{feedback}
+\end{question}
+
+\begin{question}
+Use the power rule to differentiate the following functions.
+
+$f(x) = x^{10}$ \hspace{11mm} $\ddx f(x) = \answer{10x^9}$
+
+$f(x) = 3x^2$ \hspace{10mm} $\ddx f(x) = \answer{6x}$
+
+\begin{hint}
+The value $\frac{1}{x}$ can be represented by $x^{-1}$.
+\end{hint}
+$f(x) = \frac{5}{x}$ \hspace{12mm} $\frac{d}{dx}f(x) = \answer{-5x^{-2}}$
+\end{question}
+
+\section{The Constant Rule}
+\begin{dialogue}
+\item[Dylan] Wow! That's neat!
+\item[Julia] I wish we could use rules like this all over the place though, it would really save me time.
+\item[James] There are plenty of places with rules like this! Why don't we look at a function like $y = 3$?
+\end{dialogue}
+
+Consider $y = c$, where $c$ is some arbitrary constant.
+\begin{question}
+\item{Differentiate this function using the limit definition.}
+
+$ \frac{d}{dx} c =  \answer{0}$
+
+What can you generalize about the derivative of $y=c$ based on this?
+\begin{multipleChoice}
+\choice{$\frac{d}{dx} c = 2c$}
+\choice[correct]{$\frac{d}{dx} c = 0$}
+\choice{$\frac{d}{dx} c = x$}
+\choice{$\frac{d}{dx} c = \frac{c}{2}$}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Congrats! You've found what's known as the \dfn{Constant Rule}!
+\end{feedback}
+\end{question}
+
+\begin{question}
+Using what you found in the previous question, compute the following derivatives:
+
+$f(x)=2$ \hspace{14mm} $\frac{d}{dx} f(x) =  \answer{0}$
+
+$f(x)=100$ \hspace{10mm} $\frac{d}{dx} f(x) =  \answer{0}$
+
+$f(x)=0$ \hspace{13mm} $\frac{d}{dx} f(x) =  \answer{0}$
+
+\end{question}
+
+\section{The Constant Multiple Rule}
+\begin{dialogue}
+\item[Julia] James! Show us more! These things are going to save me so much time on my homework!
+\item[James] Alright alright, calm down Julia. We can look at a function like $y = 3x$ next.
+\end{dialogue}
+
+Consider $y = kx$, where $k$ is some arbitrary constant.
+\begin{question}
+Differentiate this function using the limit definition:
+$\frac{d}{dx} (kx) = \answer{k}$
+
+What can you generalize about the derivative of $y = kx$ based on this?
+
+\begin{multipleChoice}
+\choice{$\frac{d}{dx} kx = 2k$}
+\choice{$\frac{d}{dx} kx = kx^2$}
+\choice[correct]{$\frac{d}{dx} kx = k$}
+\choice{$\frac{d}{dx} kx = x$}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Congrats! You've found what's known as the \dfn{Constant Multiple Rule}!
+\end{feedback}
+\end{question}
+
+\begin{question}
+\item{Using what you found in the previous problem, compute the following derivatives:}
+
+$f(x) = 4x$ \hspace{12mm} $\frac{d}{dx} f(x) =  \answer{4}$
+
+$f(x) = 10x$ \hspace{10mm} $\frac{d}{dx} f(x) =  \answer{10}$
+
+$f(x) = \frac{1}{5}x$ \hspace{11mm} $\frac{d}{dx} f(x) =  \answer{\frac{1}{5}}$
+\end{question}
+
+\section{The Sum and Difference Rules}
+\begin{dialogue}
+\item[Dylan] Wow, this stuff is awesome! Is there any way to put it all together? Like, is there an easy way to tell what the derivative of $f(x) = 3x+4$ is?
+\item[James] There is Dylan!
+\end{dialogue}
+
+\begin{question}
+Consider the differentiable functions $f(x)$ and $g(x)$. Let $F(x)=f(x)+g(x)$, use the limit definition to find $F'(x)$.
+
+\begin{align*}
+F'(x)&= \lim_{h\to 0}\dfrac{F(x+h)-F(x)}{h} \\
+&= \lim_{h\to 0}\dfrac{[f(x+h)+g(x+h)]-[f(x)+g(x)]}{h} \\
+&= \lim_{h\to 0}\eval{\dfrac{\answer{f(x+h)-f(x)}}{h}+\dfrac{\answer{g(x+h)-g(x)}}{h}} \\
+&= \lim_{h\to 0}\dfrac{f(x+h)-f(x)}{h}+\lim_{h\to 0}\dfrac{g(x+h)-g(x)}{h}
+\end{align*}
+
+What can you generalize based on this?
+\begin{multipleChoice}
+\choice{$(f(x) + g(x))' = f'(x) - g'(x)$}
+\choice{$(f(x) + g(x))'= g'(x)\cdot f(x) + f'(x)$}
+\choice{$(f(x) + g(x))' = f(x)\cdot g'(x) - g(x) \cdot f'(x)$}
+\choice[correct]{$(f(x) + g(x))' = f'(x) + g'(x)$}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Congrats! You've found what's known as the \dfn{Sum Rule}!
+\end{feedback}
+\end{question}
+\begin{question}
+Using what you found in the previous problem, compute the following derivatives where $F(x)=f(x)+g(x)$:
+
+$f(x) = 3x^2 - 5x + 2$, $g(x) = x^2 + 3x$ \hspace{11mm} $\frac{d}{dx}F(x) =  \answer{8x-2}$
+
+$f(x) = x^2 - 4x + 2$, $g(x) = -4x^2 + 3$ \hspace{10mm} $\frac{d}{dx}F(x) = \answer{-6x-4}$
+
+$f(x) = 5x^3 + 3x$, $g(x) = 2x^2 - 13x$ \hspace{13mm} $\frac{d}{dx}F(x) =  \answer{15x^2+4x-10}$
+\end{question}
+\begin{question}
+Julia wonders if a similar rule exists for $m(x) = f(x)-g(x)$. Using the limit definition of derivative, determine if there is a pattern. Then, if there is a rule, use it to solve the following problems. If there is not, do them using the limit definition.
+
+$f(x) = 3x^2 - 5x + 2$, $\;g(x) = x^2 + 3x$ \hspace{11mm} $\frac{d}{dx}m(x) =  \answer{4x-8}$
+
+$f(x) = x^2 - 4x + 2$, $\;g(x) = -4x^2 + 3$ \hspace{10mm} $\frac{d}{dx}m(x) =  \answer{10x-4}$
+
+$f(x) = 5x^3 + 3x$, $\;g(x) = 2x^2 - 13x$ \hspace{13mm} $\frac{d}{dx}m(x) =  \answer{15x^2-4x+16}$
+\end{question}
+\section{In Summary}
+We've covered a lot of differentiation rules in this lab, to help you out we've made the following table for you to fill out.
+\begin{question}
+\[
+\begin{array}{l|l}
+\hline
+  \small\text{Power Rule}&\begin{prompt}\ddx x^n=\answer{n}\end{prompt}\cdot\begin{prompt}\answer{x^{n-1}}\end{prompt}\\
+  \small\text{Constant Rule} & \ddx c=\answer{0}\\
+  \small\text{Constant Multiple Rule} & \begin{prompt}\ddx c\cdot f(x)=\answer{c}\cdot\ddx \answer{f(x)}\end{prompt}\\
+  \small\text{Sum Rule} & \begin{prompt}\ddx (f(x)+g(x))=\ddx \answer{f(x)}+\ddx \answer{g(x)}\end{prompt}\\
+  \small\text{Difference Rule} & \begin{prompt}\ddx (f(x)-g(x))=\ddx \answer{f(x)}-\ddx \answer{g(x)}\end{prompt}
+\end{array}
+\]
+\end{question}
+
+\pagebreak
+\end{document}

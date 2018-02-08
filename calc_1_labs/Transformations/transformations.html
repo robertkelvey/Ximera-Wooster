@@ -1,0 +1,610 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Transformations of Functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="transformations.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from transformations.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %a1b416a51d3dc57c5ca9d79b30a17c90% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div><div class="javascript" id="javascript1"><script type="text/javascript"> 
+//<![CDATA[ 
+ caseInsensitive = function(a,b) {
+    return a.toLowerCase() == b.toLowerCase();
+  };
+ 
+//]]> 
+</script></div>
+                                                                  
+
+                                                                  
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Ugh!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">What&#x2019;s up Julia?
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">I have these functions I have to graph, and they&#x2019;re <em>so</em> close to functions I
+     know really well, but they&#x2019;re a little bit different and it makes it so I have
+     to calculate a bunch of points before I can confidently graph it!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Sounds like you could use some help Julia!
+     </dd><dt class="actor">
+Julia and Dylan </dt><dd 
+class="speech">James!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">There are a ton of ways to transform functions, so let&#x2019;s get going and
+     look at how we can modify our favorite functions!</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+<!--l. 21--><p class="noindent" >While you work with many different functions, there are a few basic types of
+functions. These include polynomials, rational functions, trigonometric functions,
+exponential functions, and logarithmic functions. In this lab we will explore different
+variations on these basic functions called <strong>transformations</strong>.
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<!--l. 23--><p class="noindent" >Consider the function <script type="math/tex"> <![CDATA[ 
+f(x)=x^2 
+]]> 
+</script>.
+</p><!--l. 27--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {f(x)=x^2}  
+]]> 
+</script>
+</p>
+<div class="problem-environment question" id="problem2"><a 
+ id="x1-2001r1"></a>
+<!--l. 31--><p class="noindent" >On the same axis graph <script type="math/tex"> <![CDATA[ 
+g(x)=f(x)+2 
+]]> 
+</script>. What change happened from <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> to <script type="math/tex"> <![CDATA[ 
+g(x) 
+]]> 
+</script>?
+</p><!--l. 33--><p class="noindent" >The graph shifted <script type="math/tex"> <![CDATA[ 
+\answer {2} 
+]]> 
+</script> units <script type="math/tex"> <![CDATA[ 
+\answer [format=string,validator=caseInsensitive]{up} 
+]]> 
+</script>.
+</p><!--l. 35--><p class="noindent" >What can you infer about <script type="math/tex"> <![CDATA[ 
+f(x)-2 
+]]> 
+</script>?
+</p><!--l. 37--><p class="noindent" >The graph would shift <script type="math/tex"> <![CDATA[ 
+\answer {2} 
+]]> 
+</script> units <script type="math/tex"> <![CDATA[ 
+\answer [format=string,validator=caseInsensitive]{down} 
+]]> 
+</script>.
+</p><!--l. 39--><p class="noindent" >Consider the function <script type="math/tex"> <![CDATA[ 
+f(x+2)=(x+2)^2 
+]]> 
+</script>. How do you think this graph will be different from the graph
+of <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>? </p><div class="free-response" id="problem3"><a 
+ id="x1-2002r2"></a>
+</div> Graph the function <script type="math/tex"> <![CDATA[ 
+f(x+2) 
+]]> 
+</script> in the desmos window above, was your prediction correct? What
+can you infer about the function <script type="math/tex"> <![CDATA[ 
+f(x-2) 
+]]> 
+</script>? Graph this function to verify your prediction.
+                                                                  
+
+                                                                  
+<div class="free-response" id="problem4"><a 
+ id="x1-2003r3"></a>
+</div> What rule can you write about a general function <script type="math/tex"> <![CDATA[ 
+f(x+c) 
+]]> 
+</script> where <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script> is a positive constant?
+The function will shift <script type="math/tex"> <![CDATA[ 
+\answer [format=string,validator=caseInsensitive]{c} 
+]]> 
+</script> units <script type="math/tex"> <![CDATA[ 
+\answer [format=string,validator=caseInsensitive]{left} 
+]]> 
+</script>
+<!--l. 48--><p class="noindent" >Why do you think the graph moves in the direction it does when using the
+rule you determined in the last question? <em>Hint: Think about the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>-intercept
+and how it changes when you add or subtract a constant from the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> value</em>
+</p><div class="free-response" id="problem5"><a 
+ id="x1-2004r4"></a>
+</div> How do you think the graph of <script type="math/tex"> <![CDATA[ 
+f(x)=x^2 
+]]> 
+</script> be affected when you multiply the whole function by
+some constant <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>? <div class="free-response" id="problem6"><a 
+ id="x1-2005r5"></a>
+</div> Graph the function <script type="math/tex"> <![CDATA[ 
+c \cdot f(x) 
+]]> 
+</script> for the following values of <script type="math/tex"> <![CDATA[ 
+c=2,\frac {1}{2},-2,\frac {-1}{2} 
+]]> 
+</script> <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script> Describe what is happening to the
+function based on the value of <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script>, what can you generalize from this? It may be helpful
+to make a table with the x and y values to understand why this change happens.
+<div class="free-response" id="problem7"><a 
+ id="x1-2006r6"></a>
+</div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On your own</h3>
+<div class="problem-environment question" id="problem8"><a 
+ id="x1-3001r7"></a> Using <script type="math/tex"> <![CDATA[ 
+f(x) = x^2 
+]]> 
+</script> as your base function create a new function that will shift the graph up 4
+units, to the right 3 units, reflect it across the x-axis and stretch it vertically by a
+factor of 2 and graph it below <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script> Graph the function <script type="math/tex"> <![CDATA[ 
+f(2x) 
+]]> 
+</script> <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script> What constant does this stretch
+or compress <script type="math/tex"> <![CDATA[ 
+x^2 
+]]> 
+</script> by?
+<!--l. 75--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {1/2} 
+]]> 
+</script>
+</p><!--l. 77--><p class="noindent" >Graph <script type="math/tex"> <![CDATA[ 
+f(2x+6) 
+]]> 
+</script> on the same axis above, what transformation occurred? </p><div class="free-response" id="problem9"><a 
+ id="x1-3002r8"></a>
+</div> Note the following expansion of the general function <script type="math/tex"> <![CDATA[ 
+f(x)=(ax+b)^2 
+]]> 
+</script>:
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+\displaystyle f(x)=\left (ax+b\right )^2=\left (a\left (x+\frac {b}{a}\right )\right )^2=a^2\left (x+\frac {b}{a}\right )^2 
+]]> 
+</script>
+<!--l. 82--><p class="noindent" >From this expansion, how is a function in the form <script type="math/tex"> <![CDATA[ 
+f(x)=(ax+b)^2 
+]]> 
+</script> being shifted and
+stretched/compressed in terms of <script type="math/tex"> <![CDATA[ 
+a 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+b 
+]]> 
+</script>? </p><div class="free-response" id="problem10"><a 
+ id="x1-3003r9"></a>
+</div>
+<!--l. 86--><p class="noindent" ></div>
+</p>
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>In Summary</h3>
+<!--l. 89--><p class="noindent" >For the following questions, pick in which way the general graph <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> would change under
+certain transformations.
+</p>
+<div class="problem-environment question" id="problem11"><a 
+ id="x1-4001r10"></a>
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+c \cdot f(x) 
+]]> 
+</script>
+ When <script type="math/tex"> <![CDATA[ 
+c>1 
+]]> 
+</script>
+<div class="multiple-choice" id="problem12"><span class="choice  "   id="choice1">Shrink <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice correct "   id="choice2">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice3">Shrink <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice4">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>
+horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice5">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> axis</span> </div>
+<!--l. 103--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c<-1 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem13"><span class="choice  "   id="choice6">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> axis</span> <span class="choice  "   id="choice7">Shrink <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice8">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> axis and stretch
+horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice correct "   id="choice9">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> axis and stretch vertically by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice10">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> axis
+and stretch horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> </div>
+<!--l. 113--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+0<c<1 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem14"><span class="choice  "   id="choice11">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice correct "   id="choice12">Shrink <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice13">Shrink <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  " 
+id="choice14">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> horizontally by <script type="math/tex"> <![CDATA[ 
+c 
+]]> 
+</script></span> <span class="choice  "   id="choice15">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> axis</span> </div>
+</div>
+<div class="problem-environment question" id="problem15"><a 
+ id="x1-4002r11"></a>
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f(x+c) 
+]]> 
+</script>
+ When <script type="math/tex"> <![CDATA[ 
+c>0 
+]]> 
+</script>
+<div class="multiple-choice" id="problem16"><span class="choice correct "   id="choice16">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> left by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice17">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice  "   id="choice18">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> right by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script></span> <span class="choice  "   id="choice19">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis and
+shift it up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice20">No change occurs to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>.</span> </div>
+<!--l. 136--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c<0 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem17"><span class="choice  "   id="choice21">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> left by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice22">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice correct "   id="choice23">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> right by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script></span> <span class="choice  "   id="choice24">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis and
+shift it up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice25">No change occurs to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>.</span> </div>
+<!--l. 146--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem18"><span class="choice  "   id="choice26">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> left by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice27">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice  "   id="choice28">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> right by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script></span> <span class="choice  "   id="choice29">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis and
+shift it up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice correct "   id="choice30">No change occurs to <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script>.</span> </div>
+<!--l. 156--><p class="noindent" ></div> </p><div class="problem-environment question" id="problem19"><a 
+ id="x1-4003r12"></a>
+<!--l. 159--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f(x)+c 
+]]> 
+</script>
+</p><!--l. 161--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c>0 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem20"><span class="choice  "   id="choice31">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> down by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice32">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice33">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice correct "   id="choice34">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  " 
+id="choice35">No change will occur.</span> </div>
+<!--l. 171--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c=0 
+]]> 
+</script>
+</p>
+                                                                  
+
+                                                                  
+<div class="multiple-choice" id="problem21"><span class="choice  "   id="choice36">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> down by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice37">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice38">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice  "   id="choice39">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice correct " 
+id="choice40">No change will occur.</span> </div>
+<!--l. 181--><p class="noindent" >When <script type="math/tex"> <![CDATA[ 
+c<0 
+]]> 
+</script>
+</p>
+<div class="multiple-choice" id="problem22"><span class="choice correct "   id="choice41">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> down by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice42">Stretch <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> vertically by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  "   id="choice43">Flip <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> over the x-axis.</span> <span class="choice  "   id="choice44">Shift <script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script> up by <script type="math/tex"> <![CDATA[ 
+|c| 
+]]> 
+</script>.</span> <span class="choice  " 
+id="choice45">No change will occur.</span> </div>
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

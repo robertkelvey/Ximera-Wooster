@@ -1,0 +1,256 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Application of the Derivative</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="derivative_apps.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from derivative_apps.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %133e3edf87455c9c79302efabbb732d4% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">I love class, but I keep wondering why I&#x2019;m even learning this stuff. I&#x2019;m
+     not a math major.
+     </dd><dt class="actor">
+                                                                  
+
+                                                                  
+Dylan </dt><dd 
+class="speech">It isn&#x2019;t like we&#x2019;re ever going to use this stuff in our lives. It&#x2019;s all just
+     theoretical.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Hold on guys! Actually, we use derivatives all the time - it is a way of
+     measuring change after all.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">No way man, I can forget all this after class. Give me one time I&#x2019;d use
+     a derivative other than class.
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">I&#x2019;ll give you three!</dd></dl>
+<div class="theorem-like problem-environment remark" id="problem1"><a 
+ id="x1-43r1"></a>When possible, answer to three decimal places!
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>The Great Molasses Flood</h3>
+<!--l. 19--><p class="noindent" >On January 15, 1919, a molasses storage tank in Boston burst,
+sending molasses rushing down the streets at 35 miles per hour.
+                                                                  
+
+                                                                  
+<span class="footnote-mark"><a 
+href="derivative_apps2.html#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-1001f1"></a>
+<!--l. 21--><p class="noindent" >Let&#x2019;s pretend something similar happens in Wooster! Imagine you&#x2019;re on the street,
+walking by our newly installed molasses tank when it begins to burst. Unfortunately,
+you&#x2019;re by Born, and the molasses is rushing down the hill towards you with its
+position modeled by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+M(t)=\frac {1}{5}t^2+t \text {,} 
+]]> 
+</script>
+ Your position can be modeled by
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+f(t)=3t+45 \text {.} 
+]]> 
+</script>
+ In both cases, <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> is measured in seconds, with each equation reporting a position in
+meters.
+</p>
+<div class="problem-environment question" id="problem2"><a 
+ id="x1-1043r1"></a> What is your speed at any point?
+<!--l. 27--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {3}m/s 
+]]> 
+</script>
+</p><!--l. 29--><p class="noindent" >What about the speed of the molasses?
+</p><!--l. 31--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {(2/5)t+1}m/s 
+]]> 
+</script>
+</div>
+</p>
+<div class="problem-environment question" id="problem3"><a 
+ id="x1-1044r2"></a> What is your acceleration?
+<!--l. 37--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {0}m/s^2 
+]]> 
+</script>
+</p><!--l. 39--><p class="noindent" >The acceleration of the molasses?
+</p><!--l. 41--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {2/5}m/s^2 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem4"><a 
+ id="x1-1045r3"></a> What is the speed of the molasses after one minute?
+<!--l. 46--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {25}m/s 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem5"><a 
+ id="x1-1046r4"></a> <div class="problem-environment hint" id="problem6"><a 
+ id="x1-1047r5"></a> Make sure to take into account the distance the molasses will need to travel to each
+location.
+</div>If you want to survive the flood, you&#x2019;ll need to get off the street and into a tall,
+sturdy building. Born is only 10 meters away, but there is a group of people trying to
+get in, meaning once you are there, it will take 20 seconds to reach the inside of the
+building. Bissman has very little foot traffic, but you&#x2019;ll take exactly 20 seconds to get
+there and inside. Which building should you go to? <div class="multiple-choice" id="problem7"><span class="choice  "   id="choice1">It makes no difference</span> <span class="choice  "   id="choice2">Born</span> <span class="choice correct " 
+id="choice3">Bissman</span> </div>
+</div>
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Marginal Profit</h3>
+<!--l. 59--><p class="noindent" >A company that makes peanut butter has a profit of
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+P(x)=-0.0027x^3+0.05x^2+18x-125\text {,} 
+]]> 
+</script>
+ where <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> is the number of units produced. One unit of peanut butter contains 10,000
+jars and the profit is in thousands of dollars. </p><div class="problem-environment question" id="problem8"><a 
+ id="x1-2001r1"></a> Compute the marginal profit,
+<script type="math/tex"> <![CDATA[ 
+P'(x) 
+]]> 
+</script>.
+<!--l. 63--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+P'(x)=\answer {-.0081x^2+.1x+18} 
+]]> 
+</script>
+</p><!--l. 65--><p class="noindent" >Explain what is meant by marginal profit? </p><div class="free-response" id="problem9"><a 
+ id="x1-2002r2"></a>
+</div>
+<!--l. 69--><p class="noindent" >Use the marginal profit function to approximate the increase in profit when
+production is increased from 20 units to 21 units.
+</p><!--l. 71--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {16.76} 
+]]> 
+</script>
+</p><!--l. 73--><p class="noindent" >Use the marginal profit function to approximate the increase in profit when
+production is increased from 65 to 66 units.
+</p><!--l. 75--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {-9.723} 
+]]> 
+</script>
+</p><!--l. 77--><p class="noindent" >Graph the marginal profit function: <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p><!--l. 82--><p class="noindent" >How would you change production based on this graph if the company was currently
+producing 20 units?
+</p>
+<div class="multiple-choice" id="problem10"><span class="choice correct "   id="choice4">Increase Production</span> <span class="choice  "   id="choice5">Maintain Current Production</span> <span class="choice  "   id="choice6">Decrease Production</span> </div>
+<!--l. 90--><p class="noindent" >What about 65 units?
+</p>
+<div class="multiple-choice" id="problem11"><span class="choice  "   id="choice7">Increase Production</span> <span class="choice  "   id="choice8">Maintain Current Production</span> <span class="choice correct "   id="choice9">Decrease Production</span> </div>
+                                                                  
+
+                                                                  
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Dorm Room Froyo</h3>
+<!--l. 100--><p class="noindent" >You&#x2019;ve opened up a Froyo franchise in your dorm room! It&#x2019;s a little cramped, but
+people are hearing about it and enjoying your generous pricing and the convenient
+location. We can model how many people hear about your franchise with the
+equation
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+p(t) = \sqrt [3]{50t^2+\dfrac {100}{3}t+10} \text {,} 
+]]> 
+</script>
+ where <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> is time in days. We can also model the profit of your location with the
+equation
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+m(p) = .32p^2 - 30p - 7000 \text {,} 
+]]> 
+</script>
+ where <script type="math/tex"> <![CDATA[ 
+p 
+]]> 
+</script> is the population of people who are willing to come to your franchise each
+day. </p><div class="problem-environment question" id="problem12"><a 
+ id="x1-3001r1"></a> Using the Chain Rule, at what rate will your profit be changing 35 days from
+now?
+<!--l. 104--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=.001]{-3.451} 
+]]> 
+</script>
+</p><!--l. 106--><p class="noindent" >What will the rate of change be for your profit in 120 days?
+</p><!--l. 108--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=.001]{13.665} 
+]]> 
+</script>
+</div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

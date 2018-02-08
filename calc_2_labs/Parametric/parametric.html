@@ -1,0 +1,551 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Parametric Equations</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="parametric.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from parametric.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %4dc9880e840dc5c81ee178481b3bfc10% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+                                                                  
+
+                                                                  
+Julia </dt><dd 
+class="speech">Ugh, I hate when they use stuff other than <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>. I&#x2019;m used to them! Why
+     do they need to change them?
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">It looks like there&#x2019;s a lot more going on here than usual. There are <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and
+     <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>, but they&#x2019;re in different equations, and there&#x2019;s a <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> that&#x2019;s all over the place!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">These are what are known as <em>parametric equations</em>. Rather than <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>
+     being defined in terms of each other, they are defined by their relationship
+     to a common variable, which here is <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>.
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Why is it called parametric? And why should we bother with it?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Well,   they&#x2019;re   called   parametric   equations   because   they   are
+     <em>parameterized</em> by <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>, meaning they&#x2019;re represented in terms of <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script>. Parameters
+     show underlying factors to better model data. Think about this: as more
+     families make chili, fewer drownings are recorded. Does it make sense that
+     the chili is causing this? We could write something like
+                                   <script type="math/tex; mode=display"> <![CDATA[ 
+\text {drownings} = 10 - \sqrt {\text {chili}}\text {.} 
+]]> 
+</script>
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">But that doesn&#x2019;t make sense! Those two things don&#x2019;t affect each other at
+     all!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">That&#x2019;s right! But temperature would affect both; it&#x2019;s cold out, so I
+     make  chili,  and  I  don&#x2019;t  want  to  go  swimming!  By  using  a  parameter
+     of temperature, we could make two equations which don&#x2019;t assume some
+     non-existent relationship.</dd></dl>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Examining Parametric Graphs</h3>
+     <dl class="dialogue"><dt class="actor">
+Dylan </dt><dd 
+class="speech">So, how exactly do we input parametric equations in Desmos?
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">It&#x2019;s  easy!  First,  we  put  a  parenthesis,  then  the  equation  for  our
+     <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script>-value. After that, we put a comma, our <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>-value equation, then close our
+     parentheses!
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">But how do we work with our <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> then?
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Desmos will pop up a range for <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> just under your equations!</dd></dl>
+<!--l. 25--><p class="noindent" >For the following questions, graph the given equations, and give a short explanation
+of why each graph looks the way it does. </p><div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a> <script type="math/tex"> <![CDATA[ 
+x = \sin (2t) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y = 2t^2 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+t = [-2,2] 
+]]> 
+</script>
+<!--l. 31--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p>
+<div class="free-response" id="problem2"><a 
+ id="x1-2002r2"></a>
+</div> <script type="math/tex"> <![CDATA[ 
+x = t + \sin (3t) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y = 7t + \sin (2t) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+t = [-6,6] 
+]]> 
+</script>
+<!--l. 39--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p>
+<div class="free-response" id="problem3"><a 
+ id="x1-2003r3"></a>
+</div> <script type="math/tex"> <![CDATA[ 
+x = 3\sin (2t) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+y = 2\cos (t) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+t = [0,2\pi ] 
+]]> 
+</script>
+<!--l. 47--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p>
+<div class="free-response" id="problem4"><a 
+ id="x1-2004r4"></a>
+</div> <script type="math/tex"> <![CDATA[ 
+x(t) = 11\cos (t) - 6\cos \left (\dfrac {11}{6}t\right ), y(t) = 11\sin (t) - 6\sin \left (\dfrac {11}{6} t\right ) 
+]]> 
+</script>, <script type="math/tex"> <![CDATA[ 
+t = [0,50] 
+]]> 
+</script>
+<!--l. 55--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p>
+<div class="free-response" id="problem5"><a 
+ id="x1-2005r5"></a>
+</div>
+</div>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<div class="problem-environment question" id="problem6"><a 
+ id="x1-3001r6"></a>
+Your friend Joe is beyond excited about his new car, and wants to see just what it
+can do, despite your requests to be careful. He has set up a large wooden ramp
+designed to cause his car to do three barrel rolls before landing. These barrel rolls
+will be perfect circles, his car is 1.5 meters wide, and will take off exactly at the same
+angle it will land at.
+<!--l. 65--><p class="noindent" >How could the position of his right headlight be modeled, if the center of his front
+bumper is the origin?
+                                                                  
+
+                                                                  
+</p>
+<div class="multiple-choice" id="problem7"><span class="choice  "   id="choice1"><script type="math/tex"> <![CDATA[ 
+x(t)=\sin (t) 
+]]> 
+</script>
+<!--l. 70--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+y(t)=\cos (t) 
+]]> 
+</script></span> </p><span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+x(t)=\cos (1.5t) 
+]]> 
+</script>
+<!--l. 73--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+y(t)=\sin (1.5t) 
+]]> 
+</script></span> </p><span class="choice correct "   id="choice3"><script type="math/tex"> <![CDATA[ 
+x(t)=1.5 \cdot \cos (t) 
+]]> 
+</script>
+<!--l. 76--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+y(t)=1.5 \cdot \sin (t) 
+]]> 
+</script></span> </p><span class="choice  "   id="choice4"><script type="math/tex"> <![CDATA[ 
+x(t)=1.5 \cdot \cos (t) 
+]]> 
+</script>
+<!--l. 79--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+y(t)=\sin (t) 
+]]> 
+</script></span> </div>
+</p><!--l. 82--><p class="noindent" >What interval of <script type="math/tex"> <![CDATA[ 
+t 
+]]> 
+</script> should be used to replicate the spinning of Joe&#x2019;s car, assuming he
+lands the jump?
+</p>
+<div class="multiple-choice" id="problem8"><span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+t = [0,4\pi ] 
+]]> 
+</script></span> <span class="choice  "   id="choice6"><script type="math/tex"> <![CDATA[ 
+t = [0,\dfrac {10\pi }{3}] 
+]]> 
+</script></span> <span class="choice correct "   id="choice7"><script type="math/tex"> <![CDATA[ 
+t = [0,6\pi ] 
+]]> 
+</script></span> <span class="choice  "   id="choice8"><script type="math/tex"> <![CDATA[ 
+t = [0, 2\pi ] 
+]]> 
+</script></span> </div>
+<!--l. 91--><p class="noindent" >Using the arc length formula, determine the distance traveled by his right headlight.
+Do not use a full period, or Sage will return zero; instead, use half of a period and
+remember to multiply your final result by two!
+</p><!--l. 93--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+L = \int _\alpha ^\beta \sqrt {\left (\dfrac {dx}{dt}\right )^2 + \left (\dfrac {dy}{dt}\right )^2} \;dt 
+]]> 
+</script>
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<div class="center" 
+>
+<!--l. 100--><p class="noindent" >
+</p><!--l. 101--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {9\pi }\text {m} 
+]]> 
+</script></p></div>
+                                                                  
+
+                                                                  
+<!--l. 103--><p class="noindent" ></div> </p><div class="problem-environment question" id="problem9"><a 
+ id="x1-3002r7"></a> After his successful jump, Joe has become even more daring, deciding to jump
+across the Grand Canyon. Choosing the narrowest point along the canyon, in Marble
+Canyon, he needs to jump “only” 185 meters to safely land on the other side.
+Consider the base of the canyon directly under the jump to be the origin. This point
+lies 140 meters below the ramp.
+<!--l. 107--><p class="noindent" >First, design position equations for Joe&#x2019;s car, starting with acceleration and working
+your way to position. You will not have the values to solve it, but you will end up
+with a skeleton for the final equation.
+</p>
+<div class="multiple-choice" id="problem10"><span class="choice correct "   id="choice9"><script type="math/tex"> <![CDATA[ 
+p_y(t) = a_gt^2 + v_0t + 140 
+]]> 
+</script>
+<!--l. 112--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p_x(t) = v_0t 
+]]> 
+</script></span> </p><span class="choice  "   id="choice10"><script type="math/tex"> <![CDATA[ 
+p_y(t) = v_0t + 140 
+]]> 
+</script>
+<!--l. 115--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p_x(t) = a_gt + v_0 
+]]> 
+</script></span> </p><span class="choice  "   id="choice11"><script type="math/tex"> <![CDATA[ 
+p_y(t) = v_0t 
+]]> 
+</script>
+<!--l. 118--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p_x(t) = a_gt^2 + v_0t 
+]]> 
+</script></span> </p><span class="choice  "   id="choice12"><script type="math/tex"> <![CDATA[ 
+p_y(t) = a_gt^2 + 140 
+]]> 
+</script>
+<!--l. 121--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+p_x(t) = v_0t + 140 
+]]> 
+</script></span> </div>
+</p><!--l. 124--><p class="noindent" >For acceleration due to gravity, use <script type="math/tex"> <![CDATA[ 
+9.8 \text {m} \backslash \text {s}^2 
+]]> 
+</script>. Joe&#x2019;s car leaves the ramp at <script type="math/tex"> <![CDATA[ 
+60 \text {m}\backslash \text {s} 
+]]> 
+</script>, at an angle of <script type="math/tex"> <![CDATA[ 
+30^\circ  
+]]> 
+</script>.
+What are the initial velocities in the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> directions?
+</p>
+<div class="multiple-choice" id="problem11"><span class="choice  "   id="choice13"><script type="math/tex"> <![CDATA[ 
+v_{x0} = 30 \text {m} / \text {s} 
+]]> 
+</script>
+<!--l. 129--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_{y0} = 51.96 \text {m} / \text {s} 
+]]> 
+</script></span> </p><span class="choice  "   id="choice14"><script type="math/tex"> <![CDATA[ 
+v_{x0} = 60 \text {m} / \text {s} 
+]]> 
+</script>
+<!--l. 132--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_{y0} = 60 \text {m} / \text {s} 
+]]> 
+</script></span> </p><span class="choice correct "   id="choice15"><script type="math/tex"> <![CDATA[ 
+v_{x0} = 51.96 \text {m} / \text {s} 
+]]> 
+</script>
+<!--l. 135--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_{y0} = 30 \text {m} / \text {s} 
+]]> 
+</script></span> </p><span class="choice  "   id="choice16"><script type="math/tex"> <![CDATA[ 
+v_{x0} = 42.42 \text {m} / \text {s} 
+]]> 
+</script>
+<!--l. 138--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+v_{y0} = 42.42 \text {m} / \text {s} 
+]]> 
+</script></span> </div>
+</p><div class="feedback" data-feedback="correct" id="feedback12"> What is the equation for <script type="math/tex"> <![CDATA[ 
+v_{y} 
+]]> 
+</script>? <div class="multiple-choice" id="problem13"><span class="choice  "   id="choice17"><script type="math/tex"> <![CDATA[ 
+v_y = 30 
+]]> 
+</script></span> <span class="choice correct "   id="choice18"><script type="math/tex"> <![CDATA[ 
+v_y = 30 + a_gt 
+]]> 
+</script></span> <span class="choice  "   id="choice19"><script type="math/tex"> <![CDATA[ 
+v_y = 30 + a_gt^2 
+]]> 
+</script></span> <span class="choice  "   id="choice20"><script type="math/tex"> <![CDATA[ 
+v_y = 30t + a_gt^2 
+]]> 
+</script></span> </div>
+What is the equation for <script type="math/tex"> <![CDATA[ 
+v_x 
+]]> 
+</script>? <div class="multiple-choice" id="problem14"><span class="choice  "   id="choice21"><script type="math/tex"> <![CDATA[ 
+v_x = 51.96t 
+]]> 
+</script></span> <span class="choice  "   id="choice22"><script type="math/tex"> <![CDATA[ 
+v_y = 51.96 + a_gt 
+]]> 
+</script></span> <span class="choice correct "   id="choice23"><script type="math/tex"> <![CDATA[ 
+v_x = 51.96 
+]]> 
+</script></span> <span class="choice  "   id="choice24"><script type="math/tex"> <![CDATA[ 
+v_x = 51.96t + a_gt^2 
+]]> 
+</script></span> </div>
+</div>
+How long will it take Joe to reach the same altitude he started at? <div class="multiple-choice" id="problem15"><span class="choice correct "   id="choice25"><script type="math/tex"> <![CDATA[ 
+6.1224 \text { s} 
+]]> 
+</script></span> <span class="choice  "   id="choice26"><script type="math/tex"> <![CDATA[ 
+3.0612 \text { s} 
+]]> 
+</script></span> <span class="choice  "   id="choice27"><script type="math/tex"> <![CDATA[ 
+5.3020 \text { s} 
+]]> 
+</script></span> <span class="choice  "   id="choice28"><script type="math/tex"> <![CDATA[ 
+10.6040 \text { s} 
+]]> 
+</script></span> </div>
+<!--l. 165--><p class="noindent" >How far will Joe travel before he returns to 160 meters off the base of the canyon? </p><div class="multiple-choice" id="problem16"><span class="choice  "   id="choice29"><script type="math/tex"> <![CDATA[ 
+183.672 \text { m} 
+]]> 
+</script></span> <span class="choice 
+"  id="choice30"><script type="math/tex"> <![CDATA[ 
+145.09 \text { m} 
+]]> 
+</script></span> <span class="choice  "   id="choice31"><script type="math/tex"> <![CDATA[ 
+159.06 \text { m} 
+]]> 
+</script></span> <span class="choice correct "   id="choice32"><script type="math/tex"> <![CDATA[ 
+318.12 \text { m} 
+]]> 
+</script></span> </div>
+<!--l. 173--><p class="noindent" >Does Joe make it across? </p><div class="multiple-choice" id="problem17"><span class="choice correct "   id="choice33">Yes</span> <span class="choice  "   id="choice34">No</span> </div>
+<!--l. 179--><p class="noindent" >What is the necessary initial velocity for him to perfectly make the jump? </p><div class="multiple-choice" id="problem18"><span class="choice  "   id="choice35"><script type="math/tex"> <![CDATA[ 
+v_{0} = 45.092 \text {m} / \text {s} 
+]]> 
+</script></span> <span class="choice correct "   id="choice36"><script type="math/tex"> <![CDATA[ 
+v_{0} = 40.3672 \text {m} / \text {s} 
+]]> 
+</script></span> <span class="choice  "   id="choice37"><script type="math/tex"> <![CDATA[ 
+v_{0} = 35.673 \text {m} / \text {s} 
+]]> 
+</script></span> <span class="choice  "   id="choice38"><script type="math/tex"> <![CDATA[ 
+v_{0} = 3.5673 \text {m} / \text {s} 
+]]> 
+</script></span>
+</div>
+<!--l. 187--><p class="noindent" ></div> </p><div class="problem-environment question" id="problem19"><a 
+ id="x1-3003r8"></a> Just before Joe started to accelerate towards the ramp, a young spider crawled onto
+one of his tires! Your friend noticed just before Joe started to move, and was able to
+                                                                  
+
+                                                                  
+give the position of the spider in both the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> and <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script> directions with respect to
+time:
+<!--l. 191--><p class="noindent" >
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+x = \dfrac {3}{\pi } \cdot (t - \sin (t)) 
+]]> 
+</script>
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+y = \dfrac {3}{\pi } \cdot (1 - \cos (t))\text {.} 
+]]> 
+</script>
+</p><!--l. 193--><p class="noindent" >Unfortunately, your friend didn&#x2019;t see what happened after Joe reached the ramp, and
+was unable to model everything which followed.
+</p><!--l. 195--><p class="noindent" >If Joe&#x2019;s tires have a radius of <script type="math/tex"> <![CDATA[ 
+0.4 
+]]> 
+</script> meters and he must travel 131.85 meters to reach the
+base of the jump, how much distance will the spider have covered in this
+time?
+</p><!--l. 197--><p class="noindent" ><em>Note: We are not looking for the area under the curve here. Think of the distance
+around the tire, and the number of rotations the tires will experience.</em>
+</p><!--l. 199--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {131.85} \text {m} 
+]]> 
+</script>
+</p><!--l. 201--><p class="noindent" >How does this distance relate to the distance the car itself moved? </p><div class="multiple-choice" id="problem20"><span class="choice  "   id="choice39">The spider
+traveled a greater distance than the car.</span> <span class="choice correct "   id="choice40">The spider traveled the same
+distance as the car.</span> <span class="choice  "   id="choice41">The spider traveled a lesser distance than the car.</span> </div>
+                                                                  
+
+                                                                  
+<!--l. 208--><p class="noindent" >For a parametric curve, the area under the curve may be represented by the
+integral
+                                 <script type="math/tex; mode=display"> <![CDATA[ 
+A = \int _{t_0}^{t_1} y(t)x'(t) dt \text {.} 
+]]> 
+</script>
+</p><!--l. 210--><p class="noindent" >What is the area under the curve for one full period? <script type="math/tex"> <![CDATA[ 
+\answer {.48\pi } 
+]]> 
+</script>
+</p><!--l. 214--><p class="noindent" >How does this relate to the area of the circle which created the cycloid?
+</p>
+<div class="center" 
+>
+<!--l. 215--><p class="noindent" >
+</p><!--l. 216--><p class="noindent" >The area of the cycloid is <script type="math/tex"> <![CDATA[ 
+\answer {3} 
+]]> 
+</script> times as much as the area of the circle which traces
+it.</p></div>
+<!--l. 218--><p class="noindent" ></div> </body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

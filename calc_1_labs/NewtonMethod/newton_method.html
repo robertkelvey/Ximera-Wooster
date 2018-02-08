@@ -1,0 +1,346 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+<title>Newton&#x2019;s Methods</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="newton_method.tex" /> 
+<meta name="author" content="" /> 
+<meta charset="UTF-8" /> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)" /> 
+<meta name="ximera" content="version 0.0.1" /> 
+<link href="http://ximera.osu.edu/public/static/base.min.css" rel="stylesheet" media="screen"/> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> 
+<script data-module="script" data-main="http://ximera.osu.edu/public/javascripts/app.min" src="http://ximera.osu.edu/components/requirejs/require.js"></script> 
+</head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\DeclareMathOperator }[2]{\@OldDeclareMathOperator {##1}{##2}\immediate \write \myfile {\unexpanded {\DeclareMathOperator }{\unexpanded {##1}}{\unexpanded {##2}}}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\AppendGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Append \grfext@Check }{\grfext@Append \grfext@@Add }}
+\newcommand {\PrependGraphicsExtensions }[0]{\@ifundefined {Gin@extensions}{\let \Gin@extensions \@empty }{}\@ifstar {\grfext@Prepend \grfext@Check }{\grfext@Prepend \grfext@@Add }}
+\newcommand {\RemoveGraphicsExtensions }[1]{\@ifundefined {Gin@extensions}{\def \Gin@extensions {}}{\edef \grfext@tmp {\zap@space ##1 \@empty }\@for \grfext@ext :=\grfext@tmp \do {\def \grfext@next {\let \grfext@tmp \Gin@extensions \@expandtwoargs \@removeelement \grfext@ext \Gin@extensions \Gin@extensions \ifx \grfext@tmp \Gin@extensions \let \grfext@next \relax \fi \grfext@next }\grfext@next }}\grfext@Print \RemoveGraphicsExtensions }
+\newcommand {\epstopdfsetup }[0]{\setkeys {ETE}}
+\newcommand {\epstopdfcall }[1]{\ifETE@InsideSetfile \expandafter \@firstoftwo \else \expandafter \@secondoftwo \fi {‘##1}{\Gin@base \Gin@ext }}
+\newcommand {\epstopdfDeclareGraphicsRule }[4]{\ifx \\##4\\\@PackageError {epstopdf-base}{Conversion command is missing}\@ehc \else \begingroup \@ifundefined {Gin@rule@##1}{}{\@PackageInfo {epstopdf-base}{Redefining graphics rule for ‘##1&#x2019;}}\endgroup \@namedef {Gin@rule@##1}####1{{##2}{##3}{\epstopdfcall {##4}}}\fi }
+\newcommand {\mdf@patchamsthm }[0]{\let \mdf@deferred@thm@head \deferred@thm@head \pretocmd {\deferred@thm@head }{\@inlabelfalse }{\mdf@PackageInfo {mdframed detected package amsthm
+ changed the theorem header of amsthm\MessageBreak }}{\mdf@PackageError {mdframed detected package amsthm
+ changed the theorem header of amsthm failed\MessageBreak }}}
+\newcommand {\GetTitleStringSetup }[0]{\setkeys {gettitlestring}}
+\newcommand {\GetTitleString }[0]{\ifGTS@expand \expandafter \GetTitleStringExpand \else \expandafter \GetTitleStringNonExpand \fi }
+\newcommand {\GetTitleStringExpand }[1]{\def \GetTitleStringResult {##1}\begingroup \GTS@DisablePredefinedCmds \GTS@DisableHook \edef \x {\endgroup \noexpand \def \noexpand \GetTitleStringResult {\GetTitleStringResult }}\x }
+\newcommand {\GetTitleStringNonExpand }[1]{\def \GetTitleStringResult {##1}\global \let \GTS@GlobalString \GetTitleStringResult \begingroup \GTS@RemoveLeft \GTS@RemoveRight \endgroup \let \GetTitleStringResult \GTS@GlobalString }
+\newcommand {\GTS@DisableHook }[0]{}
+\newcommand {\label@hook }[0]{}
+\newcommand {\@currentlabelname }[0]{}
+\newcommand {\reserved@a }[0]{}
+\newcommand {\@safe@activestrue }[0]{}
+\newcommand {\@safe@activesfalse }[0]{}
+\newcommand {\nameref  }[0]{\@ifstar \T@nameref \T@nameref }
+\newcommand {\Sectionformat }[2]{##1}
+\newcommand {\vnameref  }[1]{\unskip ~\nameref {##1}\@vpageref [\unskip ]{##1}}
+\newcommand {\ref  }[0]{\@ifstar \@refstar \T@ref }
+\newcommand {\pageref  }[0]{\@ifstar \@pagerefstar \T@pageref }
+\newcommand {\nameref  }[0]{\@ifstar \@namerefstar \T@nameref }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {##1:}}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[2]{}
+\newcommand {\reserved@a }[0]{\AtBeginDocument }
+\newcommand {\reserved@a }[1]{}
+\newcommand {\reserved@a }[2]{}                                                                                                                                                                                                                                                                                                                                                                                                                         </script><script type="math/tex">% This file was *autogenerated* from newton_method.sagetex.sage with
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         % sagetex.py version 2015/08/26 v3.0-92d9f7a
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        %3bec5e3e98aa1871aa8ea1fe7d050607% md5sum of corresponding .sage file (minus &#x0022;goboom&#x0022;,&#x0022;current_tex_line&#x0022;,and pause/unpause lines)</script><script type="text/javascript"> 
+</script> 
+</div>
+ <div class="maketitle"></div>
+<h3 class="sectionHead"><a 
+ id="x1-1000"></a>Introduction</h3>
+     <dl class="dialogue"><dt class="actor">
+                                                                  
+
+                                                                  
+Dylan </dt><dd 
+class="speech">I&#x2019;m so tired of having to solve roots by hand. It&#x2019;s a real drag.
+     </dd><dt class="actor">
+Julia </dt><dd 
+class="speech">Yeah, some of these roots are rough. I wish there was a better way!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">There&#x2019;s always a better way!
+     </dd><dt class="actor">
+Dylan and Julia </dt><dd 
+class="speech">Show us!!!
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Maybe you&#x2019;ve heard of Sir Isaac Newton? He got tired of solving roots
+     too, and made a whole method to approximate them!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Wow! I&#x2019;m just like him except worse in every way!</dd></dl>
+<!--l. 16--><p class="noindent" >Newton&#x2019;s Method is a system of approximating roots of polynomials by using tangent
+lines from an initial estimate. While this method is extremely accurate when used
+properly, it is possible to have a very inaccurate estimate when used improperly.
+</p>
+<div class="center" 
+>
+<!--l. 17--><p class="noindent" >
+</p><!--l. 18--><p class="noindent" ><strong>Answer all questions to at least three decimal places where possible!</strong></p></div>
+<h3 class="sectionHead"><a 
+ id="x1-2000"></a>Guided Example</h3>
+<!--l. 21--><p class="noindent" >In the following figure we have an initial guess <script type="math/tex"> <![CDATA[ 
+x_{0} 
+]]> 
+</script>, then we have the blue tangent line
+with respect to the point <script type="math/tex"> <![CDATA[ 
+x_{0} 
+]]> 
+</script> </p><div class="image-environment"><img 
+src="NewtonMethod.png" alt="PIC"  
+ /> </div>
+<div class="problem-environment question" id="problem1"><a 
+ id="x1-2001r1"></a>
+<!--l. 27--><p class="noindent" >What is the slope, in general, for the tangent line of <script type="math/tex"> <![CDATA[ 
+y=f(x) 
+]]> 
+</script> at <script type="math/tex"> <![CDATA[ 
+x_{0} 
+]]> 
+</script>?
+</p>
+<div class="multiple-choice" id="problem2"><span class="choice correct "   id="choice1"><script type="math/tex"> <![CDATA[ 
+f'(x_0) 
+]]> 
+</script></span> <span class="choice  "   id="choice2"><script type="math/tex"> <![CDATA[ 
+f'(x) 
+]]> 
+</script></span> <span class="choice  "   id="choice3"><script type="math/tex"> <![CDATA[ 
+f(x) 
+]]> 
+</script></span> <span class="choice  "   id="choice4"><script type="math/tex"> <![CDATA[ 
+f(f(x)) 
+]]> 
+</script></span> </div>
+<!--l. 36--><p class="noindent" >What is the equation of the tangent line for the point <script type="math/tex"> <![CDATA[ 
+(x_{0},f(x_{0}) 
+]]> 
+</script>?
+</p>
+<div class="multiple-choice" id="problem3"><span class="choice  "   id="choice5"><script type="math/tex"> <![CDATA[ 
+y=f(x) \cdot x + f(x_0) 
+]]> 
+</script></span> <span class="choice correct "   id="choice6"><script type="math/tex"> <![CDATA[ 
+y = f'(x_0)\cdot (x-x_0)+f(x_0) 
+]]> 
+</script></span> <span class="choice  "   id="choice7"><script type="math/tex"> <![CDATA[ 
+y = f'(x) \cdot b + x_0 
+]]> 
+</script></span> <span class="choice  "   id="choice8"><script type="math/tex"> <![CDATA[ 
+y = f'(x) \cdot b + f(x) 
+]]> 
+</script></span> </div>
+<!--l. 45--><p class="noindent" >How would you use the tangent line you found above to estimate the value of the
+root?
+</p>
+                                                                  
+
+                                                                  
+<div class="multiple-choice" id="problem4"><span class="choice  "   id="choice9">Solve for <script type="math/tex"> <![CDATA[ 
+x=0 
+]]> 
+</script> to find a point near the actual root.</span> <span class="choice correct "   id="choice10">Solve for <script type="math/tex"> <![CDATA[ 
+y=0 
+]]> 
+</script> to find a point near the
+actual root.</span> <span class="choice  "   id="choice11">Take the derivative of the tangent line to find where the second
+derivative is zero.</span> <span class="choice  "   id="choice12">Evaluate the tangent line at a <script type="math/tex"> <![CDATA[ 
+y 
+]]> 
+</script>-value which was the initial
+estimate.</span> </div>
+<!--l. 54--><p class="noindent" ></div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>On Your Own</h3>
+<div class="problem-environment question" id="problem5"><a 
+ id="x1-3001r2"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+f(x) = x^2-1 
+]]> 
+</script>. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {x^2-1}  
+]]> 
+</script>
+<!--l. 62--><p class="noindent" >Find the equation of the tangent line at an initial estimate of <script type="math/tex"> <![CDATA[ 
+x_0=3 
+]]> 
+</script>.
+</p><!--l. 64--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+y = \answer {6x-10} 
+]]> 
+</script>
+</p><!--l. 66--><p class="noindent" >Plot the tangent line and function on the same axes. Does the x-intercept of the
+tangent line seem more or less accurate than your initial estimate?
+</p>
+<div class="multiple-choice" id="problem6"><span class="choice correct "   id="choice13">More Accurate</span> <span class="choice  "   id="choice14">Less Accurate</span> </div>
+<!--l. 73--><p class="noindent" >What is the x-intercept of the tangent line?
+</p><!--l. 75--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {\frac {5}{3}} 
+]]> 
+</script> </p><div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+Continue this process until the x-intercepts change by less than .0001 on each
+iteration. How many iterations did this take?
+<!--l. 83--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {5} 
+]]> 
+</script>
+</div> </p><div class="problem-environment question" id="problem7"><a 
+ id="x1-3002r3"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+g(x) = x^3-4x^2-1 
+]]> 
+</script>. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {x^3-4x^2-1}  
+]]> 
+</script> Why does <script type="math/tex"> <![CDATA[ 
+g(x)=0 
+]]> 
+</script> have only one solution? Explain with the help of
+a graph.
+<div class="free-response" id="problem8"><a 
+ id="x1-3003r4"></a>
+</div>
+</div>
+<!--l. 96--><p class="noindent" >Fortunately, with the use of Sage Cells, we don&#x2019;t have to do all of this by hand! The
+following Sage Cell contains the commands through which we can perform
+Newton&#x2019;s Method, along with comments explaining just what it is that Sage is
+doing.
+</p>
+<div class="sage"><script type="text/x-sage">x = var('x')#This line declares the variable we will be using
+f(x)=cos(x)+5*x-5#Here we define the function whose root we're estimating
+df=diff(f,x)#We then find the derivative of the function
+NewtonsMethod(x)=x-(f/df)(x)#The formula for Newton's Method, which we are calling "NewtonsMethod"
+                                                                  
+
+                                                                  
+x0=1# initial guess
+print x0#displays the initial guess in the output
+x1=N(NewtonsMethod(x0))#first iteration of the method
+print x1#displays first result
+x2=N(NewtonsMethod(x1))#second iteration of Newtons Method
+print x2#displays second result
+ 
+</script></div>
+<!--l. 113--><p class="noindent" >The only way to run Newton&#x2019;s Method like this will be to take the first few lines of
+code and put them in each cell after this - the method is <strong>not</strong> defined as a function in
+Sage.
+</p>
+<div class="problem-environment question" id="problem9"><a 
+ id="x1-3004r5"></a> Using <script type="math/tex"> <![CDATA[ 
+g(x) = x^3 -4x^2-1 
+]]> 
+</script> from before, use an initial guess of 2. After 5 iterations, what result do you
+get?
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 124--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.001]{-0.395459530414480} 
+]]> 
+</script>
+</p><!--l. 126--><p class="noindent" >Why is it important to use caution with your first guess when doing Newton&#x2019;s
+Method by hand? It might help you to understand why if you plot both the
+function and the tangent lines from Newton&#x2019;s method in the following Desmos
+graph.
+</p><!--l. 130--><p class="noindent" ><script type="math/tex; mode=display"> <![CDATA[ 
+ \graph {}  
+]]> 
+</script>
+</p>
+<div class="free-response" id="problem10"><a 
+ id="x1-3005r6"></a>
+</div>
+</div>
+<div class="problem-environment question" id="problem11"><a 
+ id="x1-3006r7"></a> Consider the function <script type="math/tex"> <![CDATA[ 
+h(x) = 4x^3 - 12x^2 + 2x + 1 
+]]> 
+</script>. <script type="math/tex; mode=display"> <![CDATA[ 
+ \graph [xmin=-6,xmax=6,ymin=-15,ymax=7,height=400]{4x^3 - 12x^2 + 2x + 1}  
+]]> 
+</script> <div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 148--><p class="noindent" >Use an initial guess of <script type="math/tex"> <![CDATA[ 
+x=3 
+]]> 
+</script> to estimate a root of <script type="math/tex"> <![CDATA[ 
+h(x) 
+]]> 
+</script>. What did you get after the fifth
+iteration?
+</p><!--l. 150--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer [tolerance=0.01]{2.78854472256823} 
+]]> 
+</script>
+</p><!--l. 152--><p class="noindent" >Look at the graph, and attempt to estimate another root using <script type="math/tex"> <![CDATA[ 
+x = 0 
+]]> 
+</script>. Did you find the
+root to the right or the left of this point?
+                                                                  
+
+                                                                  
+</p>
+<div class="multiple-choice" id="problem12"><span class="choice correct "   id="choice15">Left</span> <span class="choice  "   id="choice16">Right</span> </div>
+<!--l. 159--><p class="noindent" >Increment the <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> guess by <script type="math/tex"> <![CDATA[ 
+0.02 
+]]> 
+</script> and use Newton&#x2019;s method until you find the root on the
+right. What value of <script type="math/tex"> <![CDATA[ 
+x 
+]]> 
+</script> is the first to work?
+</p>
+<div class="sage"><script type="text/x-sage">
+ 
+</script></div>
+<!--l. 167--><p class="noindent" ><script type="math/tex"> <![CDATA[ 
+\answer {0.1} 
+]]> 
+</script>
+</div>
+</p>
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>In Summary</h3>
+     <dl class="dialogue"><dt class="actor">
+Julia </dt><dd 
+class="speech">Wow! Newton&#x2019;s Method is awesome!
+     </dd><dt class="actor">
+Dylan </dt><dd 
+class="speech">Yeah, it&#x2019;s way more accurate than just guessing! If you&#x2019;re too far off on
+     that initial guess though...
+     </dd><dt class="actor">
+James </dt><dd 
+class="speech">Things can go downhill quickly. While Newton&#x2019;s Method can be handy,
+     it&#x2019;s important to remember how important an accurate initial estimate is!
+     </dd><dt class="actor">
+Dylan and Julia </dt><dd 
+class="speech">Thanks James!</dd></dl>
+</body> 
+ 
+</html>
+                                                                  
+
+                                                                  
+                                                                  
+
+

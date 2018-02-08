@@ -1,0 +1,231 @@
+\documentclass{ximera}
+\title{Integration Practice}
+\begin{abstract}
+\end{abstract}
+
+\usepackage{../Calc2_preamble}
+
+\newcommand{\du}{\; du}
+\newcommand{\dv}{\; dv}
+\newcommand{\hh}{\hs{40pt}}
+
+
+
+\begin{document}
+
+\section{Introduction}
+
+\begin{dialogue}
+\item[Dylan] Integrals are such a drag.
+\item[Julia] Way too much to keep track of.
+\item[James] Come on, don't be such downers! I know class starts early than you would like, but calculus is awesome!
+\item[Dylan] Well, we'll just have to agree to disagree on this James.
+\item[James] I bet I could change both your minds if I showed you just how much you've learned this semester about integration!
+\item[Julia] As if! Bring it on James!
+\end{dialogue}
+%\newpage
+\section{Strategies for Integration}
+\begin{itemize}
+	\item Always do some algebra first!! Factoring can lead to some very nice simplifications of problems that, at first glance, don't look like any problem that you have recently done. Or, algebra might enlighten you as to what method to employ!
+	\item Next you should always look for substitution: let $u = g(x)$ for some function $g(x)$ in the integrand. Note that you necessarily need $g'(x)$ in the integrand as well for $\du = g'(x) \dx$. Also note: some substitutions can be \emph{tricky} and involve solving for $x$ in the expression $u=g(x)$.
+	\item Next, you might want to try Integration By Parts (IBP). Remember the ILATE acronym, this stands for:
+		\begin{itemize}
+    		\item Inverse Trig
+			\item Logarithms
+			\item Algebraic
+			\item Trig
+			\item Exponential
+		\end{itemize}
+	Choose $u$ starting from the top and working down; choose $\dv$ starting from the bottom and working up.
+	\item Are there powers of trig functions and only trig functions involved? Then you can likely apply a trig identity. Here are our most commonly used ones:
+		\begin{align*}
+			\sin^2 x + \cos^2 x &= 1 &\sin^2 x &= \frac{1}{2}\left(1-\cos(2x)\right) \\
+			\tan^2 x + 1 &= \sec^2 x &\cos^2 x &= \frac{1}{2}\left(1 + \cos(2x) \right)
+		\end{align*}
+
+    \item Are there expressions in the integral like $\sqrt{x^2 - a^2}, \sqrt{a^2 - x^2}, \sqrt{x^2+a^2}$? Then use trig substitution.
+
+	\item Is the integrand a rational function $\df{P(x)}{Q(x)}$? Then if the degree of $P(x)$ is $\geq$ degree of $Q(x)$, then do long division first. Then, when the degree of the top is less than the degree of the bottom, apply partial fraction decomposition.
+\end{itemize}
+
+
+
+\section*{Practice Problems}
+Identify the correct integration technique for each of the following integrals. A correct technique is one that results in you solving the problem correctly - you don't actually have to complete all of the integrals to get credit, but you need to be able to recognize what techniques are used to solve a problem. This is the first step to mastering integrals!
+
+\begin{problem}
+$\dint \cos^2(x) \sin(x) \dx$
+\begin{multipleChoice}
+\choice[correct]{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This is a trig integral: so do a substitution. In this case, let $u = \cos x$.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint x^2 \ln(x) \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice[correct]{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This is an integration by parts (IBP) problem. Let $u=\ln x$ and $dv = x^2 \dx$.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{1+x^2}{1-x^2} \dx$
+\begin{multipleChoice}
+\choice[correct]{Trig Sub}
+\choice{IBP}
+\choice[correct]{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This is a rational function. Since the degrees of the numerator and denominator are the same, do long division. The resulting integral might involve another technique, such as trig sub or partial fractions.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{x}{\sqrt{x^2 + 2}} \dx$
+\begin{multipleChoice}
+\choice[correct]{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice[correct]{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+You can do an easy substitution by letting $u = x^2 + 2$; or you can do trig substitution with $x=\sqrt{2}\tan \theta$.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{x}{\sqrt{x + 2}} \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice[correct]{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This is a tricky substitution problem. Let $u=x+2$. Then $\dx = \du$ and $x = u-2$. Now you can do algebra with the new integral and solve.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{x^2 + 2x + 10}{x^2 + x - 6} \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice{IBP}
+\choice[correct]{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+ Do long division first, then partial fractions.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$ \dint \sqrt{x^4 + x^7} \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice[correct]{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Do algebra first: factor out an $x^4$, then you should get $\dint x^2\sqrt{1+x^3} \dx$. Now do a simple substitution.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{\sqrt{x^4 - 8x^2}}{x} \dx$
+\begin{multipleChoice}
+\choice[correct]{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+Again, do some algebra first. After factoring and cancelling, you can do trig sub.
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{\dx}{x^2-1}$
+\begin{multipleChoice}
+\choice[correct]{Trig Sub}
+\choice{IBP}
+\choice[correct]{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+You can do trig sub or partial fractions for this one. The answers are equivalent (you should be able to see why that is!!)
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint (x^2\sin(x) + x\sin(x)) \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice[correct]{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+You can make the Integration by Parts here a little easier by factoring the integrand into $(x^2+x)\sin(x)$.
+\end{feedback}
+\end{problem}
+\begin{problem}
+\begin{hint}
+Factor - recall that $(e^x)^2 = e^{2x}$
+\end{hint}
+$\dint (e^{3x} + 2e^{2x} + e^x) \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice[correct]{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This was another silly problem that I came up with that doesn't require anything special. Thus integrate each term and you are done!
+\end{feedback}
+\end{problem}
+\begin{problem}
+
+$\dint x\cos^2(x)\sin(x) \dx$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice[correct]{IBP}
+\choice{Partial Fraction}
+\choice{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This was is tricky! You need to do IBP! Let $u=x$ and $\dv = \cos^2(x)\sin(x) \dx$ (don't we know how to integrate that from above???).
+\end{feedback}
+\end{problem}
+\begin{problem}
+$\dint \df{\dx}{(x+12)^4}$
+\begin{multipleChoice}
+\choice{Trig Sub}
+\choice{IBP}
+\choice{Partial Fraction}
+\choice[correct]{U Sub}
+\choice{Basic Integration}
+\end{multipleChoice}
+\begin{feedback}[correct]
+This is really just the power rule. But if you can't see it, let $u=x+12$. Then you should see that it is just $\dint \df{1}{u^4} \du$.
+\end{feedback}
+\end{problem}
+
+
+\end{document}
